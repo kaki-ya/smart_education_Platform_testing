@@ -30,7 +30,7 @@ ACCOUNTS = {
 #   True  = 不弹窗，跑得快，平时用这个
 #   False = 弹出窗口，能看着它一步步点
 # 临时想看一次不用改这里，命令行加 --headed 就盖过它了。
-HEADLESS = False
+HEADLESS = True
 
 # 每步操作之间停多久（毫秒），方便肉眼看清动作；0 就是不停。
 # 只在上面是 False（有窗口）时才有意义。
