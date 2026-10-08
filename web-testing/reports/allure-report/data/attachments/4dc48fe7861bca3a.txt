@@ -1,2 +1,0 @@
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /job/my-applications
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /login

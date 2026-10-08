@@ -1,4 +1,0 @@
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /register
-INFO     sep-web:plugins.py:99 [未登录]   ⚠ 前端 JS 报错：用户名已存在
-INFO     sep-web:plugins.py:81 [未登录]   → POST /api/user/register  200  17ms
-INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":400,"message":"用户名已存在","data":null}

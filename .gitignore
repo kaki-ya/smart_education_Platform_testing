@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# test artifacts
+reports/
+logs/
+.pytest_cache/
+allure-report/
+
+# IDE
+.idea/
+.vscode/
+
+# runtime-generated login-token cache
+data/getToken.yaml
+getToken.yaml

@@ -1,5 +1,0 @@
-INFO     sep-web:plugins.py:96 [web0923570107]   ⇢ 跳转 /user/my-course
-INFO     sep-web:plugins.py:81 [web0923570107]   → GET /api/user/info  200  63ms
-INFO     sep-web:plugins.py:84 [web0923570107]     返回 {"code":200,"message":"success","data":{"id":254,"username":"web0923570107","password":"***","nickname":"web0923570107","avatar":null,"realName":null,"phone":"10923570107","email":"web0923570107@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:10","createTime":"2026-10-02T14:46:10","u…
-INFO     sep-web:plugins.py:81 [web0923570107]   → GET /api/course/mine  200  32ms
-INFO     sep-web:plugins.py:84 [web0923570107]     返回 {"code":200,"message":"success","data":[]}

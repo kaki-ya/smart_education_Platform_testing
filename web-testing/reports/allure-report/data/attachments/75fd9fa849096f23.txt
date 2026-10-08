@@ -1,4 +1,0 @@
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /course
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /course/2
-INFO     sep-web:plugins.py:81 [未登录]   → GET /api/course/2  200  12ms
-INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…

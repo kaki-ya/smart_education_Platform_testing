@@ -1,4 +1,0 @@
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /register
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /login
-INFO     sep-web:plugins.py:81 [未登录]   → POST /api/user/register  200  153ms
-INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":null}

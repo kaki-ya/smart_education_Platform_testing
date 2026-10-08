@@ -1,9 +1,0 @@
-INFO     sep-web:plugins.py:96 [web0923565036]   ⇢ 跳转 /user/resume
-INFO     sep-web:plugins.py:81 [web0923565036]   → GET /api/user/info  200  73ms
-INFO     sep-web:plugins.py:84 [web0923565036]     返回 {"code":200,"message":"success","data":{"id":250,"username":"web0923565036","password":"***","nickname":"web0923565036","avatar":null,"realName":null,"phone":"10923565036","email":"web0923565036@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:05","createTime":"2026-10-02T14:46:05","u…
-INFO     sep-web:plugins.py:81 [web0923565036]   → GET /api/resume/list  200  64ms
-INFO     sep-web:plugins.py:84 [web0923565036]     返回 {"code":200,"message":"success","data":[]}
-INFO     sep-web:plugins.py:81 [web0923565036]   → POST /api/resume/upload  200  23ms
-INFO     sep-web:plugins.py:84 [web0923565036]     返回 {"code":200,"message":"success","data":{"fileName":"resume.pdf","resumeId":15,"url":"/uploads/53f812f31a5542bb937024d1f945465f.pdf"}}
-INFO     sep-web:plugins.py:81 [web0923565036]   → GET /api/resume/list  200  6ms
-INFO     sep-web:plugins.py:84 [web0923565036]     返回 {"code":200,"message":"success","data":[{"id":15,"userId":250,"fileName":"resume.pdf","fileUrl":"/uploads/53f812f31a5542bb937024d1f945465f.pdf","createTime":"2026-10-02T14:46:06"}]}

@@ -1,0 +1,15 @@
+# Direct dependencies only; transitive deps are resolved by pip.
+#
+# Keep this file ASCII-only: pip reads requirements files using the locale
+# encoding on some versions (cp936/GBK on Chinese Windows), so any non-ASCII
+# byte here makes `pip install -r` fail with UnicodeDecodeError.
+#
+# pytest-playwright is what registers the `browser` fixture. Without it,
+# every web test dies in setup with:
+#   FixtureLookupError: ('browser', <SubRequest 'tokens' ...>)
+
+pytest==9.1.1
+requests==2.34.2
+PyYAML==6.0.3
+allure-pytest==2.16.1
+pytest-playwright==0.9.0

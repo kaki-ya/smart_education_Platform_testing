@@ -1,6 +1,0 @@
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /job
-INFO     sep-web:plugins.py:81 [未登录]   → GET /api/job/list?page=1&size=9  200  54ms
-INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
-INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /job/1
-INFO     sep-web:plugins.py:81 [未登录]   → GET /api/job/1  200  14ms
-INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
