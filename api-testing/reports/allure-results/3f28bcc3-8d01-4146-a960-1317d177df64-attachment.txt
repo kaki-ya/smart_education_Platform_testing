@@ -1,0 +1,3 @@
+except_code    = 400
+except_message = '请选择要结算的课程'
+except_field   = （未写，不校验）

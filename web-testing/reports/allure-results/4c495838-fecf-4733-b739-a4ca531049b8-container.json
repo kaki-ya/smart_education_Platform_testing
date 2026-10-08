@@ -1,0 +1,1 @@
+{"uuid": "3d7f7b2c-fd2d-477c-aa83-b78f37df30bd", "children": ["c6fd5b37-7eae-4663-bba7-fb2b4b7c2574"], "befores": [{"name": "job_apply_page", "status": "passed", "start": 1790923583961, "stop": 1790923584203}], "afters": [{"name": "job_apply_page::<lambda>", "start": 1790923584466}], "start": 1790923583961, "stop": 1790923584466}

@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_006] → GET /api/course/list  params={"sortBy": "enroll", "order": "desc", "page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_course_006] ← HTTP 200 code=200 message=success（8ms）

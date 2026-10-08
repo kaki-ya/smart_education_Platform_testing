@@ -1,0 +1,8 @@
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/apply
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  60ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/apply/pending?page=1&size=10  200  58ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":24,"applyType":1,"targetId":16,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:46:20"},{"id":25,"applyType":2,"targetId":9,"applicantId":40,"reason":"","status":0,"auditorI…
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/users
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/user/list?page=1&size=10  200  10ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":254,"username":"web0923570107","password":"***","nickname":"web0923570107","avatar":null,"realName":null,"phone":"10923570107","email":"web0923570107@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:10","createTime":"2026-10-02T14:…

@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_033] → POST /api/job/applyList  body={"jobName": "测试岗D", "salaryMin": 10000, "salaryMax": 100001}
+INFO     sep:request_util.py:133 [TC_job_033] ← HTTP 200 code=400 message=最高薪资不得高于100000元（3ms）

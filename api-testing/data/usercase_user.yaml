@@ -1,0 +1,535 @@
+
+# 用例总数：52
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 登录 ==============
+
+- case_id: TC_user_001
+  title: 登陆成功
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "1234567"
+  except_code: 200
+
+- case_id: TC_user_002
+  title: 登陆失败，密码为3位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "123"
+  except_code: 400
+  except_message: "用户名或密码错误"
+
+- case_id: TC_user_003
+  title: 登陆失败，密码为2位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "12"
+  except_code: 400
+  except_message: "用户名或密码错误"
+
+- case_id: TC_user_004
+  title: 登陆失败，密码为1位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "1"
+  except_code: 400
+  except_message: "用户名或密码错误"
+
+- case_id: TC_user_005
+  title: 登陆失败，不设置密码
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: ""
+  except_code: 400
+  except_message: "密码不能为空"
+
+- case_id: TC_user_006
+  title: 登陆成功，密码为7位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "1234567"
+  except_code: 200
+
+- case_id: TC_user_007
+  title: 登陆失败，密码为30位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "123456789012345678901234567890"
+  except_code: 400
+  except_message: "密码长度不能超过20个字符"
+
+- case_id: TC_user_008
+  title: 登陆失败，密码为100位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+  except_code: 400
+  except_message: "密码长度不能超过20个字符"
+
+- case_id: TC_user_009
+  title: 登陆失败，密码为120位数
+  path: /api/user/login
+  body:
+    username: apitest01
+    password: "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+  except_code: 400
+  except_message: "密码长度不能超过20个字符"
+
+- case_id: TC_user_010
+  title: 登陆失败，用户名丢失
+  path: /api/user/login
+  body:
+    password: "1234567"
+  except_code: 400
+  except_message: "用户名不能为空"
+
+- case_id: TC_user_011
+  title: 登陆失败，用户名为21位
+  path: /api/user/login
+  body:
+    username: "abcdefghijklmnopqrstu"
+    password: "1234567"
+  except_code: 400
+  except_message: "用户名长度不能超过20个字符"
+
+- case_id: TC_user_012
+  title: 登陆失败，用户名不存在
+  path: /api/user/login
+  body:
+    username: "nobody"
+    password: "1234567"
+  except_code: 400
+  except_message: "用户名或密码错误"
+
+# ============= 注册 ==============
+
+- case_id: TC_user_013
+  title: 注册成功
+  path: /api/user/register
+  body:
+    username: "register013"
+    password: "1234567"
+    phone: "13900000013"
+    email: "register013@test.com"
+    role: 0
+  except_code: 200
+
+- case_id: TC_user_014
+  title: 注册失败，账号已存在
+  path: /api/user/register
+  body:
+    username: "register013"
+    password: "1234567"
+    phone: "13900000014"
+    email: "register014@test.com"
+    role: 0
+  except_code: 400
+  except_message: "用户名已存在"
+
+- case_id: TC_user_015
+  title: 注册失败，邮箱已被使用
+  path: /api/user/register
+  body:
+    username: "register015"
+    password: "1234567"
+    phone: "13900000015"
+    email: "student01@test.com"
+    role: 0
+  except_code: 400
+  except_message: "该邮箱已被注册"
+
+- case_id: TC_user_016
+  title: 注册失败，邮箱格式不正确
+  path: /api/user/register
+  body:
+    username: "register016"
+    password: "1234567"
+    phone: "13900000016"
+    email: "register016.com"
+    role: 0
+  except_code: 400
+  except_message: "邮箱格式不正确"
+
+- case_id: TC_user_017
+  title: 注册失败，手机号重复
+  path: /api/user/register
+  body:
+    username: "register017"
+    password: "1234567"
+    phone: "13900000013"        # TC_user_013 已注册的手机号，同为 role 0
+    email: "register017@test.com"
+    role: 0
+  except_code: 400
+  except_message: "该手机号在此身份下已被使用"
+
+- case_id: TC_user_018
+  title: 注册失败，手机号长度不足11位
+  path: /api/user/register
+  body:
+    username: "register018"
+    password: "1234567"
+    phone: "1380000018"
+    email: "register018@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_019
+  title: 注册失败，手机号长度不足11位
+  path: /api/user/register
+  body:
+    username: "register019"
+    password: "1234567"
+    phone: "13819"
+    email: "register019@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_020
+  title: 注册失败，手机号长度大于11位
+  path: /api/user/register
+  body:
+    username: "register020"
+    password: "1234567"
+    phone: "1390000000020"
+    email: "register020@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_021
+  title: 注册失败，手机号长度大于11位
+  path: /api/user/register
+  body:
+    username: "register021"
+    password: "1234567"
+    phone: "139000000000000000021"
+    email: "register021@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_022
+  title: 注册成功，同一个手机号但是不同身份
+  path: /api/user/register
+  body:
+    username: "register022"
+    password: "1234567"
+    phone: "13900000013"        # 同 TC_user_013 的手机号，但 role=1 所以放行
+    email: "register022@test.com"
+    role: 1
+  except_code: 200
+
+- case_id: TC_user_023
+  title: 注册失败，用户名缺失
+  path: /api/user/register
+  body:
+    # username 整行不写：只触发 @NotBlank 一条违规，报错信息唯一可断言
+    password: "1234567"
+    phone: "13900000023"
+    email: "register023@test.com"
+    role: 0
+  except_code: 400
+  except_message: "用户名不能为空"
+
+- case_id: TC_user_024
+  title: 注册失败，用户名不足3位
+  path: /api/user/register
+  body:
+    username: "24"
+    password: "1234567"
+    phone: "13900000024"
+    email: "register024@test.com"
+    role: 0
+  except_code: 400
+  except_message: "用户名长度需在3-20个字符之间"
+
+- case_id: TC_user_025
+  title: 注册失败，用户名超过20位
+  path: /api/user/register
+  body:
+    username: "smarteducationplatformtestingapitestregister25"
+    password: "1234567"
+    phone: "13900000025"
+    email: "register025@test.com"
+    role: 0
+  except_code: 400
+  except_message: "用户名长度需在3-20个字符之间"
+
+- case_id: TC_user_026
+  title: 注册失败，用户名包含中文
+  path: /api/user/register
+  body:
+    username: "注册26"
+    password: "1234567"
+    phone: "13900000026"
+    email: "register026@test.com"
+    role: 0
+  except_code: 400
+  except_message: "用户名只能包含字母、数字和下划线"
+
+- case_id: TC_user_027
+  title: 注册失败，密码缺失
+  path: /api/user/register
+  body:
+    username: "register27"
+    phone: "13900000027"
+    email: "register027@test.com"
+    role: 0
+  except_code: 400
+  except_message: "密码不能为空"
+
+- case_id: TC_user_028
+  title: 注册失败，密码不足6位
+  path: /api/user/register
+  body:
+    username: "register28"
+    password: "12345"
+    phone: "13900000028"
+    email: "register028@test.com"
+    role: 0
+  except_code: 400
+  except_message: "密码长度需在6-20个字符之间"
+
+- case_id: TC_user_029
+  title: 注册失败，密码超过20位
+  path: /api/user/register
+  body:
+    username: "register29"
+    password: "12345678901234567890111111"
+    phone: "13900000029"
+    email: "register029@test.com"
+    role: 0
+  except_code: 400
+  except_message: "密码长度需在6-20个字符之间"
+
+- case_id: TC_user_030
+  title: 注册失败，手机号缺失
+  path: /api/user/register
+  body:
+    username: "register30"
+    password: "123456"
+    email: "register030@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号不能为空"
+
+- case_id: TC_user_031
+  title: 注册失败，手机号格式不正确，不以1开始
+  path: /api/user/register
+  body:
+    username: "register31"
+    password: "123456"
+    phone: "03800000031"
+    email: "register031@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_032
+  title: 注册失败，手机号格式不正确，包含字母
+  path: /api/user/register
+  body:
+    username: "register32"
+    password: "123456"
+    phone: "138phone032"
+    email: "register032@test.com"
+    role: 0
+  except_code: 400
+  except_message: "手机号必须为11位数字,以1开始,不得含有特殊字符"
+
+- case_id: TC_user_033
+  title: 注册失败，邮箱缺失
+  path: /api/user/register
+  body:
+    username: "register33"
+    password: "123456"
+    phone: "13800000033"
+    role: 0
+  except_code: 400
+  except_message: "邮箱不能为空"
+
+# ============= 获取信息 ==============
+
+- case_id: TC_user_034
+  title: 获取当前用户信息
+  method: GET
+  path: /api/user/info
+  role: student
+  except_code: 200
+  except_field: data.username not_null
+
+- case_id: TC_user_035
+  title: 获取当前老师/企业信息
+  method: GET
+  path: /api/user/info
+  role: teacher
+  except_code: 200
+  except_field: data.role == 1
+
+- case_id: TC_user_036
+  title: 获取信息,未登录
+  method: GET
+  path: /api/user/info
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 修改信息 ==============
+
+- case_id: TC_user_037
+  title: 修改资料名称
+  method: PUT
+  path: /api/user/info
+  role: student
+  body:
+    nickname: "用户037"
+  except_code: 200
+
+- case_id: TC_user_038
+  title: 修改资料真实姓名
+  method: PUT
+  path: /api/user/info
+  role: student
+  body:
+    realName: "38同学"
+  except_code: 200
+
+- case_id: TC_user_039
+  title: 修改资料-昵称超20字
+  method: PUT
+  path: /api/user/info
+  role: student
+  body:
+    nickname: "这是一个超过二十个字符长度的昵称用来测试校验"
+  except_code: 400
+  except_message: "昵称不能超过20个字符"
+
+- case_id: TC_user_040
+  title: 修改资料-未登录
+  method: PUT
+  path: /api/user/info
+  # role 不写 → 走 defaults 的 none
+  body:
+    nickname: "hacker"
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 重设密码 ==============
+
+- case_id: TC_user_041
+  title: 修改资料-原密码错误
+  path: /api/user/resetPassword
+  role: student
+  body:
+    oldPassword: "wrongPassword"
+    newPassword: "654321"
+  except_code: 400
+  except_message: "原密码错误"
+
+- case_id: TC_user_042
+  title: 修改资料-原密码缺失
+  path: /api/user/resetPassword
+  role: student
+  body:
+    newPassword: "654321"
+  except_code: 400
+  except_message: "原密码不能为空"
+
+- case_id: TC_user_043
+  title: 修改资料-新密码缺失
+  path: /api/user/resetPassword
+  role: student
+  body:
+    oldPassword: "654321"
+  except_code: 400
+  except_message: "新密码不能为空"
+
+- case_id: TC_user_044
+  title: 修改资料-新密码过短
+  path: /api/user/resetPassword
+  role: student
+  body:
+    oldPassword: "wrongPassword"
+    newPassword: "44"
+  except_code: 400
+  except_message: "密码长度需在6-20个字符之间"
+
+# ============= 忘记密码 ==============
+
+- case_id: TC_user_045
+  title: 忘记密码-手机号尚未注册
+  path: /api/user/forgotPassword
+  body:
+    phone: "13800000000"        # 确认库中无此号（teacher01 是 13800000002）
+    newPassword: "654321"
+  except_code: 400
+  except_message: "该手机号未注册"
+
+- case_id: TC_user_046
+  title: 忘记密码-手机号格式不正确
+  path: /api/user/forgotPassword
+  body:
+    phone: "1370046"
+    newPassword: "654321"
+  except_code: 400
+  except_message: "手机号必须为11位数字"
+
+- case_id: TC_user_047
+  title: 忘记密码-手机号缺失
+  path: /api/user/forgotPassword
+  body:
+    newPassword: "654321"
+  except_code: 400
+  except_message: "手机号不能为空"
+
+- case_id: TC_user_048
+  title: 忘记密码-新密码缺失
+  path: /api/user/forgotPassword
+  body:
+    phone: "13800000001"
+  except_code: 400
+  except_message: "新密码不能为空"
+
+- case_id: TC_user_049
+  title: 忘记密码-新密码长度过短
+  path: /api/user/forgotPassword
+  body:
+    phone: "13800000001"
+    newPassword: "12"
+  except_code: 400
+  except_message: "密码长度需在6-20个字符之间"
+
+- case_id: TC_user_050
+  title: 忘记密码-成功
+  path: /api/user/forgotPassword
+  body:
+    phone: "13800000001"        # student01，改后密码仍为 123456，不影响其它用例
+    newPassword: "123456"
+  except_code: 200
+
+# ============= 登出 ==============
+
+- case_id: TC_user_051
+  title: 登出
+  path: /api/user/logout
+  role: student
+  except_code: 200
+
+- case_id: TC_user_052
+  title: 登出
+  path: /api/user/logout
+  except_code: 401
+  except_message: "未登录"

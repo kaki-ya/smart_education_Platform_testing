@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_resume_003] → DELETE /api/resume/999999
+INFO     sep:request_util.py:133 [TC_resume_003] ← HTTP 200 code=400 message=简历不存在（3ms）

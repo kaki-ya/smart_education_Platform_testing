@@ -1,0 +1,22 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "user": {
+      "id": 22,
+      "username": "apitest01",
+      "password": "$2a$10$f661nRfq2I0kmNuSVpRp7umdP9ColMXS.3g.jC8lBcahGVfrDOwZe",
+      "nickname": "apitest01",
+      "avatar": null,
+      "realName": null,
+      "phone": "13800000003",
+      "email": "apitest01@test.com",
+      "role": 0,
+      "status": 1,
+      "lastLoginTime": "2026-10-01T11:54:09.4708768",
+      "createTime": "2026-10-01T11:54:09",
+      "updateTime": "2026-10-01T11:54:09"
+    },
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjIyLCJyb2xlIjowLCJpYXQiOjE3OTA4MjY4NDksImV4cCI6MTc5MDkxMzI0OX0.aLUUBc8ZJuakMwCoBkz864jmfDl5bZBIEEPS2_4C9aU"
+  }
+}

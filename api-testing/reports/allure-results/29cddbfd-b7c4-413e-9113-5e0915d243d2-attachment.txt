@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_027] → POST /api/course/offline
+INFO     sep:request_util.py:133 [TC_course_027] ← HTTP 200 code=500 message=系统异常（4ms）

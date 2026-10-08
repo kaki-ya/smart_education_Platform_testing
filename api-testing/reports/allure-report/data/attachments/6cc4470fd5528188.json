@@ -1,0 +1,28 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "jobName": "Java 后端开发工程师",
+        "companyId": null,
+        "companyName": "示例科技有限公司",
+        "jobCategory": "开发",
+        "salaryMin": 15000.0,
+        "salaryMax": 25000.0,
+        "city": "北京",
+        "education": "本科",
+        "experience": "3年",
+        "description": "负责后端服务开发",
+        "applyCount": 0,
+        "collectCount": 0,
+        "listTime": "2026-10-01T11:49:42",
+        "status": 1,
+        "createTime": "2026-10-01T11:49:42",
+        "updateTime": "2026-10-01T11:49:42"
+      }
+    ],
+    "total": 1
+  }
+}

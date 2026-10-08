@@ -1,0 +1,24 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 20,
+        "username": "student01",
+        "password": "$2a$10$/NuKOSBSCn1UiyYhJIa7n.dMsnQ/.djaVwZheJe3Xnl0fflNfGgl2",
+        "nickname": "用户037",
+        "avatar": null,
+        "realName": "38同学",
+        "phone": "13800000001",
+        "email": "student01@test.com",
+        "role": 0,
+        "status": 1,
+        "lastLoginTime": "2026-10-01T11:54:09",
+        "createTime": "2026-10-01T11:54:08",
+        "updateTime": "2026-10-01T11:54:08"
+      }
+    ],
+    "total": 1
+  }
+}

@@ -1,0 +1,147 @@
+
+# 用例总数：14
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 我的申请 ==============
+
+- case_id: TC_apply_001
+  title: 我的申请-讲师
+  method: GET
+  path: /api/apply/my
+  role: teacher
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_apply_002
+  title: 我的申请-学生
+  method: GET
+  path: /api/apply/my
+  role: student
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_apply_003
+  title: 我的申请-未登录
+  method: GET
+  path: /api/apply/my
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 待审列表 ==============
+
+- case_id: TC_apply_004
+  title: 待审列表-管理员
+  method: GET
+  path: /api/apply/pending
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_apply_005
+  title: 待审列表-学生无权限
+  method: GET
+  path: /api/apply/pending
+  role: student
+  except_code: 403
+  except_message: "无权限"
+
+- case_id: TC_apply_006
+  title: 待审列表-讲师无权限
+  method: GET
+  path: /api/apply/pending
+  role: teacher
+  except_code: 403
+  except_message: "无权限"
+
+- case_id: TC_apply_007
+  title: 待审列表-未登录
+  method: GET
+  path: /api/apply/pending
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 已审列表 ==============
+
+- case_id: TC_apply_008
+  title: 已审列表-全部
+  method: GET
+  path: /api/apply/audited
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_apply_009
+  title: 已审列表-只看通过
+  method: GET
+  path: /api/apply/audited
+  role: admin
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_apply_010
+  title: 已审列表-只看驳回
+  method: GET
+  path: /api/apply/audited
+  role: admin
+  params:
+    status: 2
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_apply_011
+  title: 已审列表-学生无权限
+  method: GET
+  path: /api/apply/audited
+  role: student
+  except_code: 403
+  except_message: "无权限"
+
+# ============= 审核 ==============
+
+- case_id: TC_apply_012
+  title: 审核-申请不存在
+  path: /api/apply/audit
+  role: admin
+  body:
+    id: 999999
+    pass: true
+  except_code: 400
+  except_message: "申请不存在"
+
+- case_id: TC_apply_013
+  title: 审核-未登录
+  path: /api/apply/audit
+  body:
+    id: 1
+    pass: true
+  except_code: 401
+  except_message: "未登录"
+
+- case_id: TC_apply_014
+  title: 审核-学生无权限
+  path: /api/apply/audit
+  role: student
+  body:
+    id: 1
+    pass: true
+  except_code: 403
+  except_message: "无权限"

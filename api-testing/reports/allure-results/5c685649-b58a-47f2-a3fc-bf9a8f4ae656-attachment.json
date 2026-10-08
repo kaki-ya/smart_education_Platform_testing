@@ -1,0 +1,28 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "purchased": false,
+    "chapters": [],
+    "course": {
+      "id": 2,
+      "courseName": "SpringBoot 实战",
+      "courseType": 1,
+      "techSystem": "Java",
+      "techDirection": "后端",
+      "courseLevel": "中级",
+      "isFree": 0,
+      "price": 199.0,
+      "teacherId": null,
+      "teacherName": "默认讲师",
+      "coverImage": null,
+      "description": null,
+      "rating": 4.5,
+      "enrollCount": 0,
+      "listTime": "2026-10-01T11:49:42",
+      "status": 1,
+      "createTime": "2026-10-01T11:49:42",
+      "updateTime": "2026-10-01T11:49:42"
+    }
+  }
+}

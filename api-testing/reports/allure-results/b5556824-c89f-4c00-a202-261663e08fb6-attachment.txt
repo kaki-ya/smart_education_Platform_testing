@@ -1,0 +1,3 @@
+POST /api/job/ai-interview/1   [role=student]
+params = 无
+body = 无

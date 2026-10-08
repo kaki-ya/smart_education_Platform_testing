@@ -1,0 +1,3 @@
+GET /api/job/interview/report/999999   [role=student]
+params = 无
+body = 无

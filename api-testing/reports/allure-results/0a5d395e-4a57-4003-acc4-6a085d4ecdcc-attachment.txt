@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_039] → PUT /api/user/info  body={"nickname": "这是一个超过二十个字符长度的昵称用来测试校验"}
+INFO     sep:request_util.py:133 [TC_user_039] ← HTTP 200 code=400 message=昵称不能超过20个字符（5ms）

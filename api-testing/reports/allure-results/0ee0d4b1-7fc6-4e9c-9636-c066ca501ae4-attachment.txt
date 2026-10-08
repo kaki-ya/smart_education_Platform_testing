@@ -1,0 +1,3 @@
+PUT /api/admin/course/status/1   [role=student]
+params = {"status": 2}
+body = 无

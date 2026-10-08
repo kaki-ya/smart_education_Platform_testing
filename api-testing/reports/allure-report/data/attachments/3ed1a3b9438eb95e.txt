@@ -1,0 +1,3 @@
+except_code    = 400
+except_message = '最低薪资不得低于2500元'
+except_field   = （未写，不校验）

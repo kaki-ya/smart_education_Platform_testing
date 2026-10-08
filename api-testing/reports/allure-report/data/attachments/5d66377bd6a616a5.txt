@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_016] → POST /api/job/ai-interview/999999
+INFO     sep:request_util.py:133 [TC_job_016] ← HTTP 200 code=400 message=职位不存在或已下架（3ms）

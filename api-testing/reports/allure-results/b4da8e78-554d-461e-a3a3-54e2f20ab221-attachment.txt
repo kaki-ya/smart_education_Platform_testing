@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_015] → POST /api/job/ai-interview/1
+INFO     sep:request_util.py:133 [TC_job_015] ← HTTP 200 code=200 message=success（8ms）

@@ -1,0 +1,5 @@
+except_code    = 200
+except_message = （未写，不校验）
+except_field   =
+  data.course.id not_null
+  data.purchased == false

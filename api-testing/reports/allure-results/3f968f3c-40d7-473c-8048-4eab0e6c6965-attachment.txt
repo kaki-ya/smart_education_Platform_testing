@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_cart_008] → DELETE /api/cart/999999
+INFO     sep:request_util.py:133 [TC_cart_008] ← HTTP 200 code=400 message=购物车项不存在（4ms）

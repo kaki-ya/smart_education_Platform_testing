@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_050] → POST /api/user/forgotPassword  body={"phone": "13800000001", "newPassword": "123456"}
+INFO     sep:request_util.py:133 [TC_user_050] ← HTTP 200 code=200 message=success（85ms）

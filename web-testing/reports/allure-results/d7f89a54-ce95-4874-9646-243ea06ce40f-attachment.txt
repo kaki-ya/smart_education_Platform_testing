@@ -1,0 +1,9 @@
+INFO     sep-web:plugins.py:96 [web0923562624]   ⇢ 跳转 /user
+INFO     sep-web:plugins.py:81 [web0923562624]   → GET /api/user/info  200  72ms
+INFO     sep-web:plugins.py:84 [web0923562624]     返回 {"code":200,"message":"success","data":{"id":248,"username":"web0923562624","password":"***","nickname":"web0923562624","avatar":null,"realName":null,"phone":"10923562624","email":"web0923562624@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:03","createTime":"2026-10-02T14:46:03","u…
+INFO     sep-web:plugins.py:81 [web0923562624]   → GET /api/course/mine  200  125ms
+INFO     sep-web:plugins.py:84 [web0923562624]     返回 {"code":200,"message":"success","data":[]}
+INFO     sep-web:plugins.py:81 [web0923562624]   → GET /api/order/list?page=1&size=5  200  5ms
+INFO     sep-web:plugins.py:84 [web0923562624]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+INFO     sep-web:plugins.py:81 [web0923562624]   → POST /api/user/resetPassword  200  199ms
+INFO     sep-web:plugins.py:84 [web0923562624]     返回 {"code":200,"message":"success","data":null}

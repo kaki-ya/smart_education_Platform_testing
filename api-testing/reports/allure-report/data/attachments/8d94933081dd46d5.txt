@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_043] → POST /api/user/resetPassword  body={"oldPassword": "654321"}
+INFO     sep:request_util.py:133 [TC_user_043] ← HTTP 200 code=400 message=新密码不能为空（4ms）

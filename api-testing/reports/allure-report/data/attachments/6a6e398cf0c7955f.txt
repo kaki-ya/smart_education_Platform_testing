@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_020] → POST /api/course/progress  body={"courseId": 999999, "chapterId": 1, "progress": 50}
+INFO     sep:request_util.py:133 [TC_course_020] ← HTTP 200 code=400 message=课程不存在（5ms）

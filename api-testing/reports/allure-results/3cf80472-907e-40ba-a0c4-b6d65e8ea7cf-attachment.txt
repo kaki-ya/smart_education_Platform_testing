@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_008] → POST /api/user/login  body={"username": "apitest01", "password": "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"}
+INFO     sep:request_util.py:133 [TC_user_008] ← HTTP 200 code=400 message=密码长度不能超过20个字符（3ms）

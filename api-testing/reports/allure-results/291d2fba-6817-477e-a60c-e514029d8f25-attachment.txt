@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_026] → PUT /api/job/my/applicants/1
+INFO     sep:request_util.py:133 [TC_job_026] ← HTTP 200 code=500 message=系统异常（3ms）

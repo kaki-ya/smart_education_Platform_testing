@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_025] → PUT /api/job/my/applicants/999999  params={"status": 1}
+INFO     sep:request_util.py:133 [TC_job_025] ← HTTP 200 code=400 message=投递记录不存在（4ms）

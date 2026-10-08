@@ -1,0 +1,2 @@
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /course/apply
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /login

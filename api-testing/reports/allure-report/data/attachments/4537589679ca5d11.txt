@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_028] → POST /api/user/register  body={"username": "register28", "password": "12345", "phone": "13900000028", "email": "register028@test.com", "role": 0}
+INFO     sep:request_util.py:133 [TC_user_028] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（3ms）

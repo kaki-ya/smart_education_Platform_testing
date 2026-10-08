@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_036] → GET /api/user/info
+INFO     sep:request_util.py:133 [TC_user_036] ← HTTP 200 code=401 message=未登录（3ms）

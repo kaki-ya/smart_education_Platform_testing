@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_015] → POST /api/user/register  body={"username": "register015", "password": "1234567", "phone": "13900000015", "email": "student01@test.com", "role": 0}
+INFO     sep:request_util.py:133 [TC_user_015] ← HTTP 200 code=400 message=该邮箱已被注册（14ms）

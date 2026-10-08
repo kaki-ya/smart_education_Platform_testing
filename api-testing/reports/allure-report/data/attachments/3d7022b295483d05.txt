@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_026] → POST /api/course/applyList  body={"courseName": "自动化测试课程-001", "courseType": 1, "techSystem": "Java", "techDirection": "后端", "courseLevel": "初级", "isFree": 0, "price": 99, "description": "由自动化测试创建，审核前 status=0 不出现在前台列表", "reason": "自动化测试", "chapters": [{"chapterName": "第一章 概述", "duration": 10, "videoUrl": "/uploads/video/demo.…（已截断，共 307 字符）
+INFO     sep:request_util.py:133 [TC_course_026] ← HTTP 200 code=200 message=success（48ms）

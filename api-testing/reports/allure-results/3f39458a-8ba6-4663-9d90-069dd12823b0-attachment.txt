@@ -1,0 +1,3 @@
+except_code    = 401
+except_message = '未登录'
+except_field   = （未写，不校验）

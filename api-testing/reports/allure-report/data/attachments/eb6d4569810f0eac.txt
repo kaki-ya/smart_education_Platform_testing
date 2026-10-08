@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_019] → PUT /api/admin/job/status/999999  params={"status": 2}
+INFO     sep:request_util.py:133 [TC_admin_019] ← HTTP 200 code=400 message=职位不存在（7ms）

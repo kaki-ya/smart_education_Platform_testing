@@ -1,0 +1,3 @@
+GET /api/user/info   [role=teacher]
+params = 无
+body = 无

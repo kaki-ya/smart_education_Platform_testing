@@ -1,0 +1,15 @@
+INFO     sep-web:plugins.py:96 [web0923531371]   ⇢ 跳转 /course/2
+INFO     sep-web:plugins.py:81 [web0923531371]   → GET /api/user/info  200  61ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":{"id":233,"username":"web0923531371","password":"***","nickname":"web0923531371","avatar":null,"realName":null,"phone":"10923531371","email":"web0923531371@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:45:32","createTime":"2026-10-02T14:45:31","u…
+INFO     sep-web:plugins.py:81 [web0923531371]   → GET /api/course/2  200  10ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+INFO     sep-web:plugins.py:81 [web0923531371]   → POST /api/cart/add  200  20ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":null}
+INFO     sep-web:plugins.py:96 [web0923531371]   ⇢ 跳转 /cart
+INFO     sep-web:plugins.py:81 [web0923531371]   → GET /api/cart/list  200  7ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":75,"coverImage":null,"checked":1,"courseId":2}]}
+INFO     sep-web:plugins.py:81 [web0923531371]   → POST /api/order/create  200  18ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":34}
+INFO     sep-web:plugins.py:96 [web0923531371]   ⇢ 跳转 /order/34
+INFO     sep-web:plugins.py:81 [web0923531371]   → GET /api/order/34  200  4ms
+INFO     sep-web:plugins.py:84 [web0923531371]     返回 {"code":200,"message":"success","data":{"items":[{"id":34,"orderId":34,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":34,"orderNo":"ORD1790923532494150120","userId":233,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:45:32","updateTim…

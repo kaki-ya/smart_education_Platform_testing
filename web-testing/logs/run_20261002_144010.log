@@ -1,0 +1,915 @@
+2026-10-02 14:40:10 | ========================================================================
+2026-10-02 14:40:10 | 本轮测试开始
+2026-10-02 14:40:10 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\web-testing\logs\run_20261002_144010.log
+2026-10-02 14:40:10 | 前端地址：http://localhost:5173/（接口经 vite proxy 转到 http://localhost:8080）
+2026-10-02 14:40:10 | 运行环境：Python 3.12.4 / pytest 9.1.1 / Windows-11-10.0.26200-SP0
+2026-10-02 14:40:10 | 命令行：pytest （无额外参数）
+2026-10-02 14:40:10 | ========================================================================
+2026-10-02 14:40:11 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:11 | [test_WEB_TC_001_登录页渲染完整] 通过（105ms）
+2026-10-02 14:40:11 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:11 | [test_WEB_TC_002_用户名密码为空被前端拦截] 通过（102ms）
+2026-10-02 14:40:11 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:12 | [未登录]   ⚠ 前端 JS 报错：用户名或密码错误
+2026-10-02 14:40:12 | [未登录]   → POST /api/user/login  200  101ms
+2026-10-02 14:40:12 | [未登录]     返回 {"code":400,"message":"用户名或密码错误","data":null}
+2026-10-02 14:40:12 | [test_WEB_TC_003_密码错误提示] 通过（278ms）
+2026-10-02 14:40:12 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:12 | [未登录]   ⚠ 前端 JS 报错：用户名或密码错误
+2026-10-02 14:40:12 | [未登录]   → POST /api/user/login  200  12ms
+2026-10-02 14:40:12 | [未登录]     返回 {"code":400,"message":"用户名或密码错误","data":null}
+2026-10-02 14:40:12 | [test_WEB_TC_004_用户名不存在也返回同一句提示] 通过（177ms）
+2026-10-02 14:40:12 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:12 | [未登录]   → POST /api/user/login  200  82ms
+2026-10-02 14:40:12 | [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:12.9086823","createTime":"2026-10-01T16:17:11","up…
+2026-10-02 14:40:12 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:12 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  19ms
+2026-10-02 14:40:12 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:12 | [未登录]   → GET /api/job/list?page=1&size=4  200  6ms
+2026-10-02 14:40:12 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:12 | [test_WEB_TC_005_学生登录成功跳首页并显示身份] 通过（227ms）
+2026-10-02 14:40:13 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:13 | [未登录]   → POST /api/user/login  200  84ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:13.3110701","createTime":"2026-10-01T16:18:06","up…
+2026-10-02 14:40:13 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:13 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  11ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:13 | [未登录]   → GET /api/job/list?page=1&size=4  200  22ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:13 | [test_WEB_TC_006_讲师登录后页头出现讲师菜单] 通过（264ms）
+2026-10-02 14:40:13 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:13 | [未登录]   → POST /api/user/login  200  76ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:13.7256602","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}…
+2026-10-02 14:40:13 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:13 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  11ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:13 | [未登录]   → GET /api/job/list?page=1&size=4  200  20ms
+2026-10-02 14:40:13 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:13 | [test_WEB_TC_007_管理员登录后页头出现后台管理] 通过（211ms）
+2026-10-02 14:40:13 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:14 | [未登录]   → POST /api/user/login  200  84ms
+2026-10-02 14:40:14 | [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:14.1126981","createTime":"2026-10-01T16:17:11","up…
+2026-10-02 14:40:14 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:14 | [test_WEB_TC_008_登录成功后token写入localStorage] 通过（247ms）
+2026-10-02 14:40:14 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  12ms
+2026-10-02 14:40:14 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:14 | [未登录]   → GET /api/job/list?page=1&size=4  200  27ms
+2026-10-02 14:40:14 | [登录-student]   ⇢ 跳转 /login
+2026-10-02 14:40:14 | [登录-student]   → POST /api/user/login  200  78ms
+2026-10-02 14:40:14 | [登录-student]     返回 {"code":200,"message":"success","data":{"user":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:14.5301155","createTime":"2026-10-01T16:17:11","up…
+2026-10-02 14:40:14 | [登录-student]   ⇢ 跳转 /
+2026-10-02 14:40:14 | [登录-student]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  11ms
+2026-10-02 14:40:14 | [登录-student]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:14 | [登录-teacher]   ⇢ 跳转 /login
+2026-10-02 14:40:14 | [登录-teacher]   → POST /api/user/login  200  102ms
+2026-10-02 14:40:14 | [登录-teacher]     返回 {"code":200,"message":"success","data":{"user":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:14.9755665","createTime":"2026-10-01T16:18:06","up…
+2026-10-02 14:40:14 | [登录-teacher]   ⇢ 跳转 /
+2026-10-02 14:40:15 | [登录-admin]   ⇢ 跳转 /login
+2026-10-02 14:40:15 | [登录-admin]   → POST /api/user/login  200  82ms
+2026-10-02 14:40:15 | [登录-admin]     返回 {"code":200,"message":"success","data":{"user":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15.3440963","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}…
+2026-10-02 14:40:15 | [登录-admin]   ⇢ 跳转 /
+2026-10-02 14:40:15 | [登录-admin]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  12ms
+2026-10-02 14:40:15 | [testS01]   ⇢ 跳转 /login
+2026-10-02 14:40:15 | [testS01]   → GET /api/user/info  200  41ms
+2026-10-02 14:40:15 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:15 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:15 | [test_WEB_TC_009_已登录访问登录页被弹回首页] 通过（141ms）
+2026-10-02 14:40:15 | [testS01]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  7ms
+2026-10-02 14:40:15 | [testS01]   ⇢ 跳转 /register
+2026-10-02 14:40:15 | [testS01]   → GET /api/user/info  200  43ms
+2026-10-02 14:40:15 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:15 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:15 | [test_WEB_TC_010_已登录访问注册页被弹回首页] 通过（137ms）
+2026-10-02 14:40:16 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:16 | [未登录]   → POST /api/user/login  200  93ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16.2883363","createTime":"2026-10-01T16:17:11","up…
+2026-10-02 14:40:16 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:16 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  12ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:16 | [未登录]   → GET /api/job/list?page=1&size=4  200  21ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:16 | [未登录]   → POST /api/user/logout  200  15ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:16 | [test_WEB_TC_011_退出登录后回到未登录态] 通过（344ms）
+2026-10-02 14:40:16 | [未登录]   ⇢ 跳转 /
+2026-10-02 14:40:16 | [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  34ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:16 | [未登录]   → GET /api/job/list?page=1&size=4  200  25ms
+2026-10-02 14:40:16 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:16 | [test_WEB_TC_012_未登录页头显示登录注册按钮] 通过（193ms）
+2026-10-02 14:40:16 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:16 | [test_WEB_TC_013_注册页渲染完整] 通过（61ms）
+2026-10-02 14:40:17 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:17 | [test_WEB_TC_014_全部为空提示用户名不能为空] 通过（90ms）
+2026-10-02 14:40:17 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:17 | [test_WEB_TC_015_用户名少于3位被拦截] 通过（105ms）
+2026-10-02 14:40:17 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:17 | [test_WEB_TC_016_用户名超过20位被拦截] 通过（111ms）
+2026-10-02 14:40:18 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:18 | [test_WEB_TC_017_用户名含非法字符被拦截] 通过（143ms）
+2026-10-02 14:40:18 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:18 | [test_WEB_TC_018_密码为空被拦截] 通过（100ms）
+2026-10-02 14:40:18 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:18 | [test_WEB_TC_019_密码少于6位被拦截] 通过（108ms）
+2026-10-02 14:40:18 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:19 | [test_WEB_TC_020_昵称超过20字被拦截] 通过（119ms）
+2026-10-02 14:40:19 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:19 | [test_WEB_TC_021_手机号为空被拦截] 通过（126ms）
+2026-10-02 14:40:19 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:19 | [test_WEB_TC_022_手机号位数不足被拦截] 通过（154ms）
+2026-10-02 14:40:19 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:20 | [test_WEB_TC_023_邮箱为空被拦截] 通过（126ms）
+2026-10-02 14:40:20 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:20 | [test_WEB_TC_024_邮箱格式错误被拦截] 通过（155ms）
+2026-10-02 14:40:20 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:21 | [未登录]   → POST /api/user/register  200  105ms
+2026-10-02 14:40:21 | [未登录]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:21 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:21 | [test_WEB_TC_025_注册成功提示并跳登录页] 通过（342ms）
+2026-10-02 14:40:21 | [未登录]   ⇢ 跳转 /register
+2026-10-02 14:40:21 | [未登录]   ⚠ 前端 JS 报错：用户名已存在
+2026-10-02 14:40:21 | [未登录]   → POST /api/user/register  200  11ms
+2026-10-02 14:40:21 | [未登录]     返回 {"code":400,"message":"用户名已存在","data":null}
+2026-10-02 14:40:21 | [test_WEB_TC_026_用户名已存在注册失败] 通过（175ms）
+2026-10-02 14:40:21 | [未登录]   ⇢ 跳转 /cart
+2026-10-02 14:40:21 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:21 | [test_WEB_TC_027_未登录访问购物车跳登录] 通过（165ms）
+2026-10-02 14:40:21 | [未登录]   ⇢ 跳转 /order
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:22 | [test_WEB_TC_028_未登录访问我的订单跳登录] 通过（164ms）
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /user
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:22 | [test_WEB_TC_029_未登录访问个人中心跳登录] 通过（172ms）
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /user/resume
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:22 | [test_WEB_TC_030_未登录访问我的简历跳登录] 通过（166ms）
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /course/apply
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:22 | [test_WEB_TC_031_未登录访问申请课程跳登录] 通过（157ms）
+2026-10-02 14:40:22 | [未登录]   ⇢ 跳转 /job/apply
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:23 | [test_WEB_TC_032_未登录访问申请职位跳登录] 通过（137ms）
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /job/my-applications
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:23 | [test_WEB_TC_033_未登录访问我的投递跳登录] 通过（172ms）
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /admin
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:23 | [test_WEB_TC_034_未登录访问后台跳登录] 通过（145ms）
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /job/interview/1
+2026-10-02 14:40:23 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:23 | [test_WEB_TC_035_未登录访问AI面试跳登录] 通过（239ms）
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /course/apply
+2026-10-02 14:40:24 | [testS01]   → GET /api/user/info  200  65ms
+2026-10-02 14:40:24 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:24 | [test_WEB_TC_036_学生访问申请课程页回首页] 通过（209ms）
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /job/applicants
+2026-10-02 14:40:24 | [testS01]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:24 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:24 | [test_WEB_TC_037_学生访问候选人页回首页] 通过（153ms）
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /admin/users
+2026-10-02 14:40:24 | [testS01]   → GET /api/user/info  200  49ms
+2026-10-02 14:40:24 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:24 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:24 | [test_WEB_TC_038_学生访问后台用户管理回首页] 通过（148ms）
+2026-10-02 14:40:25 | [testT01]   ⇢ 跳转 /cart
+2026-10-02 14:40:25 | [testT01]   → GET /api/user/info  200  68ms
+2026-10-02 14:40:25 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:40:25 | [testT01]   ⇢ 跳转 /
+2026-10-02 14:40:25 | [test_WEB_TC_039_讲师访问购物车回首页] 通过（220ms）
+2026-10-02 14:40:25 | [testS01]   ⇢ 跳转 /forgot
+2026-10-02 14:40:25 | [testS01]   → GET /api/user/info  200  56ms
+2026-10-02 14:40:25 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:25 | [testS01]   ⇢ 跳转 /
+2026-10-02 14:40:25 | [test_WEB_TC_040_已登录访问忘记密码页回首页] 通过（225ms）
+2026-10-02 14:40:25 | [testS01]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  43ms
+2026-10-02 14:40:25 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:26 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  43ms
+2026-10-02 14:40:26 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:26 | [test_WEB_TC_041_课程中心渲染完整] 通过（109ms）
+2026-10-02 14:40:26 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:26 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  43ms
+2026-10-02 14:40:26 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:26 | [未登录]   → GET /api/course/list?page=1&size=9&keyword=SpringBoot+%E5%AE%9E%E6%88%98&sortBy=time&order=desc  200  13ms
+2026-10-02 14:40:26 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:26 | [test_WEB_TC_042_关键字搜索命中课程] 通过（164ms）
+2026-10-02 14:40:26 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:26 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  51ms
+2026-10-02 14:40:26 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:27 | [未登录]   → GET /api/course/list?page=1&size=9&keyword=%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E8%AF%BE%E7%A8%8B%E5%90%8Dxyz&sortBy=time&order=desc  200  10ms
+2026-10-02 14:40:27 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:27 | [test_WEB_TC_043_搜索无结果展示空态] 通过（178ms）
+2026-10-02 14:40:27 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:27 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  36ms
+2026-10-02 14:40:27 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:27 | [未登录]   → GET /api/course/list?page=1&size=9&courseType=1&sortBy=time&order=desc  200  13ms
+2026-10-02 14:40:27 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:27 | [test_WEB_TC_044_按课程类型筛选] 通过（138ms）
+2026-10-02 14:40:27 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:27 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  43ms
+2026-10-02 14:40:27 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:27 | [test_WEB_TC_045_按课程等级筛选] 通过（140ms）
+2026-10-02 14:40:27 | [未登录]   → GET /api/course/list?page=1&size=9&courseLevel=%E5%88%9D%E7%BA%A7&sortBy=time&order=desc  200  14ms
+2026-10-02 14:40:27 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  38ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:28 | [test_WEB_TC_046_免费筛选结果全部免费] 通过（137ms）
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/list?page=1&size=9&isFree=1&sortBy=time&order=desc  200  16ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:28 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  40ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:28 | [test_WEB_TC_047_切换排序方式] 通过（103ms）
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=enroll&order=desc  200  11ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:28 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  35ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:28 | [未登录]   ⇢ 跳转 /course/1
+2026-10-02 14:40:28 | [test_WEB_TC_048_点击课程卡片进入详情] 通过（144ms）
+2026-10-02 14:40:28 | [未登录]   → GET /api/course/1  200  9ms
+2026-10-02 14:40:28 | [未登录]     返回 {"code":200,"message":"success","data":{"purchased":true,"chapters":[{"id":1,"courseId":1,"chapterName":"第一章 环境搭建","videoUrl":"/uploads/video/c1.mp4","duration":15,"sortNo":1},{"id":2,"courseId":1,"chapterName":"第二章 语法基础","videoUrl":"/uploads/video/c2.mp4","duration":20,"sortNo":2},{"id":3,"courseId…
+2026-10-02 14:40:28 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /course/2
+2026-10-02 14:40:29 | [未登录]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:29 | [未登录]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:29 | [test_WEB_TC_049_课程详情页展示标题与购买入口] 通过（130ms）
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /course/2
+2026-10-02 14:40:29 | [未登录]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:29 | [未登录]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:29 | [test_WEB_TC_050_未登录点收藏跳登录页] 通过（200ms）
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:29 | [未登录]   ⇢ 跳转 /course/2
+2026-10-02 14:40:29 | [未登录]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:29 | [未登录]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:30 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:30 | [test_WEB_TC_051_未登录点加入购物车跳登录页] 通过（183ms）
+2026-10-02 14:40:30 | [testT01]   ⇢ 跳转 /course/2
+2026-10-02 14:40:30 | [testT01]   → GET /api/user/info  200  60ms
+2026-10-02 14:40:30 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:40:30 | [testT01]   → GET /api/course/2  200  10ms
+2026-10-02 14:40:30 | [testT01]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:30 | [test_WEB_TC_052_讲师点加入购物车被拒] 通过（324ms）
+2026-10-02 14:40:30 | [testS01]   ⇢ 跳转 /course/2
+2026-10-02 14:40:30 | [testS01]   → GET /api/user/info  200  47ms
+2026-10-02 14:40:30 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:30 | [testS01]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:30 | [testS01]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:31 | [testS01]   → POST /api/course/collect/2  200  15ms
+2026-10-02 14:40:31 | [testS01]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:31 | [test_WEB_TC_053_学生点收藏成功] 通过（310ms）
+2026-10-02 14:40:31 | [未登录]   ⇢ 跳转 /course
+2026-10-02 14:40:31 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  46ms
+2026-10-02 14:40:31 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:31 | [未登录]   → GET /api/course/list?page=1&size=9&isFree=0&sortBy=time&order=desc  200  11ms
+2026-10-02 14:40:31 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":10,"listTime…
+2026-10-02 14:40:31 | [test_WEB_TC_054_价格筛选切回全部恢复列表] 通过（222ms）
+2026-10-02 14:40:31 | [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  28ms
+2026-10-02 14:40:31 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+2026-10-02 14:40:31 | [web0923231573]   ⇢ 跳转 /cart
+2026-10-02 14:40:32 | [web0923231573]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:32 | [web0923231573]     返回 {"code":200,"message":"success","data":{"id":192,"username":"web0923231573","password":"***","nickname":"web0923231573","avatar":null,"realName":null,"phone":"10923231573","email":"web0923231573@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:32","createTime":"2026-10-02T14:40:32","u…
+2026-10-02 14:40:32 | [web0923231573]   → GET /api/cart/list  200  5ms
+2026-10-02 14:40:32 | [web0923231573]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:32 | [test_WEB_TC_055_空购物车展示空态] 通过（212ms）
+2026-10-02 14:40:32 | [web0923232157]   ⇢ 跳转 /course/2
+2026-10-02 14:40:32 | [web0923232157]   → GET /api/user/info  200  52ms
+2026-10-02 14:40:32 | [web0923232157]     返回 {"code":200,"message":"success","data":{"id":193,"username":"web0923232157","password":"***","nickname":"web0923232157","avatar":null,"realName":null,"phone":"10923232157","email":"web0923232157@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:32","createTime":"2026-10-02T14:40:32","u…
+2026-10-02 14:40:32 | [web0923232157]   → GET /api/course/2  200  8ms
+2026-10-02 14:40:32 | [web0923232157]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:32 | [web0923232157]   → POST /api/cart/add  200  17ms
+2026-10-02 14:40:32 | [web0923232157]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:32 | [web0923232157]   ⇢ 跳转 /cart
+2026-10-02 14:40:32 | [web0923232157]   → GET /api/cart/list  200  8ms
+2026-10-02 14:40:32 | [web0923232157]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":57,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:32 | [test_WEB_TC_056_加入购物车后跳购物车] 通过（337ms）
+2026-10-02 14:40:33 | [web0923232849]   ⇢ 跳转 /course/2
+2026-10-02 14:40:33 | [web0923232849]   → GET /api/user/info  200  43ms
+2026-10-02 14:40:33 | [web0923232849]     返回 {"code":200,"message":"success","data":{"id":194,"username":"web0923232849","password":"***","nickname":"web0923232849","avatar":null,"realName":null,"phone":"10923232849","email":"web0923232849@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:33","createTime":"2026-10-02T14:40:33","u…
+2026-10-02 14:40:33 | [web0923232849]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:33 | [web0923232849]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:33 | [web0923232849]   → POST /api/cart/add  200  15ms
+2026-10-02 14:40:33 | [web0923232849]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:33 | [web0923232849]   ⇢ 跳转 /cart
+2026-10-02 14:40:33 | [web0923232849]   → GET /api/cart/list  200  0ms
+2026-10-02 14:40:33 | [web0923232849]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":58,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:33 | [web0923232849]   → PUT /api/cart/58  200  13ms
+2026-10-02 14:40:33 | [web0923232849]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:33 | [test_WEB_TC_057_未勾选商品结算被拦] 通过（370ms）
+2026-10-02 14:40:34 | [web0923233605]   ⇢ 跳转 /course/2
+2026-10-02 14:40:34 | [web0923233605]   → GET /api/user/info  200  61ms
+2026-10-02 14:40:34 | [web0923233605]     返回 {"code":200,"message":"success","data":{"id":195,"username":"web0923233605","password":"***","nickname":"web0923233605","avatar":null,"realName":null,"phone":"10923233605","email":"web0923233605@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:34","createTime":"2026-10-02T14:40:34","u…
+2026-10-02 14:40:34 | [web0923233605]   → GET /api/course/2  200  9ms
+2026-10-02 14:40:34 | [web0923233605]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:34 | [web0923233605]   → POST /api/cart/add  200  19ms
+2026-10-02 14:40:34 | [web0923233605]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:34 | [web0923233605]   ⇢ 跳转 /cart
+2026-10-02 14:40:34 | [web0923233605]   → GET /api/cart/list  200  8ms
+2026-10-02 14:40:34 | [web0923233605]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":59,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:34 | [test_WEB_TC_058_勾选后合计金额正确] 通过（362ms）
+2026-10-02 14:40:35 | [web0923234722]   ⇢ 跳转 /course/2
+2026-10-02 14:40:35 | [web0923234722]   → GET /api/user/info  200  52ms
+2026-10-02 14:40:35 | [web0923234722]     返回 {"code":200,"message":"success","data":{"id":196,"username":"web0923234722","password":"***","nickname":"web0923234722","avatar":null,"realName":null,"phone":"10923234722","email":"web0923234722@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:35","createTime":"2026-10-02T14:40:35","u…
+2026-10-02 14:40:35 | [web0923234722]   → GET /api/course/2  200  9ms
+2026-10-02 14:40:35 | [web0923234722]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:35 | [web0923234722]   → POST /api/cart/add  200  26ms
+2026-10-02 14:40:35 | [web0923234722]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:35 | [web0923234722]   ⇢ 跳转 /cart
+2026-10-02 14:40:35 | [web0923234722]   → GET /api/cart/list  200  0ms
+2026-10-02 14:40:35 | [web0923234722]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":60,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:35 | [test_WEB_TC_059_数量加一后合计翻倍] 通过（396ms）
+2026-10-02 14:40:35 | [web0923234722]   → PUT /api/cart/60  200  12ms
+2026-10-02 14:40:35 | [web0923234722]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:35 | [web0923235489]   ⇢ 跳转 /course/2
+2026-10-02 14:40:35 | [web0923235489]   → GET /api/user/info  200  52ms
+2026-10-02 14:40:35 | [web0923235489]     返回 {"code":200,"message":"success","data":{"id":197,"username":"web0923235489","password":"***","nickname":"web0923235489","avatar":null,"realName":null,"phone":"10923235489","email":"web0923235489@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:36","createTime":"2026-10-02T14:40:36","u…
+2026-10-02 14:40:36 | [web0923235489]   → GET /api/course/2  200  8ms
+2026-10-02 14:40:36 | [web0923235489]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:36 | [web0923235489]   → POST /api/cart/add  200  18ms
+2026-10-02 14:40:36 | [web0923235489]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:36 | [web0923235489]   ⇢ 跳转 /cart
+2026-10-02 14:40:36 | [web0923235489]   → GET /api/cart/list  200  7ms
+2026-10-02 14:40:36 | [web0923235489]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":61,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:36 | [web0923235489]   → PUT /api/cart/61  200  13ms
+2026-10-02 14:40:36 | [web0923235489]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:36 | [test_WEB_TC_060_数量减到1后不再减少] 通过（400ms）
+2026-10-02 14:40:36 | [web0923236260]   ⇢ 跳转 /course/2
+2026-10-02 14:40:36 | [web0923236260]   → GET /api/user/info  200  52ms
+2026-10-02 14:40:36 | [web0923236260]     返回 {"code":200,"message":"success","data":{"id":198,"username":"web0923236260","password":"***","nickname":"web0923236260","avatar":null,"realName":null,"phone":"10923236260","email":"web0923236260@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:37","createTime":"2026-10-02T14:40:36","u…
+2026-10-02 14:40:36 | [web0923236260]   → GET /api/course/2  200  9ms
+2026-10-02 14:40:36 | [web0923236260]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:36 | [web0923236260]   → POST /api/cart/add  200  22ms
+2026-10-02 14:40:36 | [web0923236260]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:36 | [web0923236260]   ⇢ 跳转 /cart
+2026-10-02 14:40:36 | [web0923236260]   → GET /api/cart/list  200  8ms
+2026-10-02 14:40:36 | [web0923236260]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":62,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:37 | [web0923236260]   → DELETE /api/cart/62  200  13ms
+2026-10-02 14:40:37 | [web0923236260]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:37 | [web0923236260]   → GET /api/cart/list  200  4ms
+2026-10-02 14:40:37 | [web0923236260]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:37 | [test_WEB_TC_061_移除商品后回到空态] 通过（387ms）
+2026-10-02 14:40:37 | [web0923237085]   ⇢ 跳转 /course/2
+2026-10-02 14:40:37 | [web0923237085]   → GET /api/user/info  200  50ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":{"id":199,"username":"web0923237085","password":"***","nickname":"web0923237085","avatar":null,"realName":null,"phone":"10923237085","email":"web0923237085@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:37","createTime":"2026-10-02T14:40:37","u…
+2026-10-02 14:40:37 | [web0923237085]   → GET /api/course/2  200  8ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:37 | [web0923237085]   → POST /api/cart/add  200  17ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:37 | [web0923237085]   ⇢ 跳转 /cart
+2026-10-02 14:40:37 | [web0923237085]   → GET /api/cart/list  200  9ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":63,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:37 | [web0923237085]   → POST /api/order/create  200  14ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":28}
+2026-10-02 14:40:37 | [web0923237085]   ⇢ 跳转 /order/28
+2026-10-02 14:40:37 | [web0923237085]   → GET /api/order/28  200  6ms
+2026-10-02 14:40:37 | [web0923237085]     返回 {"code":200,"message":"success","data":{"items":[{"id":28,"orderId":28,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":28,"orderNo":"ORD1790923237790488903","userId":199,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:38","updateTim…
+2026-10-02 14:40:37 | [test_WEB_TC_062_结算成功创建订单并跳详情] 通过（384ms）
+2026-10-02 14:40:38 | [web0923237845]   ⇢ 跳转 /course/2
+2026-10-02 14:40:38 | [web0923237845]   → GET /api/user/info  200  55ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":{"id":200,"username":"web0923237845","password":"***","nickname":"web0923237845","avatar":null,"realName":null,"phone":"10923237845","email":"web0923237845@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:38","createTime":"2026-10-02T14:40:38","u…
+2026-10-02 14:40:38 | [web0923237845]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:38 | [web0923237845]   → POST /api/cart/add  200  21ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:38 | [web0923237845]   ⇢ 跳转 /cart
+2026-10-02 14:40:38 | [web0923237845]   → GET /api/cart/list  200  9ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":64,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:38 | [web0923237845]   → POST /api/order/create  200  18ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":29}
+2026-10-02 14:40:38 | [web0923237845]   ⇢ 跳转 /order/29
+2026-10-02 14:40:38 | [web0923237845]   → GET /api/order/29  200  10ms
+2026-10-02 14:40:38 | [web0923237845]     返回 {"code":200,"message":"success","data":{"items":[{"id":29,"orderId":29,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":29,"orderNo":"ORD1790923238575961333","userId":200,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:39","updateTim…
+2026-10-02 14:40:38 | [test_WEB_TC_063_订单详情展示订单号与待支付状态] 通过（429ms）
+2026-10-02 14:40:39 | [web0923238664]   ⇢ 跳转 /course/2
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":{"id":201,"username":"web0923238664","password":"***","nickname":"web0923238664","avatar":null,"realName":null,"phone":"10923238664","email":"web0923238664@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:39","createTime":"2026-10-02T14:40:39","u…
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/course/2  200  10ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:39 | [web0923238664]   → POST /api/cart/add  200  19ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:39 | [web0923238664]   ⇢ 跳转 /cart
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/cart/list  200  8ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":65,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:39 | [web0923238664]   → POST /api/order/create  200  14ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":30}
+2026-10-02 14:40:39 | [web0923238664]   ⇢ 跳转 /order/30
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/order/30  200  7ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":{"items":[{"id":30,"orderId":30,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":30,"orderNo":"ORD1790923239407089110","userId":201,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:39","updateTim…
+2026-10-02 14:40:39 | [web0923238664]   ⇢ 跳转 /order
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/user/info  200  11ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":{"id":201,"username":"web0923238664","password":"***","nickname":"web0923238664","avatar":null,"realName":null,"phone":"10923238664","email":"web0923238664@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:39","createTime":"2026-10-02T14:40:39","u…
+2026-10-02 14:40:39 | [test_WEB_TC_064_我的订单列表渲染] 通过（562ms）
+2026-10-02 14:40:39 | [web0923238664]   → GET /api/order/list?page=1&size=10  200  2ms
+2026-10-02 14:40:39 | [web0923238664]     返回 {"code":200,"message":"success","data":{"list":[{"id":30,"orderNo":"ORD1790923239407089110","userId":201,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:39","updateTime":"2026-10-02T14:40:39"}],"total":1}}
+2026-10-02 14:40:40 | [web0923239647]   ⇢ 跳转 /order
+2026-10-02 14:40:40 | [web0923239647]   → GET /api/user/info  200  51ms
+2026-10-02 14:40:40 | [web0923239647]     返回 {"code":200,"message":"success","data":{"id":202,"username":"web0923239647","password":"***","nickname":"web0923239647","avatar":null,"realName":null,"phone":"10923239647","email":"web0923239647@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:40","createTime":"2026-10-02T14:40:40","u…
+2026-10-02 14:40:40 | [web0923239647]   → GET /api/order/list?page=1&size=10  200  5ms
+2026-10-02 14:40:40 | [web0923239647]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:40 | [web0923239647]   → GET /api/order/list?page=1&size=10&status=1  200  10ms
+2026-10-02 14:40:40 | [web0923239647]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:40 | [test_WEB_TC_065_订单列表按状态筛选] 通过（230ms）
+2026-10-02 14:40:40 | [web0923240288]   ⇢ 跳转 /course/2
+2026-10-02 14:40:40 | [web0923240288]   → GET /api/user/info  200  57ms
+2026-10-02 14:40:40 | [web0923240288]     返回 {"code":200,"message":"success","data":{"id":203,"username":"web0923240288","password":"***","nickname":"web0923240288","avatar":null,"realName":null,"phone":"10923240288","email":"web0923240288@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:41","createTime":"2026-10-02T14:40:40","u…
+2026-10-02 14:40:40 | [web0923240288]   → GET /api/course/2  200  8ms
+2026-10-02 14:40:40 | [web0923240288]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:40 | [web0923240288]   → POST /api/cart/add  200  19ms
+2026-10-02 14:40:40 | [web0923240288]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:40 | [web0923240288]   ⇢ 跳转 /cart
+2026-10-02 14:40:40 | [web0923240288]   → GET /api/cart/list  200  8ms
+2026-10-02 14:40:40 | [web0923240288]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":66,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:41 | [web0923240288]   → POST /api/order/create  200  14ms
+2026-10-02 14:40:41 | [web0923240288]     返回 {"code":200,"message":"success","data":31}
+2026-10-02 14:40:41 | [web0923240288]   ⇢ 跳转 /order/31
+2026-10-02 14:40:41 | [web0923240288]   → GET /api/order/31  200  7ms
+2026-10-02 14:40:41 | [web0923240288]     返回 {"code":200,"message":"success","data":{"items":[{"id":31,"orderId":31,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":31,"orderNo":"ORD1790923241059786441","userId":203,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:41","updateTim…
+2026-10-02 14:40:41 | [web0923240288]   → POST /api/order/pay/31  200  14ms
+2026-10-02 14:40:41 | [web0923240288]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:41 | [web0923240288]   → GET /api/order/31  200  5ms
+2026-10-02 14:40:41 | [web0923240288]     返回 {"code":200,"message":"success","data":{"items":[{"id":31,"orderId":31,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":31,"orderNo":"ORD1790923241059786441","userId":203,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:40:41","createTime":"2026-10-02T14:…
+2026-10-02 14:40:41 | [test_WEB_TC_066_立即支付成功] 通过（498ms）
+2026-10-02 14:40:41 | [web0923241196]   ⇢ 跳转 /course/2
+2026-10-02 14:40:41 | [web0923241196]   → GET /api/user/info  200  45ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":{"id":204,"username":"web0923241196","password":"***","nickname":"web0923241196","avatar":null,"realName":null,"phone":"10923241196","email":"web0923241196@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:41","createTime":"2026-10-02T14:40:41","u…
+2026-10-02 14:40:41 | [web0923241196]   → GET /api/course/2  200  6ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:41 | [web0923241196]   → POST /api/cart/add  200  15ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:41 | [web0923241196]   ⇢ 跳转 /cart
+2026-10-02 14:40:41 | [web0923241196]   → GET /api/cart/list  200  6ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":67,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:41 | [web0923241196]   → POST /api/order/create  200  14ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":32}
+2026-10-02 14:40:41 | [web0923241196]   ⇢ 跳转 /order/32
+2026-10-02 14:40:41 | [web0923241196]   → GET /api/order/32  200  6ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":{"items":[{"id":32,"orderId":32,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":32,"orderNo":"ORD1790923241839664210","userId":204,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:42","updateTim…
+2026-10-02 14:40:41 | [web0923241196]   → POST /api/order/pay/32  200  14ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:41 | [web0923241196]   → GET /api/order/32  200  7ms
+2026-10-02 14:40:41 | [web0923241196]     返回 {"code":200,"message":"success","data":{"items":[{"id":32,"orderId":32,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":32,"orderNo":"ORD1790923241839664210","userId":204,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:40:42","createTime":"2026-10-02T14:…
+2026-10-02 14:40:41 | [test_WEB_TC_067_支付后订单详情出现去学习] 通过（415ms）
+2026-10-02 14:40:42 | [web0923241964]   ⇢ 跳转 /course/2
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/user/info  200  49ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":{"id":205,"username":"web0923241964","password":"***","nickname":"web0923241964","avatar":null,"realName":null,"phone":"10923241964","email":"web0923241964@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:42","createTime":"2026-10-02T14:40:42","u…
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/course/2  200  7ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+2026-10-02 14:40:42 | [web0923241964]   ⇢ 跳转 /cart
+2026-10-02 14:40:42 | [web0923241964]   → POST /api/cart/add  200  19ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/cart/list  200  7ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":68,"coverImage":null,"checked":1,"courseId":2}]}
+2026-10-02 14:40:42 | [web0923241964]   → POST /api/order/create  200  14ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":33}
+2026-10-02 14:40:42 | [web0923241964]   ⇢ 跳转 /order/33
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/order/33  200  7ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":{"items":[{"id":33,"orderId":33,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":33,"orderNo":"ORD1790923242589184654","userId":205,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:40:43","updateTim…
+2026-10-02 14:40:42 | [web0923241964]   → POST /api/order/pay/33  200  13ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/order/33  200  5ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":{"items":[{"id":33,"orderId":33,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":33,"orderNo":"ORD1790923242589184654","userId":205,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:40:43","createTime":"2026-10-02T14:…
+2026-10-02 14:40:42 | [web0923241964]   ⇢ 跳转 /user/my-course
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/user/info  200  11ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":{"id":205,"username":"web0923241964","password":"***","nickname":"web0923241964","avatar":null,"realName":null,"phone":"10923241964","email":"web0923241964@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:42","createTime":"2026-10-02T14:40:42","u…
+2026-10-02 14:40:42 | [web0923241964]   → GET /api/course/mine  200  0ms
+2026-10-02 14:40:42 | [web0923241964]     返回 {"code":200,"message":"success","data":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":13,"listTime":"2026-…
+2026-10-02 14:40:45 | [test_WEB_TC_068_支付后我的课程出现该课程] 通过（3584ms）
+2026-10-02 14:40:45 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:46 | [未登录]   → GET /api/job/list?page=1&size=9  200  38ms
+2026-10-02 14:40:46 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:46 | [test_WEB_TC_069_职位中心渲染完整] 通过（100ms）
+2026-10-02 14:40:46 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:46 | [未登录]   → GET /api/job/list?page=1&size=9  200  11ms
+2026-10-02 14:40:46 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:46 | [test_WEB_TC_070_关键字搜索命中职位] 通过（87ms）
+2026-10-02 14:40:46 | [未登录]   → GET /api/job/list?page=1&size=9&keyword=Java+%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88  200  8ms
+2026-10-02 14:40:46 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:46 | [未登录]   → GET /api/job/list?page=1&size=9  200  37ms
+2026-10-02 14:40:46 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:46 | [未登录]   → GET /api/job/list?page=1&size=9&keyword=%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E8%81%8C%E4%BD%8D%E5%90%8Dxyz  200  7ms
+2026-10-02 14:40:46 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:46 | [test_WEB_TC_071_搜索无结果展示空态] 通过（173ms）
+2026-10-02 14:40:47 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:47 | [未登录]   → GET /api/job/list?page=1&size=9  200  45ms
+2026-10-02 14:40:47 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:47 | [未登录]   → GET /api/job/list?page=1&size=9&jobCategory=%E5%89%8D%E7%AB%AF  200  11ms
+2026-10-02 14:40:47 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:47 | [test_WEB_TC_072_按职位类别筛选] 通过（182ms）
+2026-10-02 14:40:47 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:47 | [未登录]   → GET /api/job/list?page=1&size=9  200  42ms
+2026-10-02 14:40:47 | [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:47 | [未登录]   ⇢ 跳转 /job/1
+2026-10-02 14:40:47 | [test_WEB_TC_073_点击职位卡片进入详情] 通过（172ms）
+2026-10-02 14:40:47 | [未登录]   → GET /api/job/1  200  9ms
+2026-10-02 14:40:47 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:48 | [未登录]   ⇢ 跳转 /job/1
+2026-10-02 14:40:48 | [未登录]   → GET /api/job/1  200  7ms
+2026-10-02 14:40:48 | [未登录]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:48 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:48 | [test_WEB_TC_074_未登录点投递跳登录页] 通过（198ms）
+2026-10-02 14:40:48 | [未登录]   ⇢ 跳转 /job
+2026-10-02 14:40:48 | [未登录]   ⇢ 跳转 /job/1
+2026-10-02 14:40:48 | [未登录]   → GET /api/job/1  200  5ms
+2026-10-02 14:40:48 | [未登录]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:48 | [未登录]   ⇢ 跳转 /login
+2026-10-02 14:40:48 | [test_WEB_TC_075_未登录点AI面试跳登录页] 通过（160ms）
+2026-10-02 14:40:48 | [testT01]   ⇢ 跳转 /job/1
+2026-10-02 14:40:48 | [testT01]   → GET /api/user/info  200  54ms
+2026-10-02 14:40:48 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:40:48 | [testT01]   → GET /api/job/1  200  6ms
+2026-10-02 14:40:48 | [testT01]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:49 | [test_WEB_TC_076_讲师点投递被拒] 通过（269ms）
+2026-10-02 14:40:49 | [testT01]   ⇢ 跳转 /job/1
+2026-10-02 14:40:49 | [testT01]   → GET /api/user/info  200  50ms
+2026-10-02 14:40:49 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:40:49 | [testT01]   → GET /api/job/1  200  5ms
+2026-10-02 14:40:49 | [testT01]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:49 | [test_WEB_TC_077_讲师点AI面试被拒] 通过（259ms）
+2026-10-02 14:40:49 | [web0923249538]   ⇢ 跳转 /job/1
+2026-10-02 14:40:50 | [web0923249538]   → GET /api/user/info  200  45ms
+2026-10-02 14:40:50 | [web0923249538]     返回 {"code":200,"message":"success","data":{"id":206,"username":"web0923249538","password":"***","nickname":"web0923249538","avatar":null,"realName":null,"phone":"10923249538","email":"web0923249538@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:50","createTime":"2026-10-02T14:40:50","u…
+2026-10-02 14:40:50 | [web0923249538]   → GET /api/job/1  200  5ms
+2026-10-02 14:40:50 | [web0923249538]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:50 | [web0923249538]   → GET /api/resume/list  200  7ms
+2026-10-02 14:40:50 | [web0923249538]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:50 | [test_WEB_TC_078_学生点投递弹出简历弹窗] 通过（229ms）
+2026-10-02 14:40:50 | [web0923250116]   ⇢ 跳转 /job/1
+2026-10-02 14:40:50 | [web0923250116]   → GET /api/user/info  200  63ms
+2026-10-02 14:40:50 | [web0923250116]     返回 {"code":200,"message":"success","data":{"id":207,"username":"web0923250116","password":"***","nickname":"web0923250116","avatar":null,"realName":null,"phone":"10923250116","email":"web0923250116@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:50","createTime":"2026-10-02T14:40:50","u…
+2026-10-02 14:40:50 | [web0923250116]   → GET /api/job/1  200  7ms
+2026-10-02 14:40:50 | [web0923250116]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:50 | [web0923250116]   → GET /api/resume/list  200  2ms
+2026-10-02 14:40:50 | [web0923250116]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:50 | [test_WEB_TC_079_没有简历时确认投递被拦] 通过（373ms）
+2026-10-02 14:40:51 | [web0923250869]   ⇢ 跳转 /job/1
+2026-10-02 14:40:51 | [web0923250869]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:51 | [web0923250869]     返回 {"code":200,"message":"success","data":{"id":208,"username":"web0923250869","password":"***","nickname":"web0923250869","avatar":null,"realName":null,"phone":"10923250869","email":"web0923250869@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:51","createTime":"2026-10-02T14:40:51","u…
+2026-10-02 14:40:51 | [web0923250869]   → GET /api/job/1  200  6ms
+2026-10-02 14:40:51 | [web0923250869]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:51 | [web0923250869]   → GET /api/resume/list  200  6ms
+2026-10-02 14:40:51 | [web0923250869]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:51 | [test_WEB_TC_080_上传非PDF简历被前端拦截] 通过（284ms）
+2026-10-02 14:40:51 | [web0923251538]   ⇢ 跳转 /job/1
+2026-10-02 14:40:52 | [web0923251538]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:52 | [web0923251538]     返回 {"code":200,"message":"success","data":{"id":209,"username":"web0923251538","password":"***","nickname":"web0923251538","avatar":null,"realName":null,"phone":"10923251538","email":"web0923251538@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:52","createTime":"2026-10-02T14:40:52","u…
+2026-10-02 14:40:52 | [web0923251538]   → GET /api/job/1  200  6ms
+2026-10-02 14:40:52 | [web0923251538]     返回 {"code":200,"message":"success","data":{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"2026-10-0…
+2026-10-02 14:40:52 | [web0923251538]   → GET /api/resume/list  200  4ms
+2026-10-02 14:40:52 | [web0923251538]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:52 | [test_WEB_TC_081_取消按钮关闭投递弹窗] 通过（319ms）
+2026-10-02 14:40:52 | [web0923252226]   ⇢ 跳转 /job/my-applications
+2026-10-02 14:40:52 | [web0923252226]   → GET /api/user/info  200  46ms
+2026-10-02 14:40:52 | [web0923252226]     返回 {"code":200,"message":"success","data":{"id":210,"username":"web0923252226","password":"***","nickname":"web0923252226","avatar":null,"realName":null,"phone":"10923252226","email":"web0923252226@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:52","createTime":"2026-10-02T14:40:52","u…
+2026-10-02 14:40:52 | [web0923252226]   → GET /api/job/my/applications  200  5ms
+2026-10-02 14:40:52 | [web0923252226]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:52 | [web0923252226]   ⇢ 跳转 /job
+2026-10-02 14:40:52 | [test_WEB_TC_082_我的投递空态并跳职位列表] 通过（262ms）
+2026-10-02 14:40:52 | [web0923252226]   → GET /api/job/list?page=1&size=9  200  8ms
+2026-10-02 14:40:52 | [web0923252226]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+2026-10-02 14:40:52 | [testS01]   ⇢ 跳转 /user
+2026-10-02 14:40:53 | [testS01]   → GET /api/user/info  200  46ms
+2026-10-02 14:40:53 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:40:53 | [testS01]   → GET /api/course/mine  200  92ms
+2026-10-02 14:40:53 | [testS01]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:53 | [testS01]   → GET /api/order/list?page=1&size=5  200  5ms
+2026-10-02 14:40:53 | [testS01]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:53 | [test_WEB_TC_083_个人中心信息卡渲染] 通过（257ms）
+2026-10-02 14:40:53 | [web0923253252]   ⇢ 跳转 /user
+2026-10-02 14:40:53 | [web0923253252]   → GET /api/user/info  200  49ms
+2026-10-02 14:40:53 | [web0923253252]     返回 {"code":200,"message":"success","data":{"id":211,"username":"web0923253252","password":"***","nickname":"web0923253252","avatar":null,"realName":null,"phone":"10923253252","email":"web0923253252@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:53","createTime":"2026-10-02T14:40:53","u…
+2026-10-02 14:40:53 | [web0923253252]   → GET /api/course/mine  200  96ms
+2026-10-02 14:40:53 | [web0923253252]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:53 | [web0923253252]   → GET /api/order/list?page=1&size=5  200  6ms
+2026-10-02 14:40:53 | [web0923253252]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:53 | [web0923253252]   → PUT /api/user/info  200  15ms
+2026-10-02 14:40:53 | [web0923253252]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:53 | [web0923253252]   → GET /api/user/info  200  3ms
+2026-10-02 14:40:53 | [web0923253252]     返回 {"code":200,"message":"success","data":{"id":211,"username":"web0923253252","password":"***","nickname":"昵称web0923253252","avatar":"","realName":"","phone":"10923253252","email":"web0923253252@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:53","createTime":"2026-10-02T14:40:53","upd…
+2026-10-02 14:40:53 | [test_WEB_TC_084_修改昵称保存后页头同步] 通过（348ms）
+2026-10-02 14:40:54 | [web0923253917]   ⇢ 跳转 /user
+2026-10-02 14:40:54 | [web0923253917]   → GET /api/user/info  200  47ms
+2026-10-02 14:40:54 | [web0923253917]     返回 {"code":200,"message":"success","data":{"id":212,"username":"web0923253917","password":"***","nickname":"web0923253917","avatar":null,"realName":null,"phone":"10923253917","email":"web0923253917@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:54","createTime":"2026-10-02T14:40:54","u…
+2026-10-02 14:40:54 | [web0923253917]   → GET /api/course/mine  200  94ms
+2026-10-02 14:40:54 | [web0923253917]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:54 | [web0923253917]   → GET /api/order/list?page=1&size=5  200  9ms
+2026-10-02 14:40:54 | [web0923253917]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:54 | [web0923253917]   ⚠ 前端 JS 报错：原密码错误
+2026-10-02 14:40:54 | [web0923253917]   → POST /api/user/resetPassword  200  82ms
+2026-10-02 14:40:54 | [web0923253917]     返回 {"code":400,"message":"原密码错误","data":null}
+2026-10-02 14:40:54 | [test_WEB_TC_085_原密码错误提示] 通过（402ms）
+2026-10-02 14:40:55 | [web0923254638]   ⇢ 跳转 /user
+2026-10-02 14:40:55 | [web0923254638]   → GET /api/user/info  200  52ms
+2026-10-02 14:40:55 | [web0923254638]     返回 {"code":200,"message":"success","data":{"id":213,"username":"web0923254638","password":"***","nickname":"web0923254638","avatar":null,"realName":null,"phone":"10923254638","email":"web0923254638@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:55","createTime":"2026-10-02T14:40:55","u…
+2026-10-02 14:40:55 | [web0923254638]   → GET /api/course/mine  200  104ms
+2026-10-02 14:40:55 | [web0923254638]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:55 | [web0923254638]   → GET /api/order/list?page=1&size=5  200  4ms
+2026-10-02 14:40:55 | [web0923254638]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:55 | [test_WEB_TC_086_改密码两项为空被前端拦截] 通过（349ms）
+2026-10-02 14:40:55 | [web0923255387]   ⇢ 跳转 /user
+2026-10-02 14:40:55 | [web0923255387]   → GET /api/user/info  200  51ms
+2026-10-02 14:40:55 | [web0923255387]     返回 {"code":200,"message":"success","data":{"id":214,"username":"web0923255387","password":"***","nickname":"web0923255387","avatar":null,"realName":null,"phone":"10923255387","email":"web0923255387@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:56","createTime":"2026-10-02T14:40:55","u…
+2026-10-02 14:40:55 | [web0923255387]   → GET /api/course/mine  200  106ms
+2026-10-02 14:40:55 | [web0923255387]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:56 | [web0923255387]   → GET /api/order/list?page=1&size=5  200  5ms
+2026-10-02 14:40:56 | [web0923255387]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:56 | [web0923255387]   → POST /api/user/resetPassword  200  175ms
+2026-10-02 14:40:56 | [web0923255387]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:56 | [test_WEB_TC_087_修改密码成功] 通过（537ms）
+2026-10-02 14:40:56 | [web0923256268]   ⇢ 跳转 /user/resume
+2026-10-02 14:40:56 | [web0923256268]   → GET /api/user/info  200  49ms
+2026-10-02 14:40:56 | [web0923256268]     返回 {"code":200,"message":"success","data":{"id":215,"username":"web0923256268","password":"***","nickname":"web0923256268","avatar":null,"realName":null,"phone":"10923256268","email":"web0923256268@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:56","createTime":"2026-10-02T14:40:56","u…
+2026-10-02 14:40:56 | [web0923256268]   → GET /api/resume/list  200  37ms
+2026-10-02 14:40:56 | [web0923256268]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:56 | [test_WEB_TC_088_我的简历空态] 通过（202ms）
+2026-10-02 14:40:57 | [web0923256817]   ⇢ 跳转 /user/resume
+2026-10-02 14:40:57 | [web0923256817]   → GET /api/user/info  200  46ms
+2026-10-02 14:40:57 | [web0923256817]     返回 {"code":200,"message":"success","data":{"id":216,"username":"web0923256817","password":"***","nickname":"web0923256817","avatar":null,"realName":null,"phone":"10923256817","email":"web0923256817@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:57","createTime":"2026-10-02T14:40:57","u…
+2026-10-02 14:40:57 | [web0923256817]   → GET /api/resume/list  200  40ms
+2026-10-02 14:40:57 | [web0923256817]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:57 | [web0923256817]   → POST /api/resume/upload  200  20ms
+2026-10-02 14:40:57 | [web0923256817]     返回 {"code":200,"message":"success","data":{"fileName":"resume.pdf","resumeId":13,"url":"/uploads/0c8b38b2222a4dc8b494a026fb1b9772.pdf"}}
+2026-10-02 14:40:57 | [web0923256817]   → GET /api/resume/list  200  4ms
+2026-10-02 14:40:57 | [web0923256817]     返回 {"code":200,"message":"success","data":[{"id":13,"userId":216,"fileName":"resume.pdf","fileUrl":"/uploads/0c8b38b2222a4dc8b494a026fb1b9772.pdf","createTime":"2026-10-02T14:40:57"}]}
+2026-10-02 14:40:57 | [test_WEB_TC_089_上传PDF简历成功] 通过（247ms）
+2026-10-02 14:40:57 | [web0923257387]   ⇢ 跳转 /user/resume
+2026-10-02 14:40:57 | [web0923257387]   → GET /api/user/info  200  53ms
+2026-10-02 14:40:57 | [web0923257387]     返回 {"code":200,"message":"success","data":{"id":217,"username":"web0923257387","password":"***","nickname":"web0923257387","avatar":null,"realName":null,"phone":"10923257387","email":"web0923257387@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:58","createTime":"2026-10-02T14:40:57","u…
+2026-10-02 14:40:57 | [web0923257387]   → GET /api/resume/list  200  57ms
+2026-10-02 14:40:57 | [web0923257387]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:58 | [test_WEB_TC_090_上传非PDF被前端拦截] 通过（299ms）
+2026-10-02 14:40:58 | [web0923258071]   ⇢ 跳转 /user/resume
+2026-10-02 14:40:58 | [web0923258071]   → GET /api/user/info  200  54ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":{"id":218,"username":"web0923258071","password":"***","nickname":"web0923258071","avatar":null,"realName":null,"phone":"10923258071","email":"web0923258071@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:58","createTime":"2026-10-02T14:40:58","u…
+2026-10-02 14:40:58 | [web0923258071]   → GET /api/resume/list  200  40ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:58 | [web0923258071]   → POST /api/resume/upload  200  110ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":{"fileName":"resume.pdf","resumeId":14,"url":"/uploads/67bcd0d7e1cc48feb94d98fee405de4e.pdf"}}
+2026-10-02 14:40:58 | [web0923258071]   → GET /api/resume/list  200  1ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":[{"id":14,"userId":218,"fileName":"resume.pdf","fileUrl":"/uploads/67bcd0d7e1cc48feb94d98fee405de4e.pdf","createTime":"2026-10-02T14:40:59"}]}
+2026-10-02 14:40:58 | [web0923258071]   → DELETE /api/resume/14  200  10ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:40:58 | [web0923258071]   → GET /api/resume/list  200  3ms
+2026-10-02 14:40:58 | [web0923258071]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:58 | [test_WEB_TC_091_删除简历需先确认] 通过（402ms）
+2026-10-02 14:40:59 | [web0923258907]   ⇢ 跳转 /user/my-apply
+2026-10-02 14:40:59 | [web0923258907]   → GET /api/user/info  200  47ms
+2026-10-02 14:40:59 | [web0923258907]     返回 {"code":200,"message":"success","data":{"id":219,"username":"web0923258907","password":"***","nickname":"web0923258907","avatar":null,"realName":null,"phone":"10923258907","email":"web0923258907@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:59","createTime":"2026-10-02T14:40:59","u…
+2026-10-02 14:40:59 | [web0923258907]   → GET /api/apply/my?page=1&size=10  200  5ms
+2026-10-02 14:40:59 | [web0923258907]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:40:59 | [test_WEB_TC_092_我的申请空态] 通过（187ms）
+2026-10-02 14:40:59 | [web0923259396]   ⇢ 跳转 /user/my-course
+2026-10-02 14:40:59 | [web0923259396]   → GET /api/user/info  200  45ms
+2026-10-02 14:40:59 | [web0923259396]     返回 {"code":200,"message":"success","data":{"id":220,"username":"web0923259396","password":"***","nickname":"web0923259396","avatar":null,"realName":null,"phone":"10923259396","email":"web0923259396@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:00","createTime":"2026-10-02T14:40:59","u…
+2026-10-02 14:40:59 | [web0923259396]   → GET /api/course/mine  200  4ms
+2026-10-02 14:40:59 | [web0923259396]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:40:59 | [test_WEB_TC_093_我的课程空态] 通过（177ms）
+2026-10-02 14:41:00 | [testS01]   ⇢ 跳转 /user
+2026-10-02 14:41:00 | [testS01]   → GET /api/user/info  200  47ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:41:00 | [testS01]   → GET /api/course/mine  200  6ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:41:00 | [testS01]   → GET /api/order/list?page=1&size=5  200  96ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:41:00 | [testS01]   ⇢ 跳转 /user/resume
+2026-10-02 14:41:00 | [testS01]   → GET /api/resume/list  200  18ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:41:00 | [testS01]   ⇢ 跳转 /user
+2026-10-02 14:41:00 | [testS01]   → GET /api/user/info  200  10ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:16","createTime":"2026-10-01T16:17:11","updateTime":"2026-…
+2026-10-02 14:41:00 | [testS01]   → GET /api/course/mine  200  6ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":[]}
+2026-10-02 14:41:00 | [testS01]   → GET /api/order/list?page=1&size=5  200  4ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:41:00 | [testS01]   ⇢ 跳转 /user/my-apply
+2026-10-02 14:41:00 | [test_WEB_TC_094_个人中心入口跳转正常] 通过（488ms）
+2026-10-02 14:41:00 | [testS01]   → GET /api/apply/my?page=1&size=10  200  5ms
+2026-10-02 14:41:00 | [testS01]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:41:00 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:00 | [testT01]   → GET /api/user/info  200  59ms
+2026-10-02 14:41:00 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:00 | [test_WEB_TC_095_课程申请页渲染完整] 通过（115ms）
+2026-10-02 14:41:01 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:01 | [testT01]   → GET /api/user/info  200  52ms
+2026-10-02 14:41:01 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:01 | [test_WEB_TC_096_课程名称未填被拦截] 通过（122ms）
+2026-10-02 14:41:01 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:01 | [testT01]   → GET /api/user/info  200  50ms
+2026-10-02 14:41:01 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:01 | [test_WEB_TC_097_未选技术体系被拦截] 通过（147ms）
+2026-10-02 14:41:02 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:02 | [testT01]   → GET /api/user/info  200  63ms
+2026-10-02 14:41:02 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:02 | [test_WEB_TC_098_未选技术方向被拦截] 通过（204ms）
+2026-10-02 14:41:02 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:02 | [testT01]   → GET /api/user/info  200  54ms
+2026-10-02 14:41:02 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:02 | [test_WEB_TC_099_添加章节行] 通过（99ms）
+2026-10-02 14:41:03 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:03 | [testT01]   → GET /api/user/info  200  53ms
+2026-10-02 14:41:03 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:03 | [test_WEB_TC_100_删除章节行] 通过（184ms）
+2026-10-02 14:41:03 | [testT01]   ⇢ 跳转 /course/apply
+2026-10-02 14:41:03 | [testT01]   → GET /api/user/info  200  54ms
+2026-10-02 14:41:03 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:03 | [testT01]   → POST /api/course/applyList  200  31ms
+2026-10-02 14:41:03 | [testT01]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:04 | [test_WEB_TC_101_提交课程上架申请成功] 通过（372ms）
+2026-10-02 14:41:04 | [testT01]   ⇢ 跳转 /job/apply
+2026-10-02 14:41:04 | [testT01]   → GET /api/user/info  200  70ms
+2026-10-02 14:41:04 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:04 | [test_WEB_TC_102_职位申请页渲染完整] 通过（124ms）
+2026-10-02 14:41:04 | [testT01]   ⇢ 跳转 /job/apply
+2026-10-02 14:41:04 | [testT01]   → GET /api/user/info  200  61ms
+2026-10-02 14:41:04 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:05 | [test_WEB_TC_103_职位名称未填被拦截] 通过（146ms）
+2026-10-02 14:41:05 | [testT01]   ⇢ 跳转 /job/apply
+2026-10-02 14:41:05 | [testT01]   → GET /api/user/info  200  50ms
+2026-10-02 14:41:05 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:05 | [test_WEB_TC_104_未选职位类别被拦截] 通过（137ms）
+2026-10-02 14:41:05 | [testT01]   ⇢ 跳转 /job/apply
+2026-10-02 14:41:05 | [testT01]   → GET /api/user/info  200  48ms
+2026-10-02 14:41:05 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:05 | [test_WEB_TC_105_最低薪资不小于最高薪资被拦截] 通过（237ms）
+2026-10-02 14:41:06 | [testT01]   ⇢ 跳转 /job/apply
+2026-10-02 14:41:06 | [testT01]   → GET /api/user/info  200  61ms
+2026-10-02 14:41:06 | [testT01]     返回 {"code":200,"message":"success","data":{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTime":"2026-…
+2026-10-02 14:41:06 | [testT01]   → POST /api/job/applyList  200  29ms
+2026-10-02 14:41:06 | [testT01]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:06 | [test_WEB_TC_106_提交职位发布申请成功] 通过（237ms）
+2026-10-02 14:41:06 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:06 | [admin]   → GET /api/user/info  200  50ms
+2026-10-02 14:41:06 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:06 | [admin]   → GET /api/apply/pending?page=1&size=10  200  33ms
+2026-10-02 14:41:06 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":22,"applyType":1,"targetId":15,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:04"},{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorI…
+2026-10-02 14:41:06 | [test_WEB_TC_107_后台侧栏渲染完整] 通过（241ms）
+2026-10-02 14:41:07 | [admin]   ⇢ 跳转 /admin
+2026-10-02 14:41:07 | [admin]   → GET /api/user/info  200  67ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:07 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:07 | [test_WEB_TC_108_进入后台默认落在申请审核] 通过（210ms）
+2026-10-02 14:41:07 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:07 | [admin]   → GET /api/user/info  200  62ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:07 | [admin]   → GET /api/apply/pending?page=1&size=10  200  38ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":22,"applyType":1,"targetId":15,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:04"},{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorI…
+2026-10-02 14:41:07 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:07 | [admin]   → GET /api/user/info  200  11ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:07 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  15ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":219,"username":"web0923258907","password":"***","nickname":"web0923258907","avatar":null,"realName":null,"phone":"10923258907","email":"web0923258907@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:59","createTime":"2026-10-02T14:…
+2026-10-02 14:41:07 | [admin]   ⇢ 跳转 /admin/courses
+2026-10-02 14:41:07 | [admin]   → GET /api/user/info  200  9ms
+2026-10-02 14:41:07 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:08 | [admin]   ⇢ 跳转 /admin/jobs
+2026-10-02 14:41:08 | [admin]   → GET /api/admin/course/list?page=1&size=10  200  13ms
+2026-10-02 14:41:08 | [admin]   → GET /api/user/info  200  9ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:08 | [admin]   → GET /api/admin/job/list?page=1&size=10  200  15ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":8,"jobName":"自动化测试工程师","companyId":null,"companyName":"","jobCategory":"前端","salaryMin":10000.00,"salaryMax":20000.00,"city":"","education":"","experience":"","description":"","applyCount":0,"collectCount":0,"listTime":null,"status":0,"createTime…
+2026-10-02 14:41:08 | [admin]   ⇢ 跳转 /admin/orders
+2026-10-02 14:41:08 | [admin]   → GET /api/user/info  200  14ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:08 | [admin]   → GET /api/admin/order/list?page=1&size=10  200  12ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":33,"orderNo":"ORD1790923242589184654","userId":205,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:40:43","createTime":"2026-10-02T14:40:43","updateTime":"2026-10-02T14:40:43"},{"id":32,"orderNo":"ORD1790923241839664210","userId":204,"to…
+2026-10-02 14:41:08 | [test_WEB_TC_109_后台五个管理页面都能打开] 通过（741ms）
+2026-10-02 14:41:08 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:08 | [admin]   → GET /api/user/info  200  53ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:08 | [admin]   → GET /api/apply/pending?page=1&size=10  200  32ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":22,"applyType":1,"targetId":15,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:04"},{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorI…
+2026-10-02 14:41:08 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:08 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  8ms
+2026-10-02 14:41:08 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":219,"username":"web0923258907","password":"***","nickname":"web0923258907","avatar":null,"realName":null,"phone":"10923258907","email":"web0923258907@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:59","createTime":"2026-10-02T14:…
+2026-10-02 14:41:08 | [test_WEB_TC_110_点击侧栏菜单切换页面] 通过（315ms）
+2026-10-02 14:41:08 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:09 | [admin]   → GET /api/user/info  200  47ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:09 | [admin]   → GET /api/apply/pending?page=1&size=10  200  32ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":22,"applyType":1,"targetId":15,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:04"},{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorI…
+2026-10-02 14:41:09 | [admin]   → GET /api/apply/audited?page=1&size=10  200  11ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":20,"applyType":1,"targetId":14,"applicantId":40,"reason":"","status":1,"auditorId":1,"auditComment":"","auditTime":"2026-10-02T14:27:34","createTime":"2026-10-02T14:27:29"},{"id":21,"applyType":2,"targetId":7,"applicantId":40,"reason":"","status"…
+2026-10-02 14:41:09 | [test_WEB_TC_111_切到已处理出现状态筛选] 通过（281ms）
+2026-10-02 14:41:09 | [admin]   → GET /api/apply/audited?page=1&size=10&status=1  200  19ms
+2026-10-02 14:41:09 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:09 | [admin]   → GET /api/user/info  200  53ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:09 | [admin]   → GET /api/apply/pending?page=1&size=10  200  0ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":22,"applyType":1,"targetId":15,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:04"},{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorI…
+2026-10-02 14:41:09 | [admin]   → POST /api/apply/audit  200  16ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:09 | [admin]   → GET /api/apply/pending?page=1&size=10  200  5ms
+2026-10-02 14:41:09 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:06"}],"total":1}}
+2026-10-02 14:41:09 | [test_WEB_TC_112_待审核申请点通过] 通过（76ms）
+2026-10-02 14:41:09 | [admin]   ⇢ 跳转 /admin/apply
+2026-10-02 14:41:10 | [admin]   → GET /api/user/info  200  56ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:10 | [admin]   → GET /api/apply/pending?page=1&size=10  200  0ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":23,"applyType":2,"targetId":8,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:41:06"}],"total":1}}
+2026-10-02 14:41:10 | [admin]   → POST /api/apply/audit  200  13ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:10 | [admin]   → GET /api/apply/pending?page=1&size=10  200  5ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+2026-10-02 14:41:10 | [test_WEB_TC_113_待审核申请点驳回] 通过（104ms）
+2026-10-02 14:41:10 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:10 | [admin]   → GET /api/user/info  200  57ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:10 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  28ms
+2026-10-02 14:41:10 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":219,"username":"web0923258907","password":"***","nickname":"web0923258907","avatar":null,"realName":null,"phone":"10923258907","email":"web0923258907@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:40:59","createTime":"2026-10-02T14:…
+2026-10-02 14:41:10 | [test_WEB_TC_114_用户管理渲染完整] 通过（264ms）
+2026-10-02 14:41:11 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:11 | [admin]   → GET /api/user/info  200  48ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:11 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  31ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":221,"username":"web0923270837","password":"***","nickname":"web0923270837","avatar":null,"realName":null,"phone":"10923270837","email":"web0923270837@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:11","createTime":"2026-10-02T14:…
+2026-10-02 14:41:11 | [admin]   → GET /api/admin/user/list?page=1&size=10&keyword=web0923270837  200  8ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":221,"username":"web0923270837","password":"***","nickname":"web0923270837","avatar":null,"realName":null,"phone":"10923270837","email":"web0923270837@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:11","createTime":"2026-10-02T14:…
+2026-10-02 14:41:11 | [test_WEB_TC_115_用户管理关键字搜索] 通过（237ms）
+2026-10-02 14:41:11 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:11 | [admin]   → GET /api/user/info  200  49ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:11 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  28ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":221,"username":"web0923270837","password":"***","nickname":"web0923270837","avatar":null,"realName":null,"phone":"10923270837","email":"web0923270837@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:11","createTime":"2026-10-02T14:…
+2026-10-02 14:41:11 | [admin]   → GET /api/admin/user/list?page=1&size=10&role=1  200  8ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":40,"username":"testT01","password":"***","nickname":"自动化测试老师02","avatar":null,"realName":null,"phone":"13800000002","email":"testT01@test.com","role":1,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T16:18:06","updateTim…
+2026-10-02 14:41:11 | [test_WEB_TC_116_用户管理按身份筛选] 通过（343ms）
+2026-10-02 14:41:11 | [admin]   → GET /api/admin/user/list?page=1&size=10&role=0  200  107ms
+2026-10-02 14:41:11 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":221,"username":"web0923270837","password":"***","nickname":"web0923270837","avatar":null,"realName":null,"phone":"10923270837","email":"web0923270837@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:11","createTime":"2026-10-02T14:…
+2026-10-02 14:41:12 | [admin]   ⇢ 跳转 /admin/users
+2026-10-02 14:41:12 | [admin]   → GET /api/user/info  200  54ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:12 | [admin]   → GET /api/admin/user/list?page=1&size=10  200  31ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":222,"username":"web0923271903","password":"***","nickname":"web0923271903","avatar":null,"realName":null,"phone":"10923271903","email":"web0923271903@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:12","createTime":"2026-10-02T14:…
+2026-10-02 14:41:12 | [admin]   → GET /api/admin/user/list?page=1&size=10&keyword=web0923271903  200  21ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":222,"username":"web0923271903","password":"***","nickname":"web0923271903","avatar":null,"realName":null,"phone":"10923271903","email":"web0923271903@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:12","createTime":"2026-10-02T14:…
+2026-10-02 14:41:12 | [admin]   → PUT /api/admin/user/status/222?status=0  200  14ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:12 | [admin]   → GET /api/admin/user/list?page=1&size=10&keyword=web0923271903  200  6ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":222,"username":"web0923271903","password":"***","nickname":"web0923271903","avatar":null,"realName":null,"phone":"10923271903","email":"web0923271903@test.com","role":0,"status":0,"lastLoginTime":"2026-10-02T14:41:12","createTime":"2026-10-02T14:…
+2026-10-02 14:41:12 | [admin]   → PUT /api/admin/user/status/222?status=1  200  15ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:12 | [admin]   → GET /api/admin/user/list?page=1&size=10&keyword=web0923271903  200  15ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":222,"username":"web0923271903","password":"***","nickname":"web0923271903","avatar":null,"realName":null,"phone":"10923271903","email":"web0923271903@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:41:12","createTime":"2026-10-02T14:…
+2026-10-02 14:41:12 | [test_WEB_TC_117_禁用用户后可再启用] 通过（446ms）
+2026-10-02 14:41:12 | [admin]   ⇢ 跳转 /admin/courses
+2026-10-02 14:41:12 | [admin]   → GET /api/user/info  200  65ms
+2026-10-02 14:41:12 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:13 | [admin]   → GET /api/admin/course/list?page=1&size=10  200  38ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":15,"courseName":"自动化测试课程","courseType":1,"techSystem":"Java","techDirection":"Web后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":40,"teacherName":"自动化测试老师02","coverImage":"","description":"","rating":0.0,"enrollCount":0,"listTime":"202…
+2026-10-02 14:41:13 | [test_WEB_TC_118_课程管理渲染与状态筛选] 通过（343ms）
+2026-10-02 14:41:13 | [admin]   → GET /api/admin/course/list?page=1&size=10&status=1  200  13ms
+2026-10-02 14:41:13 | [admin]   ⇢ 跳转 /admin/courses
+2026-10-02 14:41:13 | [admin]   → GET /api/user/info  200  56ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:13 | [admin]   → GET /api/admin/course/list?page=1&size=10  200  0ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":15,"courseName":"自动化测试课程","courseType":1,"techSystem":"Java","techDirection":"Web后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":40,"teacherName":"自动化测试老师02","coverImage":"","description":"","rating":0.0,"enrollCount":0,"listTime":"202…
+2026-10-02 14:41:13 | [admin]   → PUT /api/admin/course/status/15?status=2  200  14ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:13 | [admin]   → GET /api/admin/course/list?page=1&size=10  200  7ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":15,"courseName":"自动化测试课程","courseType":1,"techSystem":"Java","techDirection":"Web后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":40,"teacherName":"自动化测试老师02","coverImage":"","description":"","rating":0.0,"enrollCount":0,"listTime":"202…
+2026-10-02 14:41:13 | [admin]   → PUT /api/admin/course/status/15?status=1  200  13ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:13 | [admin]   → GET /api/admin/course/list?page=1&size=10  200  7ms
+2026-10-02 14:41:13 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":15,"courseName":"自动化测试课程","courseType":1,"techSystem":"Java","techDirection":"Web后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":40,"teacherName":"自动化测试老师02","coverImage":"","description":"","rating":0.0,"enrollCount":0,"listTime":"202…
+2026-10-02 14:41:13 | [test_WEB_TC_119_课程下架后可重新上架] 通过（424ms）
+2026-10-02 14:41:13 | [admin]   ⇢ 跳转 /admin/jobs
+2026-10-02 14:41:14 | [admin]   → GET /api/user/info  200  47ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:14 | [admin]   → GET /api/admin/job/list?page=1&size=10  200  28ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":8,"jobName":"自动化测试工程师","companyId":null,"companyName":"","jobCategory":"前端","salaryMin":10000.00,"salaryMax":20000.00,"city":"","education":"","experience":"","description":"","applyCount":0,"collectCount":0,"listTime":null,"status":3,"createTime…
+2026-10-02 14:41:14 | [admin]   → PUT /api/admin/job/status/1?status=2  200  12ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:14 | [admin]   → GET /api/admin/job/list?page=1&size=10  200  9ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":8,"jobName":"自动化测试工程师","companyId":null,"companyName":"","jobCategory":"前端","salaryMin":10000.00,"salaryMax":20000.00,"city":"","education":"","experience":"","description":"","applyCount":0,"collectCount":0,"listTime":null,"status":3,"createTime…
+2026-10-02 14:41:14 | [admin]   → PUT /api/admin/job/status/1?status=1  200  14ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":null}
+2026-10-02 14:41:14 | [admin]   → GET /api/admin/job/list?page=1&size=10  200  9ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":8,"jobName":"自动化测试工程师","companyId":null,"companyName":"","jobCategory":"前端","salaryMin":10000.00,"salaryMax":20000.00,"city":"","education":"","experience":"","description":"","applyCount":0,"collectCount":0,"listTime":null,"status":3,"createTime…
+2026-10-02 14:41:14 | [test_WEB_TC_120_职位上下架往返] 通过（388ms）
+2026-10-02 14:41:14 | [admin]   ⇢ 跳转 /admin/orders
+2026-10-02 14:41:14 | [admin]   → GET /api/user/info  200  57ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:40:15","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+2026-10-02 14:41:14 | [admin]   → GET /api/admin/order/list?page=1&size=10  200  9ms
+2026-10-02 14:41:14 | [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":33,"orderNo":"ORD1790923242589184654","userId":205,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:40:43","createTime":"2026-10-02T14:40:43","updateTime":"2026-10-02T14:40:43"},{"id":32,"orderNo":"ORD1790923241839664210","userId":204,"to…
+2026-10-02 14:41:14 | [test_WEB_TC_121_订单管理渲染与状态筛选] 通过（276ms）
+2026-10-02 14:41:15 | ============================================================
+2026-10-02 14:41:15 | 数据后置清理（回复现场）
+2026-10-02 14:41:15 | ============================================================
+2026-10-02 14:41:15 |   本轮一次性账号     31 个
+2026-10-02 14:41:15 |   已清购物车         5 条
+2026-10-02 14:41:15 |   已取消待支付订单   3 条
+2026-10-02 14:41:15 |   已删简历           1 份
+2026-10-02 14:41:15 |   已下架测试课程     1 门（自动化测试课程）
+2026-10-02 14:41:15 |   已下架测试职位     0 个（自动化测试工程师）
+2026-10-02 14:41:15 | ------------------------------------------------------------
+2026-10-02 14:41:15 | 撤不掉的（后端没有对应接口），要彻底干净只能重置数据库：
+2026-10-02 14:41:15 |   · 31 个 web<时间戳> 账号 —— 没有删除用户的接口
+2026-10-02 14:41:15 |   · apply 表里每轮新增的申请记录 —— 没有删除申请的接口
+2026-10-02 14:41:15 |   · 一次性账号名下已支付的订单 —— cancel 只对 status=0 生效
+2026-10-02 14:41:15 | ============================================================
+2026-10-02 14:41:15 | ------------------------------------------------------------------------
+2026-10-02 14:41:15 | 本轮结束：共 121 条，通过 121，失败 0，出错 0，耗时 65.54s
+2026-10-02 14:41:15 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\web-testing\logs\run_20261002_144010.log
+2026-10-02 14:41:15 | ========================================================================

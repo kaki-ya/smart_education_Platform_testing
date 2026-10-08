@@ -1,0 +1,19 @@
+2026-10-01 11:36:35 | ========================================================================
+2026-10-01 11:36:35 | 本轮测试开始
+2026-10-01 11:36:35 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_113635.log
+2026-10-01 11:36:35 | 后端地址：http://localhost:8080
+2026-10-01 11:36:35 | 运行环境：Python 3.12.4 / pytest 9.1.1 / Windows-11-10.0.26200-SP0
+2026-10-01 11:36:35 | 命令行：pytest （无额外参数）
+2026-10-01 11:36:35 | ========================================================================
+2026-10-01 11:36:36 | [后端探活] → GET /api/course/list  params={"page": 1, "size": 1}
+2026-10-01 11:36:36 | [后端探活] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:36:36 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:36:36 | [账号引导·student01] ← HTTP 200 code=200 message=success（77ms）
+2026-10-01 11:36:36 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:36:36 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（73ms）
+2026-10-01 11:36:36 | [账号引导·admin] → POST /api/user/login  body={"username": "admin", "password": "admin123"}
+2026-10-01 11:36:36 | [账号引导·admin] ← HTTP 200 code=400 message=用户名或密码错误（3ms）
+2026-10-01 11:36:36 | ------------------------------------------------------------------------
+2026-10-01 11:36:36 | 本轮结束：共 0 条，通过 0，失败 0，出错 0，耗时 0.91s
+2026-10-01 11:36:36 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_113635.log
+2026-10-01 11:36:36 | ========================================================================

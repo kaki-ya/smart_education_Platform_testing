@@ -1,0 +1,6 @@
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /course
+INFO     sep-web:plugins.py:81 [未登录]   → GET /api/course/list?page=1&size=9&sortBy=time&order=desc  200  58ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"courseName":"Java 基础入门","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":5.0,"enrollCount":0,"listTime":"2026…
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /course/1
+INFO     sep-web:plugins.py:81 [未登录]   → GET /api/course/1  200  17ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"purchased":true,"chapters":[{"id":1,"courseId":1,"chapterName":"第一章 环境搭建","videoUrl":"/uploads/video/c1.mp4","duration":15,"sortNo":1},{"id":2,"courseId":1,"chapterName":"第二章 语法基础","videoUrl":"/uploads/video/c2.mp4","duration":20,"sortNo":2},{"id":3,"courseId…

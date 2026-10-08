@@ -1,0 +1,324 @@
+
+# 用例总数：30
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 课程列表 ==============
+
+- case_id: TC_course_001
+  title: 课程列表-默认分页
+  method: GET
+  path: /api/course/list
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_002
+  title: 课程列表-关键字筛选
+  method: GET
+  path: /api/course/list
+  params:
+    keyword: Java
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_003
+  title: 课程列表-按类型筛选
+  method: GET
+  path: /api/course/list
+  params:
+    courseType: 1
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_004
+  title: 课程列表-只看免费
+  method: GET
+  path: /api/course/list
+  params:
+    isFree: 1
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_005
+  title: 课程列表-按技术体系筛选
+  method: GET
+  path: /api/course/list
+  params:
+    techSystem: Java
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_006
+  title: 课程列表-按报名数排序
+  method: GET
+  path: /api/course/list
+  params:
+    sortBy: enroll
+    order: desc
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_course_007
+  title: 课程列表-超大页码
+  method: GET
+  path: /api/course/list
+  params:
+    page: 9999
+    size: 10
+  except_code: 200
+  except_field: data.list == []
+
+# ============= 课程详情 ==============
+
+- case_id: TC_course_008
+  title: 课程详情-免费课
+  method: GET
+  path: /api/course/1
+  except_code: 200
+  except_field:
+    - data.course.id not_null
+    - data.purchased == true
+
+- case_id: TC_course_009
+  title: 课程详情-付费课
+  method: GET
+  path: /api/course/2
+  except_code: 200
+  except_field:
+    - data.course.id not_null
+    - data.purchased == false
+
+- case_id: TC_course_010
+  title: 课程详情-含章节列表
+  method: GET
+  path: /api/course/1
+  except_code: 200
+  except_field: data.chapters not_empty
+
+- case_id: TC_course_011
+  title: 课程详情-不存在
+  method: GET
+  path: /api/course/999999
+  except_code: 400
+  except_message: "课程不存在或已下架"
+
+# ============= 收藏与学习 ==============
+
+- case_id: TC_course_012
+  title: 收藏课程
+  path: /api/course/collect/1
+  role: student
+  except_code: 200
+
+- case_id: TC_course_013
+  title: 学习-免费课
+  method: GET
+  path: /api/course/study/1
+  role: student
+  except_code: 200
+  except_field:
+    - data.course.id not_null
+    - data.chapters not_empty
+    - data.progress not_null
+
+- case_id: TC_course_014
+  title: 学习-付费课未购买
+  method: GET
+  path: /api/course/study/2
+  role: student
+  except_code: 400
+  except_message: "请先购买该课程"
+
+- case_id: TC_course_015
+  title: 学习-课程不存在
+  method: GET
+  path: /api/course/study/999999
+  role: student
+  except_code: 400
+  except_message: "课程不存在"
+
+- case_id: TC_course_016
+  title: 学习-未登录
+  method: GET
+  path: /api/course/study/1
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 我的课程 ==============
+
+- case_id: TC_course_017
+  title: 我的课程-学生
+  method: GET
+  path: /api/course/mine
+  role: student
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_course_018
+  title: 我的课程-未登录
+  method: GET
+  path: /api/course/mine
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 学习进度 ==============
+
+- case_id: TC_course_019
+  title: 学习进度-保存成功
+  path: /api/course/progress
+  role: student
+  body:
+    courseId: 1
+    chapterId: 1
+    progress: 50
+  except_code: 200
+
+- case_id: TC_course_020
+  title: 学习进度-课程不存在
+  path: /api/course/progress
+  role: student
+  body:
+    courseId: 999999
+    chapterId: 1
+    progress: 50
+  except_code: 400
+  except_message: "课程不存在"
+
+- case_id: TC_course_021
+  title: 学习进度-未登录
+  path: /api/course/progress
+  body:
+    courseId: 1
+    chapterId: 1
+    progress: 50
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 申请开课 ==============
+
+- case_id: TC_course_022
+  title: 申请开课-课程名为空
+  path: /api/course/applyList
+  role: teacher
+  body:
+    courseName: ""
+    price: 99
+  except_code: 400
+  except_message: "课程名称不能为空"
+
+- case_id: TC_course_023
+  title: 申请开课-课程名超长
+  path: /api/course/applyList
+  role: teacher
+  body:
+    courseName: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    price: 99
+  except_code: 400
+  except_message: "课程名称不能超过50个字符"
+
+- case_id: TC_course_024
+  title: 申请开课-价格为负
+  path: /api/course/applyList
+  role: teacher
+  body:
+    courseName: 自动化测试课程
+    price: -1
+  except_code: 400
+  except_message: "价格不能小于0"
+
+# price 上限 30000，30001 越界。
+- case_id: TC_course_025
+  title: 申请开课-价格超上限
+  path: /api/course/applyList
+  role: teacher
+  body:
+    courseName: 自动化测试课程
+    price: 30001
+  except_code: 400
+  except_message: "价格不能超过30000"
+
+# 成功用例。chapters 上的 @Valid 已补，超长 videoUrl 会走 400 而不是 500。
+# 新建课程 status=0，不会出现在 TC_course_001 的公开列表里。
+- case_id: TC_course_026
+  title: 申请开课-成功
+  path: /api/course/applyList
+  role: teacher
+  body:
+    courseName: 自动化测试课程-001
+    courseType: 1
+    techSystem: Java
+    techDirection: 后端
+    courseLevel: 初级
+    isFree: 0
+    price: 99
+    description: 由自动化测试创建，审核前 status=0 不出现在前台列表
+    reason: 自动化测试
+    chapters:
+      - chapterName: 第一章 概述
+        duration: 10
+        videoUrl: /uploads/video/demo.mp4
+  except_code: 200
+
+# ============= 申请下架 ==============
+
+# courseId 是必填 query 参数，这里故意不传。
+# 当前 GlobalExceptionHandler 用 @ExceptionHandler(Exception.class) 兜底，
+# MissingServletRequestParameterException 会被吞成 {"code":500,"message":"系统异常"}。
+# 用例断言 400，会保持红色 —— 这是有意留的，用来暴露该缺陷。
+# 同类问题还有 TC_job_026 / TC_job_037 / TC_admin_009。
+- case_id: TC_course_027
+  title: 申请下架-缺courseId
+  path: /api/course/offline
+  role: teacher
+  except_code: 400
+
+- case_id: TC_course_028
+  title: 申请下架-课程不存在
+  path: /api/course/offline
+  role: teacher
+  params:
+    courseId: 999999
+  except_code: 400
+  except_message: "课程不存在"
+
+# 缺陷 B（下架不校验归属）修复后，这条的期望从 200 改成 403：
+# reset 基线里 course 1 的 teacher_id 是 NULL（系统预置课），
+# teacher01 不是它的归属讲师，CourseService.offline 会走到
+# ResultCode.FORBIDDEN → 403 无权下架该课程。
+# 下架自己的课程（TC_course_026 建的那门）才会返回 200，
+# 但 applyList 不返回新建 id，跨用例取 id 这套 YAML 表达不了。
+- case_id: TC_course_029
+  title: 申请下架-非本人课程被拒绝
+  path: /api/course/offline
+  role: teacher
+  params:
+    courseId: 1
+    reason: 内容过期，申请下架
+  except_code: 403
+  except_message: "无权下架该课程"
+
+- case_id: TC_course_030
+  title: 申请下架-未登录
+  path: /api/course/offline
+  params:
+    courseId: 1
+  except_code: 401
+  except_message: "未登录"

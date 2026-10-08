@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_005] → GET /api/job/1
+INFO     sep:request_util.py:133 [TC_job_005] ← HTTP 200 code=200 message=success（4ms）

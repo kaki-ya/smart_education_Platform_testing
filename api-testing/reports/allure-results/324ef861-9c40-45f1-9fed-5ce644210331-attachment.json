@@ -1,0 +1,54 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "chapters": [
+      {
+        "id": 1,
+        "courseId": 1,
+        "chapterName": "第一章 环境搭建",
+        "videoUrl": "/uploads/video/c1.mp4",
+        "duration": 15,
+        "sortNo": 1
+      },
+      {
+        "id": 2,
+        "courseId": 1,
+        "chapterName": "第二章 语法基础",
+        "videoUrl": "/uploads/video/c2.mp4",
+        "duration": 20,
+        "sortNo": 2
+      },
+      {
+        "id": 3,
+        "courseId": 1,
+        "chapterName": "第三章 面向对象",
+        "videoUrl": "/uploads/video/c3.mp4",
+        "duration": 25,
+        "sortNo": 3
+      }
+    ],
+    "chapterId": null,
+    "course": {
+      "id": 1,
+      "courseName": "Java 基础入门",
+      "courseType": 1,
+      "techSystem": "Java",
+      "techDirection": "后端",
+      "courseLevel": "初级",
+      "isFree": 1,
+      "price": 0.0,
+      "teacherId": null,
+      "teacherName": "默认讲师",
+      "coverImage": null,
+      "description": null,
+      "rating": 5.0,
+      "enrollCount": 0,
+      "listTime": "2026-10-01T11:49:42",
+      "status": 1,
+      "createTime": "2026-10-01T11:49:42",
+      "updateTime": "2026-10-01T11:49:42"
+    },
+    "progress": 0
+  }
+}

@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_029] → POST /api/course/offline  params={"courseId": 1, "reason": "内容过期，申请下架"}
+INFO     sep:request_util.py:133 [TC_course_029] ← HTTP 200 code=403 message=无权下架该课程（6ms）

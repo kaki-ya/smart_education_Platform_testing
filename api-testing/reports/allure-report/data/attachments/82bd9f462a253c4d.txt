@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_025] → POST /api/user/register  body={"username": "smarteducationplatformtestingapitestregister25", "password": "1234567", "phone": "13900000025", "email": "register025@test.com", "role": 0}
+INFO     sep:request_util.py:133 [TC_user_025] ← HTTP 200 code=400 message=用户名长度需在3-20个字符之间（4ms）

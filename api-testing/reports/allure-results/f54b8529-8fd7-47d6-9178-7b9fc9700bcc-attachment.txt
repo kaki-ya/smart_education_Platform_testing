@@ -1,0 +1,3 @@
+POST /api/order/cancel/1   [role=none]
+params = 无
+body = 无

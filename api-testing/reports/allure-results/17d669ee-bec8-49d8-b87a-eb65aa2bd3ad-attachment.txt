@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_order_007] → GET /api/order/list  params={"status": 0, "page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_order_007] ← HTTP 200 code=200 message=success（6ms）

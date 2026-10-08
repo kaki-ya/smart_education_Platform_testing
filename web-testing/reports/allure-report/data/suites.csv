@@ -1,0 +1,174 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"JobDetail.vue:25 needLogin() 没登录直接送去 /login。","283","test_WEB_TC_074_未登录点投递跳登录页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","571","test_WEB_TC_081_取消按钮关闭投递弹窗[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"router/index.js:48 —— 已登录不该再看到登录页。","236","test_WEB_TC_009_已登录访问登录页被弹回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","337","test_WEB_TC_075_未登录点AI面试跳登录页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","345","test_WEB_TC_093_我的课程空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","567","test_WEB_TC_062_结算成功创建订单并跳详情[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"类别 chips：第 1 个是「全部类别」，第 2 个是「前端」。","157","test_WEB_TC_072_按职位类别筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"前端先拦一次（JobApply.vue:20），后端 JobApplyDTO 的 @AssertTrue 还会再拦一次。","261","test_WEB_TC_105_最低薪资不小于最高薪资被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"Cart.vue:30 没勾选只提示，不发创建订单的请求。","554","test_WEB_TC_057_未勾选商品结算被拦[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"订单由 test_05 的下单闭环产生；库里没有就只验证页面骨架。","385","test_WEB_TC_121_订单管理渲染与状态筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","580","test_WEB_TC_058_勾选后合计金额正确[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","225","test_WEB_TC_104_未选职位类别被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","738","test_WEB_TC_094_个人中心入口跳转正常[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","93","test_WEB_TC_069_职位中心渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"用户名重复由后端拒绝，提示后停留在注册页。
+
+    用 testS01 —— 它在 accounts_ready 里保证存在。
+    邮箱/手机号必须换成没被占用的，否则会先撞上「该邮箱已被注册」，
+    拿到的提示就不是这条用例要测的了。
+    ","248","test_WEB_TC_026_用户名已存在注册失败[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","381","test_WEB_TC_107_后台侧栏渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","458","test_WEB_TC_090_上传非PDF被前端拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","813","test_WEB_TC_064_我的订单列表渲染[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"拿本轮临时注册的账号当靶子，改完再改回去 —— 不碰 testS01。
+
+    utils/status.js：user 的 1 = 正常、0 = 已禁用；
+    role=2 的账号不渲染这个按钮（UserManage.vue:53）。
+
+    搜索没返回之前表里是全部用户，这时点 .first 会禁用到别人头上，
+    所以必须先把「筛到只剩这一个账号」等出来。
+    ","793","test_WEB_TC_117_禁用用户后可再启用[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","643","test_WEB_TC_120_职位上下架往返[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","367","test_WEB_TC_029_未登录访问个人中心跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"MyResume.vue:28 用的是原生 confirm。
+
+    Playwright 默认自动 dismiss 掉原生弹窗，confirm 返回 false，
+    删除逻辑整段跳过、界面毫无反应 —— 所以必须先注册接受回调。
+    ","621","test_WEB_TC_091_删除简历需先确认[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"router/index.js:30 —— /admin 的 index 子路由 redirect 到 /admin/apply。","347","test_WEB_TC_108_进入后台默认落在申请审核[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"CourseDetail.vue:15 没登录直接 router.push('/login')。","304","test_WEB_TC_050_未登录点收藏跳登录页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"依赖：用户名、密码合法；昵称留空（选填，空值不触发长度校验）。","187","test_WEB_TC_021_手机号为空被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","345","test_WEB_TC_033_未登录访问我的投递跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"","488","test_WEB_TC_053_学生点收藏成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","204","test_WEB_TC_054_价格筛选切回全部恢复列表[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"后台是嵌套路由，父级 meta 上的 roles 对子路由同样生效。","348","test_WEB_TC_038_学生访问后台用户管理回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"状态筛选框只在「已处理」tab 下渲染（ApplyAudit.vue:42）。","656","test_WEB_TC_111_切到已处理出现状态筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","318","test_WEB_TC_027_未登录访问购物车跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"Profile.vue:32-36 保存成功后重新拉一次用户信息，页头昵称随之更新。","536","test_WEB_TC_084_修改昵称保存后页头同步[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","245","test_WEB_TC_049_课程详情页展示标题与购买入口[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"改的是本轮临时注册的账号，改完不影响任何别的用例。","716","test_WEB_TC_087_修改密码成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","626","test_WEB_TC_063_订单详情展示订单号与待支付状态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"挑一门已上架的课程下架、再上架回去，全程锁定这一行。
+
+    为什么要按名字锁行：库里本来就有别的已下架课程时，只点 .first 的话，
+    第二步会上架到别人头上，自己那门留在下架态，用例却""通过""了。
+
+    为什么还要 .first：课程名不保证唯一 —— test_08 每轮提交的
+    「自动化测试课程」被 TC_112 审核通过后就多一门同名的，跑几轮就有好几条。
+    但往返仍然是准的：下架后只有刚点的那一行会出现「上架」按钮，
+    所以第二步按「名字 + 上架按钮」能唯一命中它。
+    ","608","test_WEB_TC_119_课程下架后可重新上架[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","275","test_WEB_TC_051_未登录点加入购物车跳登录页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","427","test_WEB_TC_083_个人中心信息卡渲染[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","307","test_WEB_TC_037_学生访问候选人页回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"","228","test_WEB_TC_046_免费筛选结果全部免费[chromium]","testcases","2026-10-02","failed","2026-10-02","","test_04_course","",""
+"搜索框绑的是 @keyup.enter（CourseList.vue:26），要回车而不是点按钮。","156","test_WEB_TC_042_关键字搜索命中课程[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"utils/auth.js:2 的键名是 smart_edu_token，请求拦截器靠它带 Authorization。","354","test_WEB_TC_008_登录成功后token写入localStorage[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","71","test_WEB_TC_013_注册页渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","346","test_WEB_TC_115_用户管理关键字搜索[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"勾「免费」绕开价格填写，其余用表单默认值。
+
+    提交成功后表单会被重置（CourseApply.vue:23），顺带把这一点也断言掉。
+    ","429","test_WEB_TC_101_提交课程上架申请成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","213","test_WEB_TC_071_搜索无结果展示空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","511","test_WEB_TC_089_上传PDF简历成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","499","test_WEB_TC_078_学生点投递弹出简历弹窗[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","298","test_WEB_TC_043_搜索无结果展示空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","230","test_WEB_TC_096_课程名称未填被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","217","test_WEB_TC_010_已登录访问注册页被弹回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","181","test_WEB_TC_016_用户名超过20位被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","578","test_WEB_TC_061_移除商品后回到空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","237","test_WEB_TC_007_管理员登录后页头出现后台管理[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","112","test_WEB_TC_113_待审核申请点驳回[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","101","test_WEB_TC_014_全部为空提示用户名不能为空[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"router/index.js:48 —— 已登录就没必要再走一遍找回密码。","471","test_WEB_TC_040_已登录访问忘记密码页回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"AppHeader.vue:8：退出后 push('/')，页头换成登录/注册按钮。","352","test_WEB_TC_011_退出登录后回到未登录态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"安全断言：不暴露「这个用户名到底存不存在」。
+
+    后端 UserService.login 对「用户不存在」和「密码错误」返回同一句话，
+    这条用例就是防止以后有人把它改成两种提示。
+    ","148","test_WEB_TC_004_用户名不存在也返回同一句提示[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"完整闭环：加购 → 结算 → 支付 → 我的课程里有它。","3839","test_WEB_TC_068_支付后我的课程出现该课程[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","243","test_WEB_TC_097_未选技术体系被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"只有学生能买课；讲师点了要被拦下，而且不离开当前页。","569","test_WEB_TC_052_讲师点加入购物车被拒[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","382","test_WEB_TC_092_我的申请空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","507","test_WEB_TC_082_我的投递空态并跳职位列表[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","755","test_WEB_TC_066_立即支付成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"JobDetail.vue:40 只认 .pdf 结尾的文件名，不是就 toast，不发请求。","504","test_WEB_TC_080_上传非PDF简历被前端拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"CourseApply.vue:13 新增一章默认时长 20。","163","test_WEB_TC_099_添加章节行[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","400","test_WEB_TC_088_我的简历空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"","387","test_WEB_TC_114_用户管理渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"CourseDetail.vue:29 加购成功后直接 router.push('/cart')。","498","test_WEB_TC_056_加入购物车后跳购物车[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","533","test_WEB_TC_059_数量加一后合计翻倍[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","337","test_WEB_TC_028_未登录访问我的订单跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"卡片 href 指向 /course/<id>，点进去应落到同一个路径。","244","test_WEB_TC_048_点击课程卡片进入详情[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"Login.vue:10 前端先判空，这两个框都不发请求。","137","test_WEB_TC_002_用户名密码为空被前端拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"Profile.vue:38 前端先判空，不发请求。","553","test_WEB_TC_086_改密码两项为空被前端拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""
+"新账号没有订单；筛「已支付」时列表应为空。","372","test_WEB_TC_065_订单列表按状态筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","178","test_WEB_TC_103_职位名称未填被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","75","test_WEB_TC_001_登录页渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","206","test_WEB_TC_022_手机号位数不足被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","387","test_WEB_TC_118_课程管理渲染与状态筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"下拉的 change 直接触发 load（CourseList.vue:27）。","109","test_WEB_TC_047_切换排序方式[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","297","test_WEB_TC_030_未登录访问我的简历跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"","246","test_WEB_TC_024_邮箱格式错误被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","345","test_WEB_TC_035_未登录访问AI面试跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"昵称是选填项，只填 4 个必填项就应注册成功。
+
+    后端 UserService.register 已把空昵称按未填写处理（空串不再参与查重），
+    这里刻意不填昵称，顺带守住这个修复不再回归。
+    ","454","test_WEB_TC_025_注册成功提示并跳登录页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","376","test_WEB_TC_110_点击侧栏菜单切换页面[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","330","test_WEB_TC_106_提交职位发布申请成功[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"JobDetail.vue:32 没选中简历时只提示，不发投递请求。","635","test_WEB_TC_079_没有简历时确认投递被拦[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","367","test_WEB_TC_005_学生登录成功跳首页并显示身份[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"审核不可逆，所以只断言提示，不要求状态回滚。
+
+    toast 按文案过滤：通过/驳回是同屏连着点的，
+    直接读第一条会读到上一条的文案。
+    ","84","test_WEB_TC_112_待审核申请点通过[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","368","test_WEB_TC_006_讲师登录后页头出现讲师菜单[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"/course/apply 的 roles 是 [1]，学生进去应被弹回首页。","326","test_WEB_TC_036_学生访问申请课程页回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"","542","test_WEB_TC_077_讲师点AI面试被拒[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","523","test_WEB_TC_055_空购物车展示空态[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","276","test_WEB_TC_012_未登录页头显示登录注册按钮[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","162","test_WEB_TC_102_职位申请页渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"等级 chips：全部等级 / 入门 / 初级 / 中级 / 高级 / 专家。
+
+    这条只断言 chip 进入激活态且列表刷新出结果（有卡片或空态），
+    因为卡片上的等级混在 meta 文本里（讲师名 · 等级），不好直接取。
+    ","156","test_WEB_TC_045_按课程等级筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"类型 chips：第 1 个是「全部类型」，第 2 个是「理论」。","147","test_WEB_TC_044_按课程类型筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"侧栏 5 条路由逐个打开，标题对得上就算通。","910","test_WEB_TC_109_后台五个管理页面都能打开[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"","442","test_WEB_TC_032_未登录访问申请职位跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"/cart 的 roles 是 [0]，讲师不该能进。","451","test_WEB_TC_039_讲师访问购物车回首页[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"卡片 href 指向 /job/<id>，点进去应落到同一个路径。","181","test_WEB_TC_073_点击职位卡片进入详情[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","297","test_WEB_TC_100_删除章节行[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","414","test_WEB_TC_003_密码错误提示[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_01_auth","",""
+"","182","test_WEB_TC_095_课程申请页渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","254","test_WEB_TC_098_未选技术方向被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_08_teacher","",""
+"","299","test_WEB_TC_031_未登录访问申请课程跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"昵称是选填项，但一旦超过 20 字前端就拦（Register.vue:14）。
+
+    注意校验顺序：昵称在手机号、邮箱之前，所以这两个可以留空。
+    ","187","test_WEB_TC_020_昵称超过20字被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"筛「讲师/企业」再筛「学生」，两次都不该混进别的身份。
+
+    先筛讲师是故意的：这一步必定让列表换一次内容，
+    后面筛学生时才不会读到还没刷新的旧列表。
+    testT01 由 fixture/session.py 的 accounts_ready 保证存在。
+    ","463","test_WEB_TC_116_用户管理按身份筛选[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_09_admin","",""
+"依赖：用户名合法（13 位、全小写字母数字）。","204","test_WEB_TC_018_密码为空被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","96","test_WEB_TC_070_关键字搜索命中职位[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"","152","test_WEB_TC_017_用户名含非法字符被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","438","test_WEB_TC_034_未登录访问后台跳登录[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_03_guard","",""
+"依赖：用户名、密码、手机号都合法，校验才走到邮箱这一条。","258","test_WEB_TC_023_邮箱为空被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","136","test_WEB_TC_015_用户名少于3位被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"","165","test_WEB_TC_019_密码少于6位被拦截[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_02_register","",""
+"Cart.vue:21 用 Math.max(1, ...) 兜底，购物车里不会出现 0 件。","625","test_WEB_TC_060_数量减到1后不再减少[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"只有学生能投递；讲师被拦下且不离开当前页。","409","test_WEB_TC_076_讲师点投递被拒[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_06_job","",""
+"OrderDetail.vue:45 只有 status===1 才渲染「去学习」按钮。","676","test_WEB_TC_067_支付后订单详情出现去学习[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_05_cart_order","",""
+"","130","test_WEB_TC_041_课程中心渲染完整[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_04_course","",""
+"","759","test_WEB_TC_085_原密码错误提示[chromium]","testcases","2026-10-02","passed","2026-10-02","","test_07_user","",""

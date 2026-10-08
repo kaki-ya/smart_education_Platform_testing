@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_044] → POST /api/user/resetPassword  body={"oldPassword": "wrongPassword", "newPassword": "44"}
+INFO     sep:request_util.py:133 [TC_user_044] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（4ms）

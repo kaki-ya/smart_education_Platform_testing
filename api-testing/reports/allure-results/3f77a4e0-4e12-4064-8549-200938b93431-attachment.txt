@@ -1,0 +1,3 @@
+PUT /api/user/info   [role=student]
+params = 无
+body = {"nickname": "这是一个超过二十个字符长度的昵称用来测试校验"}

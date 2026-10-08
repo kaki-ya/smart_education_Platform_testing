@@ -1,0 +1,27 @@
+2026-10-01 11:34:36 | ========================================================================
+2026-10-01 11:34:36 | 本轮测试开始
+2026-10-01 11:34:36 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_113436.log
+2026-10-01 11:34:36 | 后端地址：http://localhost:8080
+2026-10-01 11:34:36 | 运行环境：Python 3.12.4 / pytest 9.1.1 / Windows-11-10.0.26200-SP0
+2026-10-01 11:34:36 | 命令行：pytest -p no:cacheprovider --no-header --alluredir=./reports/allure-results -q
+2026-10-01 11:34:36 | ========================================================================
+2026-10-01 11:34:36 | [后端探活] → GET /api/course/list  params={"page": 1, "size": 1}
+2026-10-01 11:34:36 | [后端探活] ← HTTP 200 code=200 message=success（43ms）
+2026-10-01 11:34:36 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:34:36 | [账号引导·student01] ← HTTP 200 code=400 message=用户名或密码错误（6ms）
+2026-10-01 11:34:36 | [账号引导·student01] → POST /api/user/register  body={"username": "student01", "password": "123456", "phone": "13800000001", "email": "student01@test.com", "role": 0}
+2026-10-01 11:34:36 | [账号引导·student01] ← HTTP 200 code=200 message=success（106ms）
+2026-10-01 11:34:36 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:34:36 | [账号引导·student01] ← HTTP 200 code=200 message=success（95ms）
+2026-10-01 11:34:36 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:34:36 | [账号引导·teacher01] ← HTTP 200 code=400 message=用户名或密码错误（3ms）
+2026-10-01 11:34:36 | [账号引导·teacher01] → POST /api/user/register  body={"username": "teacher01", "password": "123456", "phone": "13800000002", "email": "teacher01@test.com", "role": 1}
+2026-10-01 11:34:36 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（100ms）
+2026-10-01 11:34:36 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:34:36 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（100ms）
+2026-10-01 11:34:36 | [账号引导·admin] → POST /api/user/login  body={"username": "admin", "password": "admin123"}
+2026-10-01 11:34:36 | [账号引导·admin] ← HTTP 200 code=400 message=用户名或密码错误（4ms）
+2026-10-01 11:34:37 | ------------------------------------------------------------------------
+2026-10-01 11:34:37 | 本轮结束：共 0 条，通过 0，失败 0，出错 0，耗时 1.53s
+2026-10-01 11:34:37 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_113436.log
+2026-10-01 11:34:37 | ========================================================================

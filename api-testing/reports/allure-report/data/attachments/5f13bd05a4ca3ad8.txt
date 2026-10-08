@@ -1,0 +1,3 @@
+POST /api/course/offline   [role=teacher]
+params = {"courseId": 1, "reason": "内容过期，申请下架"}
+body = 无

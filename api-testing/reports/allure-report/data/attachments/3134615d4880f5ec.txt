@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_028] → POST /api/job/applyList  body={"salaryMin": 10000, "salaryMax": 20000}
+INFO     sep:request_util.py:133 [TC_job_028] ← HTTP 200 code=400 message=职位名称不能为空（3ms）

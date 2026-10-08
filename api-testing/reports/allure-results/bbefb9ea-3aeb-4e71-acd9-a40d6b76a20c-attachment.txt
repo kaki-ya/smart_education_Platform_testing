@@ -1,0 +1,3 @@
+PUT /api/admin/job/status/999999   [role=admin]
+params = {"status": 2}
+body = 无

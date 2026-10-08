@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_023] → GET /api/job/my/applicants/1
+INFO     sep:request_util.py:133 [TC_job_023] ← HTTP 200 code=400 message=无权查看该职位（6ms）

@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_035] → GET /api/user/info
+INFO     sep:request_util.py:133 [TC_user_035] ← HTTP 200 code=200 message=success（7ms）

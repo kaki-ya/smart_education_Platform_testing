@@ -1,0 +1,216 @@
+
+# 用例总数：20
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 用户管理 ==============
+
+- case_id: TC_admin_001
+  title: 用户列表
+  method: GET
+  path: /api/admin/user/list
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_admin_002
+  title: 用户列表-按角色筛选
+  method: GET
+  path: /api/admin/user/list
+  role: admin
+  params:
+    role: 0
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_003
+  title: 用户列表-按状态筛选
+  method: GET
+  path: /api/admin/user/list
+  role: admin
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_004
+  title: 用户列表-关键字搜索
+  method: GET
+  path: /api/admin/user/list
+  role: admin
+  params:
+    keyword: stu
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_005
+  title: 用户列表-学生无权限
+  method: GET
+  path: /api/admin/user/list
+  role: student
+  except_code: 403
+  except_message: "无权限"
+
+- case_id: TC_admin_006
+  title: 用户列表-讲师无权限
+  method: GET
+  path: /api/admin/user/list
+  role: teacher
+  except_code: 403
+  except_message: "无权限"
+
+- case_id: TC_admin_007
+  title: 用户列表-未登录
+  method: GET
+  path: /api/admin/user/list
+  except_code: 401
+  except_message: "未登录"
+
+- case_id: TC_admin_008
+  title: 用户状态-用户不存在
+  method: PUT
+  path: /api/admin/user/status/999999
+  role: admin
+  params:
+    status: 0
+  except_code: 400
+  except_message: "用户不存在"
+
+# status 是必填 query 参数，故意不传 → 当前 500 系统异常，
+# 用例断言 400（理由同 TC_course_027）。
+- case_id: TC_admin_009
+  title: 用户状态-缺status参数
+  method: PUT
+  path: /api/admin/user/status/1
+  role: admin
+  except_code: 400
+
+# ============= 订单管理 ==============
+
+- case_id: TC_admin_010
+  title: 订单列表
+  method: GET
+  path: /api/admin/order/list
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_011
+  title: 订单列表-按状态筛选
+  method: GET
+  path: /api/admin/order/list
+  role: admin
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_012
+  title: 订单详情-不存在
+  method: GET
+  path: /api/admin/order/999999
+  role: admin
+  except_code: 400
+  except_message: "订单不存在"
+
+# ============= 课程管理 ==============
+
+- case_id: TC_admin_013
+  title: 课程列表
+  method: GET
+  path: /api/admin/course/list
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_014
+  title: 课程列表-按状态筛选
+  method: GET
+  path: /api/admin/course/list
+  role: admin
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_015
+  title: 课程列表-关键字搜索
+  method: GET
+  path: /api/admin/course/list
+  role: admin
+  params:
+    keyword: Java
+    page: 1
+    size: 10
+  except_code: 200
+
+# ============= 职位管理 ==============
+
+- case_id: TC_admin_016
+  title: 职位列表
+  method: GET
+  path: /api/admin/job/list
+  role: admin
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_admin_017
+  title: 职位列表-按状态筛选
+  method: GET
+  path: /api/admin/job/list
+  role: admin
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+# ============= 上下架 ==============
+
+- case_id: TC_admin_018
+  title: 课程上下架-课程不存在
+  method: PUT
+  path: /api/admin/course/status/999999
+  role: admin
+  params:
+    status: 2
+  except_code: 400
+  except_message: "课程不存在"
+
+- case_id: TC_admin_019
+  title: 职位上下架-职位不存在
+  method: PUT
+  path: /api/admin/job/status/999999
+  role: admin
+  params:
+    status: 2
+  except_code: 400
+  except_message: "职位不存在"
+
+- case_id: TC_admin_020
+  title: 课程上下架-学生无权限
+  method: PUT
+  path: /api/admin/course/status/1
+  role: student
+  params:
+    status: 2
+  except_code: 403
+  except_message: "无权限"

@@ -1,0 +1,18 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": [
+    {
+      "jobName": "Java 后端开发工程师",
+      "applyId": 4,
+      "jobId": 1,
+      "jobCategory": "开发",
+      "city": "北京",
+      "companyName": "示例科技有限公司",
+      "applyTime": "2026-10-01T11:54:12",
+      "applyStatus": 0,
+      "salaryMin": 15000.0,
+      "salaryMax": 25000.0
+    }
+  ]
+}

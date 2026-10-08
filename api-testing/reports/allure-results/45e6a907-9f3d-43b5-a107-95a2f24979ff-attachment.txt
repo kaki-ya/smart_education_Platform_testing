@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_cart_003] → POST /api/cart/add  body={"courseId": 2}
+INFO     sep:request_util.py:133 [TC_cart_003] ← HTTP 200 code=200 message=success（13ms）

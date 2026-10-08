@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_resume_001] → GET /api/resume/list
+INFO     sep:request_util.py:133 [TC_resume_001] ← HTTP 200 code=200 message=success（5ms）

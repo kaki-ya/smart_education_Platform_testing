@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_048] → POST /api/user/forgotPassword  body={"phone": "13800000001"}
+INFO     sep:request_util.py:133 [TC_user_048] ← HTTP 200 code=400 message=新密码不能为空（2ms）

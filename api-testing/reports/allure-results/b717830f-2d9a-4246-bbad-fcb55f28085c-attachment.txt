@@ -1,0 +1,3 @@
+POST /api/order/create   [role=student]
+params = 无
+body = {"cartIds": [999999]}

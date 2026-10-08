@@ -1,0 +1,3 @@
+GET /api/resume/list   [role=student]
+params = 无
+body = 无

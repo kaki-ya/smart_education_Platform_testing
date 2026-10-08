@@ -1,0 +1,3 @@
+POST /api/user/register   [role=none]
+params = 无
+body = {"password": "1234567", "phone": "13900000023", "email": "register023@test.com", "role": 0}

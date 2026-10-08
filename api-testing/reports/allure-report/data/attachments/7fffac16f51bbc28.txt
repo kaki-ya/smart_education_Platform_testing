@@ -1,0 +1,3 @@
+POST /api/job/interview/submit   [role=student]
+params = 无
+body = {"interviewId": 999999, "answers": ["A", "B"]}

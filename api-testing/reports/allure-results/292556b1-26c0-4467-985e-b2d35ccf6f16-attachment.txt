@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_apply_002] → GET /api/apply/my  params={"page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_apply_002] ← HTTP 200 code=200 message=success（7ms）

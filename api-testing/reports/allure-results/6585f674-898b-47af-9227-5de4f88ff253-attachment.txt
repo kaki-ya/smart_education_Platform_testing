@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_019] → POST /api/course/progress  body={"courseId": 1, "chapterId": 1, "progress": 50}
+INFO     sep:request_util.py:133 [TC_course_019] ← HTTP 200 code=200 message=success（23ms）

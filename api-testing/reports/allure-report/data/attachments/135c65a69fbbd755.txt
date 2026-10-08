@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_003] → GET /api/job/list  params={"jobCategory": "开发", "page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_job_003] ← HTTP 200 code=200 message=success（9ms）

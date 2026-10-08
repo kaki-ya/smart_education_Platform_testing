@@ -1,0 +1,10 @@
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /login
+INFO     sep-web:plugins.py:81 [未登录]   → POST /api/user/login  200  119ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"user":{"id":39,"username":"testS01","password":"***","nickname":"自动化测试学生01","avatar":null,"realName":null,"phone":"13800000000","email":"testS01@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:44:46.7631414","createTime":"2026-10-01T16:17:11","up…
+INFO     sep-web:plugins.py:96 [未登录]   ⇢ 跳转 /
+INFO     sep-web:plugins.py:81 [未登录]   → GET /api/course/list?page=1&size=5&sortBy=enroll&order=desc  200  45ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"rating":4.5,"enrollCount":13,"listTime…
+INFO     sep-web:plugins.py:81 [未登录]   → GET /api/job/list?page=1&size=4  200  9ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":{"list":[{"id":1,"jobName":"Java 后端开发工程师","companyId":null,"companyName":"示例科技有限公司","jobCategory":"开发","salaryMin":15000.00,"salaryMax":25000.00,"city":"北京","education":"本科","experience":"3年","description":"负责后端服务开发","applyCount":0,"collectCount":0,"listTime":"…
+INFO     sep-web:plugins.py:81 [未登录]   → POST /api/user/logout  200  8ms
+INFO     sep-web:plugins.py:84 [未登录]     返回 {"code":200,"message":"success","data":null}

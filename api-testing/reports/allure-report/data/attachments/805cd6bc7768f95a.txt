@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_order_001] → POST /api/order/create  body={"cartIds": []}
+INFO     sep:request_util.py:133 [TC_order_001] ← HTTP 200 code=400 message=请选择要结算的课程（3ms）

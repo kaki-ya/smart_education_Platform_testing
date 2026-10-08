@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_003] → GET /api/admin/user/list  params={"status": 1, "page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_admin_003] ← HTTP 200 code=200 message=success（13ms）

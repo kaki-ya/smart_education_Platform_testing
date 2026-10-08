@@ -1,0 +1,20 @@
+INFO     sep-web:plugins.py:96 [web0923534015]   ⇢ 跳转 /course/2
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/user/info  200  63ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":{"id":235,"username":"web0923534015","password":"***","nickname":"web0923534015","avatar":null,"realName":null,"phone":"10923534015","email":"web0923534015@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:45:34","createTime":"2026-10-02T14:45:34","u…
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/course/2  200  11ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":{"purchased":false,"chapters":[],"course":{"id":2,"courseName":"SpringBoot 实战","courseType":1,"techSystem":"Java","techDirection":"后端","courseLevel":"中级","isFree":0,"price":199.00,"teacherId":null,"teacherName":"默认讲师","coverImage":null,"description":null,"ratin…
+INFO     sep-web:plugins.py:81 [web0923534015]   → POST /api/cart/add  200  26ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":null}
+INFO     sep-web:plugins.py:96 [web0923534015]   ⇢ 跳转 /cart
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/cart/list  200  5ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":[{"courseName":"SpringBoot 实战","quantity":1,"price":199.00,"cartId":77,"coverImage":null,"checked":1,"courseId":2}]}
+INFO     sep-web:plugins.py:81 [web0923534015]   → POST /api/order/create  200  17ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":36}
+INFO     sep-web:plugins.py:96 [web0923534015]   ⇢ 跳转 /order/36
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/order/36  200  3ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":{"items":[{"id":36,"orderId":36,"courseId":2,"courseName":"SpringBoot 实战","price":199.00,"quantity":1}],"order":{"id":36,"orderNo":"ORD1790923535212744544","userId":235,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:45:35","updateTim…
+INFO     sep-web:plugins.py:96 [web0923534015]   ⇢ 跳转 /order
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/user/info  200  13ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":{"id":235,"username":"web0923534015","password":"***","nickname":"web0923534015","avatar":null,"realName":null,"phone":"10923534015","email":"web0923534015@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:45:34","createTime":"2026-10-02T14:45:34","u…
+INFO     sep-web:plugins.py:81 [web0923534015]   → GET /api/order/list?page=1&size=10  200  0ms
+INFO     sep-web:plugins.py:84 [web0923534015]     返回 {"code":200,"message":"success","data":{"list":[{"id":36,"orderNo":"ORD1790923535212744544","userId":235,"totalAmount":199.00,"status":0,"payTime":null,"createTime":"2026-10-02T14:45:35","updateTime":"2026-10-02T14:45:35"}],"total":1}}

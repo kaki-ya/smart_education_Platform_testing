@@ -1,0 +1,3 @@
+POST /api/user/resetPassword   [role=student]
+params = 无
+body = {"oldPassword": "wrongPassword", "newPassword": "44"}

@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_cart_005] → POST /api/cart/add  body={"courseId": 999999}
+INFO     sep:request_util.py:133 [TC_cart_005] ← HTTP 200 code=400 message=课程不存在或已下架（4ms）

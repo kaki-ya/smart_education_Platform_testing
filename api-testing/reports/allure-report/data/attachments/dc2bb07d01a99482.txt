@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_008] → GET /api/course/1
+INFO     sep:request_util.py:133 [TC_course_008] ← HTTP 200 code=200 message=success（11ms）

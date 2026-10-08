@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_022] → POST /api/course/applyList  body={"courseName": "", "price": 99}
+INFO     sep:request_util.py:133 [TC_course_022] ← HTTP 200 code=400 message=课程名称不能为空（27ms）

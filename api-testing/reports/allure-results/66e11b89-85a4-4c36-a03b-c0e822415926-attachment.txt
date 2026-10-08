@@ -1,0 +1,3 @@
+POST /api/order/pay/999999   [role=student]
+params = 无
+body = 无

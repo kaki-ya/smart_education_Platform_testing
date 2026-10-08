@@ -1,0 +1,3 @@
+POST /api/course/offline   [role=teacher]
+params = {"courseId": 999999}
+body = 无

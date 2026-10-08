@@ -1,0 +1,3 @@
+POST /api/course/progress   [role=student]
+params = 无
+body = {"courseId": 999999, "chapterId": 1, "progress": 50}

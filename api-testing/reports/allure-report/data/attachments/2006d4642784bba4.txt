@@ -1,0 +1,3 @@
+POST /api/course/applyList   [role=teacher]
+params = 无
+body = {"courseName": "自动化测试课程", "price": 30001}

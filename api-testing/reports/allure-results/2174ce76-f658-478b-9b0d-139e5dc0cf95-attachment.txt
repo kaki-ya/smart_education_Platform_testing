@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_016] → GET /api/course/study/1
+INFO     sep:request_util.py:133 [TC_course_016] ← HTTP 200 code=401 message=未登录（3ms）

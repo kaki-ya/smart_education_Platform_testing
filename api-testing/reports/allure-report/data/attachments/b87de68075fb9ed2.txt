@@ -1,0 +1,3 @@
+except_code    = 400
+except_message = '申请不存在'
+except_field   = （未写，不校验）

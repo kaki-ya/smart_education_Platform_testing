@@ -1,0 +1,3 @@
+GET /api/course/study/2   [role=student]
+params = 无
+body = 无

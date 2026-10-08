@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_003] → POST /api/user/login  body={"username": "apitest01", "password": "12"}
+INFO     sep:request_util.py:133 [TC_user_003] ← HTTP 200 code=400 message=用户名或密码错误（72ms）

@@ -1,0 +1,90 @@
+
+# 用例总数：9
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 购物车列表 ==============
+
+- case_id: TC_cart_001
+  title: 购物车列表
+  method: GET
+  path: /api/cart/list
+  role: student
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_cart_002
+  title: 购物车列表-未登录
+  method: GET
+  path: /api/cart/list
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 加入购物车 ==============
+
+- case_id: TC_cart_003
+  title: 加入购物车-付费课
+  path: /api/cart/add
+  role: student
+  body:
+    courseId: 2
+  except_code: 200
+
+# 依赖 TC_cart_003 先跑：CartService.add 发现同一课程已在车里，
+# 走的是 quantity+1 分支，不是插新行。
+- case_id: TC_cart_004
+  title: 加入购物车-重复加入
+  path: /api/cart/add
+  role: student
+  body:
+    courseId: 2
+  except_code: 200
+
+- case_id: TC_cart_005
+  title: 加入购物车-课程不存在
+  path: /api/cart/add
+  role: student
+  body:
+    courseId: 999999
+  except_code: 400
+  except_message: "课程不存在或已下架"
+
+- case_id: TC_cart_006
+  title: 加入购物车-未登录
+  path: /api/cart/add
+  body:
+    courseId: 2
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 更新与删除 ==============
+
+- case_id: TC_cart_007
+  title: 更新购物车项-不存在
+  method: PUT
+  path: /api/cart/999999
+  role: student
+  body:
+    quantity: 1
+  except_code: 400
+  except_message: "购物车项不存在"
+
+- case_id: TC_cart_008
+  title: 删除购物车项-不存在
+  method: DELETE
+  path: /api/cart/999999
+  role: student
+  except_code: 400
+  except_message: "购物车项不存在"
+
+- case_id: TC_cart_009
+  title: 删除购物车项-未登录
+  method: DELETE
+  path: /api/cart/999999
+  except_code: 401
+  except_message: "未登录"

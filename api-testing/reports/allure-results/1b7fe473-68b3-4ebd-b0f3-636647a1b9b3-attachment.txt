@@ -1,0 +1,3 @@
+PUT /api/job/my/applicants/1   [role=teacher]
+params = 无
+body = 无

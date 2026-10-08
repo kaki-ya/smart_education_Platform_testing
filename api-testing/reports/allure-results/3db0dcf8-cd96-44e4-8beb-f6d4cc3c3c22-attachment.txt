@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_036] → POST /api/job/offline  params={"jobId": 999999}
+INFO     sep:request_util.py:133 [TC_job_036] ← HTTP 200 code=400 message=职位不存在（4ms）

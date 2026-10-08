@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_022] → POST /api/user/register  body={"username": "register022", "password": "1234567", "phone": "13900000013", "email": "register022@test.com", "role": 1}
+INFO     sep:request_util.py:133 [TC_user_022] ← HTTP 200 code=200 message=success（115ms）

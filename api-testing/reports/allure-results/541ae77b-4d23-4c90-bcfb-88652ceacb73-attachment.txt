@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_006] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+INFO     sep:request_util.py:133 [TC_user_006] ← HTTP 200 code=200 message=success（80ms）

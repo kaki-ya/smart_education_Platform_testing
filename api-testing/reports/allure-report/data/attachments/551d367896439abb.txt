@@ -1,0 +1,3 @@
+GET /api/admin/user/list   [role=teacher]
+params = 无
+body = 无

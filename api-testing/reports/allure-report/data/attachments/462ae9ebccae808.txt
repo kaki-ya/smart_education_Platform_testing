@@ -1,0 +1,24 @@
+INFO     sep:request_util.py:110 [后端探活] → GET /api/course/list  params={"page": 1, "size": 1}
+INFO     sep:request_util.py:133 [后端探活] ← HTTP 200 code=200 message=success（219ms）
+INFO     sep:request_util.py:110 [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+INFO     sep:request_util.py:133 [账号引导·student01] ← HTTP 200 code=400 message=用户名或密码错误（87ms）
+INFO     sep:request_util.py:110 [账号引导·student01] → POST /api/user/register  body={"username": "student01", "password": "123456", "phone": "13800000001", "email": "student01@test.com", "role": 0}
+INFO     sep:request_util.py:133 [账号引导·student01] ← HTTP 200 code=200 message=success（119ms）
+INFO     sep:request_util.py:110 [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+INFO     sep:request_util.py:133 [账号引导·student01] ← HTTP 200 code=200 message=success（131ms）
+INFO     sep:request_util.py:110 [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+INFO     sep:request_util.py:133 [账号引导·teacher01] ← HTTP 200 code=400 message=用户名或密码错误（5ms）
+INFO     sep:request_util.py:110 [账号引导·teacher01] → POST /api/user/register  body={"username": "teacher01", "password": "123456", "phone": "13800000002", "email": "teacher01@test.com", "role": 1}
+INFO     sep:request_util.py:133 [账号引导·teacher01] ← HTTP 200 code=200 message=success（81ms）
+INFO     sep:request_util.py:110 [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+INFO     sep:request_util.py:133 [账号引导·teacher01] ← HTTP 200 code=200 message=success（78ms）
+INFO     sep:request_util.py:110 [账号引导·admin] → POST /api/user/login  body={"username": "admin", "password": "admin123"}
+INFO     sep:request_util.py:133 [账号引导·admin] ← HTTP 200 code=200 message=success（82ms）
+INFO     sep:request_util.py:110 [账号引导·apitest01] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+INFO     sep:request_util.py:133 [账号引导·apitest01] ← HTTP 200 code=400 message=用户名或密码错误（6ms）
+INFO     sep:request_util.py:110 [账号引导·apitest01] → POST /api/user/register  body={"username": "apitest01", "password": "1234567", "phone": "13800000003", "email": "apitest01@test.com", "role": 0}
+INFO     sep:request_util.py:133 [账号引导·apitest01] ← HTTP 200 code=200 message=success（93ms）
+INFO     sep:request_util.py:110 [账号引导·apitest01] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+INFO     sep:request_util.py:133 [账号引导·apitest01] ← HTTP 200 code=200 message=success（77ms）
+INFO     sep:request_util.py:110 [TC_user_001] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+INFO     sep:request_util.py:133 [TC_user_001] ← HTTP 200 code=200 message=success（89ms）

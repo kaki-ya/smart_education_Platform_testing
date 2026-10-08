@@ -1,0 +1,146 @@
+
+# 用例总数：15
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 创建订单 ==============
+
+- case_id: TC_order_001
+  title: 创建订单-空cartIds
+  path: /api/order/create
+  role: student
+  body:
+    cartIds: []
+  except_code: 400
+  except_message: "请选择要结算的课程"
+
+- case_id: TC_order_002
+  title: 创建订单-cartIds缺失
+  path: /api/order/create
+  role: student
+  body: {}
+  except_code: 400
+  except_message: "请选择要结算的课程"
+
+- case_id: TC_order_003
+  title: 创建订单-购物车项不存在
+  path: /api/order/create
+  role: student
+  body:
+    cartIds:
+      - 999999
+  except_code: 400
+  except_message: "购物车项不存在"
+
+# cartIds=[1] 期望来自 cart 模块的 TC_cart_003（student01 加购 course 2）。
+# 若 cart 模块没先跑，cart 1 不存在，报的是「购物车项不存在」；
+# 跑过了才是「购物车项不属于当前用户」。两者都是 400，故只断言 code。
+- case_id: TC_order_004
+  title: 创建订单-他人购物车项
+  path: /api/order/create
+  role: teacher
+  body:
+    cartIds:
+      - 1
+  except_code: 400
+
+- case_id: TC_order_005
+  title: 创建订单-未登录
+  path: /api/order/create
+  body:
+    cartIds:
+      - 1
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 订单列表 ==============
+
+- case_id: TC_order_006
+  title: 订单列表
+  method: GET
+  path: /api/order/list
+  role: student
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_order_007
+  title: 订单列表-只看待支付
+  method: GET
+  path: /api/order/list
+  role: student
+  params:
+    status: 0
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_order_008
+  title: 订单列表-只看已支付
+  method: GET
+  path: /api/order/list
+  role: student
+  params:
+    status: 1
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_order_009
+  title: 订单列表-未登录
+  method: GET
+  path: /api/order/list
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 订单详情 ==============
+
+- case_id: TC_order_010
+  title: 订单详情-不存在
+  method: GET
+  path: /api/order/999999
+  role: student
+  except_code: 400
+  except_message: "订单不存在"
+
+- case_id: TC_order_011
+  title: 订单详情-未登录
+  method: GET
+  path: /api/order/1
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 支付与取消 ==============
+
+- case_id: TC_order_012
+  title: 支付订单-不存在
+  path: /api/order/pay/999999
+  role: student
+  except_code: 400
+  except_message: "订单不存在"
+
+- case_id: TC_order_013
+  title: 支付订单-未登录
+  path: /api/order/pay/1
+  except_code: 401
+  except_message: "未登录"
+
+- case_id: TC_order_014
+  title: 取消订单-不存在
+  path: /api/order/cancel/999999
+  role: student
+  except_code: 400
+  except_message: "订单不存在"
+
+- case_id: TC_order_015
+  title: 取消订单-未登录
+  path: /api/order/cancel/1
+  except_code: 401
+  except_message: "未登录"

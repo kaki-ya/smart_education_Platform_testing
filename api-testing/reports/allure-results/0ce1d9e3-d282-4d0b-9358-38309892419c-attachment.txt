@@ -1,0 +1,3 @@
+GET /api/apply/pending   [role=student]
+params = 无
+body = 无

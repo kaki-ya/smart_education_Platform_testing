@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_005] → GET /api/admin/user/list
+INFO     sep:request_util.py:133 [TC_admin_005] ← HTTP 200 code=403 message=无权限（2ms）

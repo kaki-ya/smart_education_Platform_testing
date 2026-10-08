@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_038] → PUT /api/user/info  body={"realName": "38同学"}
+INFO     sep:request_util.py:133 [TC_user_038] ← HTTP 200 code=200 message=success（12ms）

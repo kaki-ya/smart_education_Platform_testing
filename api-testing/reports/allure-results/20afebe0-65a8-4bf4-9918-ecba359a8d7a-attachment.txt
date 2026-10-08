@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_order_004] → POST /api/order/create  body={"cartIds": [1]}
+INFO     sep:request_util.py:133 [TC_order_004] ← HTTP 200 code=400 message=购物车项不存在（4ms）

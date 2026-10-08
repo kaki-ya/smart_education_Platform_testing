@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_018] → PUT /api/admin/course/status/999999  params={"status": 2}
+INFO     sep:request_util.py:133 [TC_admin_018] ← HTTP 200 code=400 message=课程不存在（4ms）

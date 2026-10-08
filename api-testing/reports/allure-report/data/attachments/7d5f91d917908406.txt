@@ -1,0 +1,3 @@
+POST /api/cart/add   [role=student]
+params = 无
+body = {"courseId": 2}

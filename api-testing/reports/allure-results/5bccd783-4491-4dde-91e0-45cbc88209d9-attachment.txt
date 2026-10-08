@@ -1,0 +1,3 @@
+POST /api/job/applyList   [role=teacher]
+params = 无
+body = {"jobName": "测试岗A", "salaryMin": 20000, "salaryMax": 10000}

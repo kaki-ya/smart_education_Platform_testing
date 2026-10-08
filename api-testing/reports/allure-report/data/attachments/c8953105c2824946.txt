@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_012] → POST /api/job/apply/1
+INFO     sep:request_util.py:133 [TC_job_012] ← HTTP 200 code=401 message=未登录（2ms）

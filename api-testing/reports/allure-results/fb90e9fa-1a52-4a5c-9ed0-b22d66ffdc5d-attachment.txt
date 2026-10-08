@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_018] → POST /api/job/interview/submit  body={"interviewId": 1, "answers": ["A"]}
+INFO     sep:request_util.py:133 [TC_job_018] ← HTTP 200 code=401 message=未登录（2ms）

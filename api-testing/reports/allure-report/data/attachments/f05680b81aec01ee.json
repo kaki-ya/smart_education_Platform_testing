@@ -1,0 +1,19 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "id": 21,
+    "username": "teacher01",
+    "password": "$2a$10$IR5.UJRkB5OHxAaMZzLnaeOKzNlnUcdrQMKIUJjbOa1UlBzt5YRme",
+    "nickname": "teacher01",
+    "avatar": null,
+    "realName": null,
+    "phone": "13800000002",
+    "email": "teacher01@test.com",
+    "role": 1,
+    "status": 1,
+    "lastLoginTime": "2026-10-01T11:54:09",
+    "createTime": "2026-10-01T11:54:09",
+    "updateTime": "2026-10-01T11:54:09"
+  }
+}

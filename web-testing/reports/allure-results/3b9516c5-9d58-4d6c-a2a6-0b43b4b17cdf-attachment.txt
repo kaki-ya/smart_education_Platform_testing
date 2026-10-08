@@ -1,0 +1,7 @@
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/users
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  54ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/user/list?page=1&size=10  200  32ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":255,"username":"web0923594829","password":"***","nickname":"web0923594829","avatar":null,"realName":null,"phone":"10923594829","email":"web0923594829@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:35","createTime":"2026-10-02T14:…
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/user/list?page=1&size=10&keyword=web0923594829  200  10ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":255,"username":"web0923594829","password":"***","nickname":"web0923594829","avatar":null,"realName":null,"phone":"10923594829","email":"web0923594829@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:46:35","createTime":"2026-10-02T14:…

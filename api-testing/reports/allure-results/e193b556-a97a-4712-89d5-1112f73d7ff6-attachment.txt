@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_apply_003] → GET /api/apply/my
+INFO     sep:request_util.py:133 [TC_apply_003] ← HTTP 200 code=401 message=未登录（2ms）

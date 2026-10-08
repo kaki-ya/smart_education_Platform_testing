@@ -1,0 +1,3 @@
+POST /api/job/offline   [role=teacher]
+params = {"jobId": 999999}
+body = 无

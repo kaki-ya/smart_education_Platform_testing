@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_008] → PUT /api/admin/user/status/999999  params={"status": 0}
+INFO     sep:request_util.py:133 [TC_admin_008] ← HTTP 200 code=400 message=用户不存在（4ms）

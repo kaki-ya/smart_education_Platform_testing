@@ -1,0 +1,639 @@
+2026-10-01 11:54:07 | ========================================================================
+2026-10-01 11:54:07 | 本轮测试开始
+2026-10-01 11:54:07 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_115407.log
+2026-10-01 11:54:07 | 后端地址：http://localhost:8080
+2026-10-01 11:54:07 | 运行环境：Python 3.12.4 / pytest 9.1.1 / Windows-11-10.0.26200-SP0
+2026-10-01 11:54:07 | 命令行：pytest （无额外参数）
+2026-10-01 11:54:07 | ========================================================================
+2026-10-01 11:54:08 | [后端探活] → GET /api/course/list  params={"page": 1, "size": 1}
+2026-10-01 11:54:08 | [后端探活] ← HTTP 200 code=200 message=success（219ms）
+2026-10-01 11:54:08 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:54:08 | [账号引导·student01] ← HTTP 200 code=400 message=用户名或密码错误（87ms）
+2026-10-01 11:54:08 | [账号引导·student01] → POST /api/user/register  body={"username": "student01", "password": "123456", "phone": "13800000001", "email": "student01@test.com", "role": 0}
+2026-10-01 11:54:08 | [账号引导·student01] ← HTTP 200 code=200 message=success（119ms）
+2026-10-01 11:54:08 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:54:08 | [账号引导·student01] ← HTTP 200 code=200 message=success（131ms）
+2026-10-01 11:54:08 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:54:08 | [账号引导·teacher01] ← HTTP 200 code=400 message=用户名或密码错误（5ms）
+2026-10-01 11:54:08 | [账号引导·teacher01] → POST /api/user/register  body={"username": "teacher01", "password": "123456", "phone": "13800000002", "email": "teacher01@test.com", "role": 1}
+2026-10-01 11:54:08 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（81ms）
+2026-10-01 11:54:08 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:54:08 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（78ms）
+2026-10-01 11:54:08 | [账号引导·admin] → POST /api/user/login  body={"username": "admin", "password": "admin123"}
+2026-10-01 11:54:08 | [账号引导·admin] ← HTTP 200 code=200 message=success（82ms）
+2026-10-01 11:54:08 | [账号引导·apitest01] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+2026-10-01 11:54:08 | [账号引导·apitest01] ← HTTP 200 code=400 message=用户名或密码错误（6ms）
+2026-10-01 11:54:08 | [账号引导·apitest01] → POST /api/user/register  body={"username": "apitest01", "password": "1234567", "phone": "13800000003", "email": "apitest01@test.com", "role": 0}
+2026-10-01 11:54:08 | [账号引导·apitest01] ← HTTP 200 code=200 message=success（93ms）
+2026-10-01 11:54:08 | [账号引导·apitest01] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+2026-10-01 11:54:09 | [账号引导·apitest01] ← HTTP 200 code=200 message=success（77ms）
+2026-10-01 11:54:09 | [TC_user_001] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+2026-10-01 11:54:09 | [TC_user_001] ← HTTP 200 code=200 message=success（89ms）
+2026-10-01 11:54:09 | [TC_user_001] 通过（95ms）
+2026-10-01 11:54:09 | [TC_user_002] → POST /api/user/login  body={"username": "apitest01", "password": "123"}
+2026-10-01 11:54:09 | [TC_user_002] ← HTTP 200 code=400 message=用户名或密码错误（74ms）
+2026-10-01 11:54:09 | [TC_user_002] 通过（80ms）
+2026-10-01 11:54:09 | [TC_user_003] → POST /api/user/login  body={"username": "apitest01", "password": "12"}
+2026-10-01 11:54:09 | [TC_user_003] ← HTTP 200 code=400 message=用户名或密码错误（72ms）
+2026-10-01 11:54:09 | [TC_user_003] 通过（77ms）
+2026-10-01 11:54:09 | [TC_user_004] → POST /api/user/login  body={"username": "apitest01", "password": "1"}
+2026-10-01 11:54:09 | [TC_user_004] ← HTTP 200 code=400 message=用户名或密码错误（73ms）
+2026-10-01 11:54:09 | [TC_user_004] 通过（80ms）
+2026-10-01 11:54:09 | [TC_user_005] → POST /api/user/login  body={"username": "apitest01", "password": ""}
+2026-10-01 11:54:09 | [TC_user_005] ← HTTP 200 code=400 message=密码不能为空（7ms）
+2026-10-01 11:54:09 | [TC_user_005] 通过（13ms）
+2026-10-01 11:54:09 | [TC_user_006] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+2026-10-01 11:54:09 | [TC_user_006] ← HTTP 200 code=200 message=success（80ms）
+2026-10-01 11:54:09 | [TC_user_006] 通过（85ms）
+2026-10-01 11:54:09 | [TC_user_007] → POST /api/user/login  body={"username": "apitest01", "password": "123456789012345678901234567890"}
+2026-10-01 11:54:09 | [TC_user_007] ← HTTP 200 code=400 message=密码长度不能超过20个字符（3ms）
+2026-10-01 11:54:09 | [TC_user_007] 通过（8ms）
+2026-10-01 11:54:09 | [TC_user_008] → POST /api/user/login  body={"username": "apitest01", "password": "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"}
+2026-10-01 11:54:09 | [TC_user_008] ← HTTP 200 code=400 message=密码长度不能超过20个字符（3ms）
+2026-10-01 11:54:09 | [TC_user_008] 通过（8ms）
+2026-10-01 11:54:09 | [TC_user_009] → POST /api/user/login  body={"username": "apitest01", "password": "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"}
+2026-10-01 11:54:09 | [TC_user_009] ← HTTP 200 code=400 message=密码长度不能超过20个字符（3ms）
+2026-10-01 11:54:09 | [TC_user_009] 通过（9ms）
+2026-10-01 11:54:09 | [TC_user_010] → POST /api/user/login  body={"password": "1234567"}
+2026-10-01 11:54:09 | [TC_user_010] ← HTTP 200 code=400 message=用户名不能为空（4ms）
+2026-10-01 11:54:09 | [TC_user_010] 通过（9ms）
+2026-10-01 11:54:09 | [TC_user_011] → POST /api/user/login  body={"username": "abcdefghijklmnopqrstu", "password": "1234567"}
+2026-10-01 11:54:09 | [TC_user_011] ← HTTP 200 code=400 message=用户名长度不能超过20个字符（4ms）
+2026-10-01 11:54:09 | [TC_user_011] 通过（9ms）
+2026-10-01 11:54:09 | [TC_user_012] → POST /api/user/login  body={"username": "nobody", "password": "1234567"}
+2026-10-01 11:54:09 | [TC_user_012] ← HTTP 200 code=400 message=用户名或密码错误（4ms）
+2026-10-01 11:54:09 | [TC_user_012] 通过（10ms）
+2026-10-01 11:54:09 | [TC_user_013] → POST /api/user/register  body={"username": "register013", "password": "1234567", "phone": "13900000013", "email": "register013@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_013] ← HTTP 200 code=200 message=success（83ms）
+2026-10-01 11:54:09 | [TC_user_013] 通过（87ms）
+2026-10-01 11:54:09 | [TC_user_014] → POST /api/user/register  body={"username": "register013", "password": "1234567", "phone": "13900000014", "email": "register014@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_014] ← HTTP 200 code=400 message=用户名已存在（4ms）
+2026-10-01 11:54:09 | [TC_user_014] 通过（10ms）
+2026-10-01 11:54:09 | [TC_user_015] → POST /api/user/register  body={"username": "register015", "password": "1234567", "phone": "13900000015", "email": "student01@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_015] ← HTTP 200 code=400 message=该邮箱已被注册（14ms）
+2026-10-01 11:54:09 | [TC_user_015] 通过（19ms）
+2026-10-01 11:54:09 | [TC_user_016] → POST /api/user/register  body={"username": "register016", "password": "1234567", "phone": "13900000016", "email": "register016.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_016] ← HTTP 200 code=400 message=邮箱格式不正确（3ms）
+2026-10-01 11:54:09 | [TC_user_016] 通过（9ms）
+2026-10-01 11:54:09 | [TC_user_017] → POST /api/user/register  body={"username": "register017", "password": "1234567", "phone": "13900000013", "email": "register017@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_017] ← HTTP 200 code=400 message=该手机号在此身份下已被使用（7ms）
+2026-10-01 11:54:09 | [TC_user_017] 通过（12ms）
+2026-10-01 11:54:09 | [TC_user_018] → POST /api/user/register  body={"username": "register018", "password": "1234567", "phone": "1380000018", "email": "register018@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_018] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）
+2026-10-01 11:54:09 | [TC_user_018] 通过（8ms）
+2026-10-01 11:54:09 | [TC_user_019] → POST /api/user/register  body={"username": "register019", "password": "1234567", "phone": "13819", "email": "register019@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_019] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）
+2026-10-01 11:54:09 | [TC_user_019] 通过（8ms）
+2026-10-01 11:54:09 | [TC_user_020] → POST /api/user/register  body={"username": "register020", "password": "1234567", "phone": "1390000000020", "email": "register020@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_020] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）
+2026-10-01 11:54:09 | [TC_user_020] 通过（9ms）
+2026-10-01 11:54:09 | [TC_user_021] → POST /api/user/register  body={"username": "register021", "password": "1234567", "phone": "139000000000000000021", "email": "register021@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_021] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）
+2026-10-01 11:54:09 | [TC_user_021] 通过（8ms）
+2026-10-01 11:54:09 | [TC_user_022] → POST /api/user/register  body={"username": "register022", "password": "1234567", "phone": "13900000013", "email": "register022@test.com", "role": 1}
+2026-10-01 11:54:09 | [TC_user_022] ← HTTP 200 code=200 message=success（115ms）
+2026-10-01 11:54:09 | [TC_user_022] 通过（123ms）
+2026-10-01 11:54:09 | [TC_user_023] → POST /api/user/register  body={"password": "1234567", "phone": "13900000023", "email": "register023@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_023] ← HTTP 200 code=400 message=用户名不能为空（3ms）
+2026-10-01 11:54:09 | [TC_user_023] 通过（11ms）
+2026-10-01 11:54:09 | [TC_user_024] → POST /api/user/register  body={"username": "24", "password": "1234567", "phone": "13900000024", "email": "register024@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_024] ← HTTP 200 code=400 message=用户名长度需在3-20个字符之间（4ms）
+2026-10-01 11:54:09 | [TC_user_024] 通过（10ms）
+2026-10-01 11:54:09 | [TC_user_025] → POST /api/user/register  body={"username": "smarteducationplatformtestingapitestregister25", "password": "1234567", "phone": "13900000025", "email": "register025@test.com", "role": 0}
+2026-10-01 11:54:09 | [TC_user_025] ← HTTP 200 code=400 message=用户名长度需在3-20个字符之间（4ms）
+2026-10-01 11:54:09 | [TC_user_025] 通过（12ms）
+2026-10-01 11:54:09 | [TC_user_026] → POST /api/user/register  body={"username": "注册26", "password": "1234567", "phone": "13900000026", "email": "register026@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_026] ← HTTP 200 code=400 message=用户名只能包含字母、数字和下划线（4ms）
+2026-10-01 11:54:10 | [TC_user_026] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_027] → POST /api/user/register  body={"username": "register27", "phone": "13900000027", "email": "register027@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_027] ← HTTP 200 code=400 message=密码不能为空（4ms）
+2026-10-01 11:54:10 | [TC_user_027] 通过（11ms）
+2026-10-01 11:54:10 | [TC_user_028] → POST /api/user/register  body={"username": "register28", "password": "12345", "phone": "13900000028", "email": "register028@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_028] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（3ms）
+2026-10-01 11:54:10 | [TC_user_028] 通过（9ms）
+2026-10-01 11:54:10 | [TC_user_029] → POST /api/user/register  body={"username": "register29", "password": "12345678901234567890111111", "phone": "13900000029", "email": "register029@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_029] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（4ms）
+2026-10-01 11:54:10 | [TC_user_029] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_030] → POST /api/user/register  body={"username": "register30", "password": "123456", "email": "register030@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_030] ← HTTP 200 code=400 message=手机号不能为空（3ms）
+2026-10-01 11:54:10 | [TC_user_030] 通过（9ms）
+2026-10-01 11:54:10 | [TC_user_031] → POST /api/user/register  body={"username": "register31", "password": "123456", "phone": "03800000031", "email": "register031@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_031] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）
+2026-10-01 11:54:10 | [TC_user_031] 通过（9ms）
+2026-10-01 11:54:10 | [TC_user_032] → POST /api/user/register  body={"username": "register32", "password": "123456", "phone": "138phone032", "email": "register032@test.com", "role": 0}
+2026-10-01 11:54:10 | [TC_user_032] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（4ms）
+2026-10-01 11:54:10 | [TC_user_032] 通过（9ms）
+2026-10-01 11:54:10 | [TC_user_033] → POST /api/user/register  body={"username": "register33", "password": "123456", "phone": "13800000033", "role": 0}
+2026-10-01 11:54:10 | [TC_user_033] ← HTTP 200 code=400 message=邮箱不能为空（3ms）
+2026-10-01 11:54:10 | [TC_user_033] 通过（8ms）
+2026-10-01 11:54:10 | [TC_user_034] → GET /api/user/info
+2026-10-01 11:54:10 | [TC_user_034] ← HTTP 200 code=200 message=success（21ms）
+2026-10-01 11:54:10 | [TC_user_034] 通过（27ms）
+2026-10-01 11:54:10 | [TC_user_035] → GET /api/user/info
+2026-10-01 11:54:10 | [TC_user_035] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:10 | [TC_user_035] 通过（14ms）
+2026-10-01 11:54:10 | [TC_user_036] → GET /api/user/info
+2026-10-01 11:54:10 | [TC_user_036] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:10 | [TC_user_036] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_037] → PUT /api/user/info  body={"nickname": "用户037"}
+2026-10-01 11:54:10 | [TC_user_037] ← HTTP 200 code=200 message=success（17ms）
+2026-10-01 11:54:10 | [TC_user_037] 通过（23ms）
+2026-10-01 11:54:10 | [TC_user_038] → PUT /api/user/info  body={"realName": "38同学"}
+2026-10-01 11:54:10 | [TC_user_038] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:54:10 | [TC_user_038] 通过（18ms）
+2026-10-01 11:54:10 | [TC_user_039] → PUT /api/user/info  body={"nickname": "这是一个超过二十个字符长度的昵称用来测试校验"}
+2026-10-01 11:54:10 | [TC_user_039] ← HTTP 200 code=400 message=昵称不能超过20个字符（5ms）
+2026-10-01 11:54:10 | [TC_user_039] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_040] → PUT /api/user/info  body={"nickname": "hacker"}
+2026-10-01 11:54:10 | [TC_user_040] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:10 | [TC_user_040] 通过（8ms）
+2026-10-01 11:54:10 | [TC_user_041] → POST /api/user/resetPassword  body={"oldPassword": "wrongPassword", "newPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_041] ← HTTP 200 code=400 message=原密码错误（79ms）
+2026-10-01 11:54:10 | [TC_user_041] 通过（85ms）
+2026-10-01 11:54:10 | [TC_user_042] → POST /api/user/resetPassword  body={"newPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_042] ← HTTP 200 code=400 message=原密码不能为空（4ms）
+2026-10-01 11:54:10 | [TC_user_042] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_043] → POST /api/user/resetPassword  body={"oldPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_043] ← HTTP 200 code=400 message=新密码不能为空（4ms）
+2026-10-01 11:54:10 | [TC_user_043] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_044] → POST /api/user/resetPassword  body={"oldPassword": "wrongPassword", "newPassword": "44"}
+2026-10-01 11:54:10 | [TC_user_044] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（4ms）
+2026-10-01 11:54:10 | [TC_user_044] 通过（11ms）
+2026-10-01 11:54:10 | [TC_user_045] → POST /api/user/forgotPassword  body={"phone": "13800000000", "newPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_045] ← HTTP 200 code=400 message=该手机号未注册（10ms）
+2026-10-01 11:54:10 | [TC_user_045] 通过（15ms）
+2026-10-01 11:54:10 | [TC_user_046] → POST /api/user/forgotPassword  body={"phone": "1370046", "newPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_046] ← HTTP 200 code=400 message=手机号必须为11位数字（3ms）
+2026-10-01 11:54:10 | [TC_user_046] 通过（8ms）
+2026-10-01 11:54:10 | [TC_user_047] → POST /api/user/forgotPassword  body={"newPassword": "654321"}
+2026-10-01 11:54:10 | [TC_user_047] ← HTTP 200 code=400 message=手机号不能为空（3ms）
+2026-10-01 11:54:10 | [TC_user_047] 通过（8ms）
+2026-10-01 11:54:10 | [TC_user_048] → POST /api/user/forgotPassword  body={"phone": "13800000001"}
+2026-10-01 11:54:10 | [TC_user_048] ← HTTP 200 code=400 message=新密码不能为空（2ms）
+2026-10-01 11:54:10 | [TC_user_048] 通过（7ms）
+2026-10-01 11:54:10 | [TC_user_049] → POST /api/user/forgotPassword  body={"phone": "13800000001", "newPassword": "12"}
+2026-10-01 11:54:10 | [TC_user_049] ← HTTP 200 code=400 message=密码长度需在6-20个字符之间（2ms）
+2026-10-01 11:54:10 | [TC_user_049] 通过（7ms）
+2026-10-01 11:54:10 | [TC_user_050] → POST /api/user/forgotPassword  body={"phone": "13800000001", "newPassword": "123456"}
+2026-10-01 11:54:10 | [TC_user_050] ← HTTP 200 code=200 message=success（85ms）
+2026-10-01 11:54:10 | [TC_user_050] 通过（90ms）
+2026-10-01 11:54:10 | [TC_user_051] → POST /api/user/logout
+2026-10-01 11:54:10 | [TC_user_051] ← HTTP 200 code=200 message=success（3ms）
+2026-10-01 11:54:10 | [TC_user_051] 通过（10ms）
+2026-10-01 11:54:10 | [TC_user_052] → POST /api/user/logout
+2026-10-01 11:54:10 | [TC_user_052] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:10 | [TC_user_052] 通过（9ms）
+2026-10-01 11:54:10 | [TC_course_001] → GET /api/course/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_001] ← HTTP 200 code=200 message=success（16ms）
+2026-10-01 11:54:10 | [TC_course_001] 通过（24ms）
+2026-10-01 11:54:10 | [TC_course_002] → GET /api/course/list  params={"keyword": "Java", "page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_002] ← HTTP 200 code=200 message=success（20ms）
+2026-10-01 11:54:10 | [TC_course_002] 通过（26ms）
+2026-10-01 11:54:10 | [TC_course_003] → GET /api/course/list  params={"courseType": 1, "page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_003] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:54:10 | [TC_course_003] 通过（18ms）
+2026-10-01 11:54:10 | [TC_course_004] → GET /api/course/list  params={"isFree": 1, "page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_004] ← HTTP 200 code=200 message=success（9ms）
+2026-10-01 11:54:10 | [TC_course_004] 通过（15ms）
+2026-10-01 11:54:10 | [TC_course_005] → GET /api/course/list  params={"techSystem": "Java", "page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_005] ← HTTP 200 code=200 message=success（10ms）
+2026-10-01 11:54:10 | [TC_course_005] 通过（16ms）
+2026-10-01 11:54:10 | [TC_course_006] → GET /api/course/list  params={"sortBy": "enroll", "order": "desc", "page": 1, "size": 10}
+2026-10-01 11:54:10 | [TC_course_006] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:10 | [TC_course_006] 通过（14ms）
+2026-10-01 11:54:10 | [TC_course_007] → GET /api/course/list  params={"page": 9999, "size": 10}
+2026-10-01 11:54:10 | [TC_course_007] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:10 | [TC_course_007] 通过（13ms）
+2026-10-01 11:54:10 | [TC_course_008] → GET /api/course/1
+2026-10-01 11:54:10 | [TC_course_008] ← HTTP 200 code=200 message=success（11ms）
+2026-10-01 11:54:10 | [TC_course_008] 通过（18ms）
+2026-10-01 11:54:10 | [TC_course_009] → GET /api/course/2
+2026-10-01 11:54:10 | [TC_course_009] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:10 | [TC_course_009] 通过（15ms）
+2026-10-01 11:54:10 | [TC_course_010] → GET /api/course/1
+2026-10-01 11:54:10 | [TC_course_010] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:10 | [TC_course_010] 通过（13ms）
+2026-10-01 11:54:10 | [TC_course_011] → GET /api/course/999999
+2026-10-01 11:54:10 | [TC_course_011] ← HTTP 200 code=400 message=课程不存在或已下架（4ms）
+2026-10-01 11:54:10 | [TC_course_011] 通过（9ms）
+2026-10-01 11:54:10 | [TC_course_012] → POST /api/course/collect/1
+2026-10-01 11:54:10 | [TC_course_012] ← HTTP 200 code=200 message=success（11ms）
+2026-10-01 11:54:10 | [TC_course_012] 通过（16ms）
+2026-10-01 11:54:10 | [TC_course_013] → GET /api/course/study/1
+2026-10-01 11:54:10 | [TC_course_013] ← HTTP 200 code=200 message=success（10ms）
+2026-10-01 11:54:10 | [TC_course_013] 通过（17ms）
+2026-10-01 11:54:10 | [TC_course_014] → GET /api/course/study/2
+2026-10-01 11:54:10 | [TC_course_014] ← HTTP 200 code=400 message=请先购买该课程（7ms）
+2026-10-01 11:54:10 | [TC_course_014] 通过（12ms）
+2026-10-01 11:54:10 | [TC_course_015] → GET /api/course/study/999999
+2026-10-01 11:54:10 | [TC_course_015] ← HTTP 200 code=400 message=课程不存在（4ms）
+2026-10-01 11:54:10 | [TC_course_015] 通过（9ms）
+2026-10-01 11:54:10 | [TC_course_016] → GET /api/course/study/1
+2026-10-01 11:54:11 | [TC_course_016] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:11 | [TC_course_016] 通过（8ms）
+2026-10-01 11:54:11 | [TC_course_017] → GET /api/course/mine
+2026-10-01 11:54:11 | [TC_course_017] ← HTTP 200 code=200 message=success（5ms）
+2026-10-01 11:54:11 | [TC_course_017] 通过（10ms）
+2026-10-01 11:54:11 | [TC_course_018] → GET /api/course/mine
+2026-10-01 11:54:11 | [TC_course_018] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:11 | [TC_course_018] 通过（8ms）
+2026-10-01 11:54:11 | [TC_course_019] → POST /api/course/progress  body={"courseId": 1, "chapterId": 1, "progress": 50}
+2026-10-01 11:54:11 | [TC_course_019] ← HTTP 200 code=200 message=success（23ms）
+2026-10-01 11:54:11 | [TC_course_019] 通过（28ms）
+2026-10-01 11:54:11 | [TC_course_020] → POST /api/course/progress  body={"courseId": 999999, "chapterId": 1, "progress": 50}
+2026-10-01 11:54:11 | [TC_course_020] ← HTTP 200 code=400 message=课程不存在（5ms）
+2026-10-01 11:54:11 | [TC_course_020] 通过（10ms）
+2026-10-01 11:54:11 | [TC_course_021] → POST /api/course/progress  body={"courseId": 1, "chapterId": 1, "progress": 50}
+2026-10-01 11:54:11 | [TC_course_021] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:11 | [TC_course_021] 通过（9ms）
+2026-10-01 11:54:11 | [TC_course_022] → POST /api/course/applyList  body={"courseName": "", "price": 99}
+2026-10-01 11:54:11 | [TC_course_022] ← HTTP 200 code=400 message=课程名称不能为空（27ms）
+2026-10-01 11:54:11 | [TC_course_022] 通过（32ms）
+2026-10-01 11:54:11 | [TC_course_023] → POST /api/course/applyList  body={"courseName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "price": 99}
+2026-10-01 11:54:11 | [TC_course_023] ← HTTP 200 code=400 message=课程名称不能超过50个字符（5ms）
+2026-10-01 11:54:11 | [TC_course_023] 通过（10ms）
+2026-10-01 11:54:11 | [TC_course_024] → POST /api/course/applyList  body={"courseName": "自动化测试课程", "price": -1}
+2026-10-01 11:54:11 | [TC_course_024] ← HTTP 200 code=400 message=价格不能小于0（4ms）
+2026-10-01 11:54:11 | [TC_course_024] 通过（9ms）
+2026-10-01 11:54:11 | [TC_course_025] → POST /api/course/applyList  body={"courseName": "自动化测试课程", "price": 30001}
+2026-10-01 11:54:11 | [TC_course_025] ← HTTP 200 code=400 message=价格不能超过30000（3ms）
+2026-10-01 11:54:11 | [TC_course_025] 通过（8ms）
+2026-10-01 11:54:11 | [TC_course_026] → POST /api/course/applyList  body={"courseName": "自动化测试课程-001", "courseType": 1, "techSystem": "Java", "techDirection": "后端", "courseLevel": "初级", "isFree": 0, "price": 99, "description": "由自动化测试创建，审核前 status=0 不出现在前台列表", "reason": "自动化测试", "chapters": [{"chapterName": "第一章 概述", "duration": 10, "videoUrl": "/uploads/video/demo.…（已截断，共 307 字符）
+2026-10-01 11:54:11 | [TC_course_026] ← HTTP 200 code=200 message=success（48ms）
+2026-10-01 11:54:11 | [TC_course_026] 通过（54ms）
+2026-10-01 11:54:11 | [TC_course_027] → POST /api/course/offline
+2026-10-01 11:54:11 | [TC_course_027] ← HTTP 200 code=500 message=系统异常（4ms）
+2026-10-01 11:54:11 | [TC_course_027] 失败（9ms）
+2026-10-01 11:54:11 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:261
+2026-10-01 11:54:11 |         AssertionError: ===== TC_course_027 申请下架-缺courseId =====
+2026-10-01 11:54:11 |         ===== 来源 =====
+2026-10-01 11:54:11 |         data/usercase_course.yaml:287
+2026-10-01 11:54:11 |         ===== 请求 =====
+2026-10-01 11:54:11 |         POST /api/course/offline   [role=teacher]
+2026-10-01 11:54:11 |         params = 无
+2026-10-01 11:54:11 |         body = 无
+2026-10-01 11:54:11 |         ===== 预期 =====
+2026-10-01 11:54:11 |         code == 400（参数错误）
+2026-10-01 11:54:11 |         ===== 实际 =====
+2026-10-01 11:54:11 |         code == 500（系统异常）
+2026-10-01 11:54:11 |         后端 message：系统异常
+2026-10-01 11:54:11 |         ===== 响应 =====
+2026-10-01 11:54:11 |         HTTP 200｜{"code": 500, "message": "系统异常", "data": null}
+2026-10-01 11:54:11 | [TC_course_028] → POST /api/course/offline  params={"courseId": 999999}
+2026-10-01 11:54:11 | [TC_course_028] ← HTTP 200 code=400 message=课程不存在（7ms）
+2026-10-01 11:54:11 | [TC_course_028] 通过（14ms）
+2026-10-01 11:54:11 | [TC_course_029] → POST /api/course/offline  params={"courseId": 1, "reason": "内容过期，申请下架"}
+2026-10-01 11:54:11 | [TC_course_029] ← HTTP 200 code=403 message=无权下架该课程（6ms）
+2026-10-01 11:54:11 | [TC_course_029] 通过（12ms）
+2026-10-01 11:54:11 | [TC_course_030] → POST /api/course/offline  params={"courseId": 1}
+2026-10-01 11:54:11 | [TC_course_030] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:11 | [TC_course_030] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_001] → GET /api/job/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:11 | [TC_job_001] ← HTTP 200 code=200 message=success（13ms）
+2026-10-01 11:54:11 | [TC_job_001] 通过（19ms）
+2026-10-01 11:54:11 | [TC_job_002] → GET /api/job/list  params={"keyword": "Java", "page": 1, "size": 10}
+2026-10-01 11:54:11 | [TC_job_002] ← HTTP 200 code=200 message=success（9ms）
+2026-10-01 11:54:11 | [TC_job_002] 通过（15ms）
+2026-10-01 11:54:11 | [TC_job_003] → GET /api/job/list  params={"jobCategory": "开发", "page": 1, "size": 10}
+2026-10-01 11:54:11 | [TC_job_003] ← HTTP 200 code=200 message=success（9ms）
+2026-10-01 11:54:11 | [TC_job_003] 通过（15ms）
+2026-10-01 11:54:11 | [TC_job_004] → GET /api/job/list  params={"page": 9999, "size": 10}
+2026-10-01 11:54:11 | [TC_job_004] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:11 | [TC_job_004] 通过（11ms）
+2026-10-01 11:54:11 | [TC_job_005] → GET /api/job/1
+2026-10-01 11:54:11 | [TC_job_005] ← HTTP 200 code=200 message=success（4ms）
+2026-10-01 11:54:11 | [TC_job_005] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_006] → GET /api/job/999999
+2026-10-01 11:54:11 | [TC_job_006] ← HTTP 200 code=400 message=职位不存在或已下架（3ms）
+2026-10-01 11:54:11 | [TC_job_006] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_007] → POST /api/job/collect/1
+2026-10-01 11:54:11 | [TC_job_007] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:11 | [TC_job_007] 通过（13ms）
+2026-10-01 11:54:11 | [TC_job_008] → POST /api/job/collect/1
+2026-10-01 11:54:11 | [TC_job_008] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:11 | [TC_job_008] 通过（7ms）
+2026-10-01 11:54:11 | [TC_job_009] → POST /api/job/apply/1
+2026-10-01 11:54:11 | [TC_job_009] ← HTTP 200 code=200 message=success（19ms）
+2026-10-01 11:54:11 | [TC_job_009] 通过（26ms）
+2026-10-01 11:54:11 | [TC_job_010] → POST /api/job/apply/1
+2026-10-01 11:54:11 | [TC_job_010] ← HTTP 200 code=400 message=您已投递过该职位，请勿重复投递（7ms）
+2026-10-01 11:54:11 | [TC_job_010] 通过（13ms）
+2026-10-01 11:54:11 | [TC_job_011] → POST /api/job/apply/999999
+2026-10-01 11:54:11 | [TC_job_011] ← HTTP 200 code=400 message=职位不存在或已下架（5ms）
+2026-10-01 11:54:11 | [TC_job_011] 通过（12ms）
+2026-10-01 11:54:11 | [TC_job_012] → POST /api/job/apply/1
+2026-10-01 11:54:11 | [TC_job_012] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:11 | [TC_job_012] 通过（10ms）
+2026-10-01 11:54:11 | [TC_job_013] → GET /api/job/my/applications
+2026-10-01 11:54:11 | [TC_job_013] ← HTTP 200 code=200 message=success（11ms）
+2026-10-01 11:54:11 | [TC_job_013] 通过（16ms）
+2026-10-01 11:54:11 | [TC_job_014] → GET /api/job/my/applications
+2026-10-01 11:54:11 | [TC_job_014] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:11 | [TC_job_014] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_015] → POST /api/job/ai-interview/1
+2026-10-01 11:54:11 | [TC_job_015] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:11 | [TC_job_015] 通过（13ms）
+2026-10-01 11:54:11 | [TC_job_016] → POST /api/job/ai-interview/999999
+2026-10-01 11:54:11 | [TC_job_016] ← HTTP 200 code=400 message=职位不存在或已下架（3ms）
+2026-10-01 11:54:11 | [TC_job_016] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_017] → POST /api/job/interview/submit  body={"interviewId": 999999, "answers": ["A", "B"]}
+2026-10-01 11:54:11 | [TC_job_017] ← HTTP 200 code=400 message=面试不存在（6ms）
+2026-10-01 11:54:11 | [TC_job_017] 通过（11ms）
+2026-10-01 11:54:11 | [TC_job_018] → POST /api/job/interview/submit  body={"interviewId": 1, "answers": ["A"]}
+2026-10-01 11:54:11 | [TC_job_018] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:11 | [TC_job_018] 通过（6ms）
+2026-10-01 11:54:11 | [TC_job_019] → GET /api/job/interview/report/999999
+2026-10-01 11:54:11 | [TC_job_019] ← HTTP 200 code=400 message=面试不存在（4ms）
+2026-10-01 11:54:11 | [TC_job_019] 通过（10ms）
+2026-10-01 11:54:11 | [TC_job_020] → GET /api/job/interview/report/1
+2026-10-01 11:54:11 | [TC_job_020] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:11 | [TC_job_020] 通过（9ms）
+2026-10-01 11:54:11 | [TC_job_021] → GET /api/job/my
+2026-10-01 11:54:11 | [TC_job_021] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:11 | [TC_job_021] 通过（13ms）
+2026-10-01 11:54:11 | [TC_job_022] → GET /api/job/my
+2026-10-01 11:54:11 | [TC_job_022] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:11 | [TC_job_022] 通过（8ms）
+2026-10-01 11:54:11 | [TC_job_023] → GET /api/job/my/applicants/1
+2026-10-01 11:54:11 | [TC_job_023] ← HTTP 200 code=400 message=无权查看该职位（6ms）
+2026-10-01 11:54:11 | [TC_job_023] 通过（13ms）
+2026-10-01 11:54:11 | [TC_job_024] → GET /api/job/my/applicants/1
+2026-10-01 11:54:11 | [TC_job_024] ← HTTP 200 code=400 message=无权查看该职位（5ms）
+2026-10-01 11:54:12 | [TC_job_024] 通过（11ms）
+2026-10-01 11:54:12 | [TC_job_025] → PUT /api/job/my/applicants/999999  params={"status": 1}
+2026-10-01 11:54:12 | [TC_job_025] ← HTTP 200 code=400 message=投递记录不存在（4ms）
+2026-10-01 11:54:12 | [TC_job_025] 通过（10ms）
+2026-10-01 11:54:12 | [TC_job_026] → PUT /api/job/my/applicants/1
+2026-10-01 11:54:12 | [TC_job_026] ← HTTP 200 code=500 message=系统异常（3ms）
+2026-10-01 11:54:12 | [TC_job_026] 失败（9ms）
+2026-10-01 11:54:12 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:261
+2026-10-01 11:54:12 |         AssertionError: ===== TC_job_026 更新候选人状态-缺status =====
+2026-10-01 11:54:12 |         ===== 来源 =====
+2026-10-01 11:54:12 |         data/usercase_job.yaml:233
+2026-10-01 11:54:12 |         ===== 请求 =====
+2026-10-01 11:54:12 |         PUT /api/job/my/applicants/1   [role=teacher]
+2026-10-01 11:54:12 |         params = 无
+2026-10-01 11:54:12 |         body = 无
+2026-10-01 11:54:12 |         ===== 预期 =====
+2026-10-01 11:54:12 |         code == 400（参数错误）
+2026-10-01 11:54:12 |         ===== 实际 =====
+2026-10-01 11:54:12 |         code == 500（系统异常）
+2026-10-01 11:54:12 |         后端 message：系统异常
+2026-10-01 11:54:12 |         ===== 响应 =====
+2026-10-01 11:54:12 |         HTTP 200｜{"code": 500, "message": "系统异常", "data": null}
+2026-10-01 11:54:12 | [TC_job_027] → POST /api/job/applyList  body={"jobName": "自动化测试岗", "jobCategory": "开发", "salaryMin": 10000, "salaryMax": 20000, "city": "北京", "education": "本科", "experience": "3年", "reason": "自动化用例", "duties": ["负责测试", "编写用例"]}
+2026-10-01 11:54:12 | [TC_job_027] ← HTTP 200 code=200 message=success（17ms）
+2026-10-01 11:54:12 | [TC_job_027] 通过（23ms）
+2026-10-01 11:54:12 | [TC_job_028] → POST /api/job/applyList  body={"salaryMin": 10000, "salaryMax": 20000}
+2026-10-01 11:54:12 | [TC_job_028] ← HTTP 200 code=400 message=职位名称不能为空（3ms）
+2026-10-01 11:54:12 | [TC_job_028] 通过（8ms）
+2026-10-01 11:54:12 | [TC_job_029] → POST /api/job/applyList  body={"jobName": "岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗", "salaryMin": 10000, "salaryMax": 20000}
+2026-10-01 11:54:12 | [TC_job_029] ← HTTP 200 code=400 message=职位名称不能超过50个字符（3ms）
+2026-10-01 11:54:12 | [TC_job_029] 通过（10ms）
+2026-10-01 11:54:12 | [TC_job_030] → POST /api/job/applyList  body={"jobName": "测试岗A", "salaryMin": 20000, "salaryMax": 10000}
+2026-10-01 11:54:12 | [TC_job_030] ← HTTP 200 code=400 message=最低薪资必须小于最高薪资（4ms）
+2026-10-01 11:54:12 | [TC_job_030] 通过（10ms）
+2026-10-01 11:54:12 | [TC_job_031] → POST /api/job/applyList  body={"jobName": "测试岗B", "salaryMin": 10000, "salaryMax": 10000}
+2026-10-01 11:54:12 | [TC_job_031] ← HTTP 200 code=400 message=最低薪资必须小于最高薪资（3ms）
+2026-10-01 11:54:12 | [TC_job_031] 通过（8ms）
+2026-10-01 11:54:12 | [TC_job_032] → POST /api/job/applyList  body={"jobName": "测试岗C", "salaryMin": 2000, "salaryMax": 20000}
+2026-10-01 11:54:12 | [TC_job_032] ← HTTP 200 code=400 message=最低薪资不得低于2500元（3ms）
+2026-10-01 11:54:12 | [TC_job_032] 通过（9ms）
+2026-10-01 11:54:12 | [TC_job_033] → POST /api/job/applyList  body={"jobName": "测试岗D", "salaryMin": 10000, "salaryMax": 100001}
+2026-10-01 11:54:12 | [TC_job_033] ← HTTP 200 code=400 message=最高薪资不得高于100000元（3ms）
+2026-10-01 11:54:12 | [TC_job_033] 通过（10ms）
+2026-10-01 11:54:12 | [TC_job_034] → POST /api/job/applyList  body={"jobName": "x", "salaryMin": 10000, "salaryMax": 20000}
+2026-10-01 11:54:12 | [TC_job_034] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_job_034] 通过（8ms）
+2026-10-01 11:54:12 | [TC_job_035] → POST /api/job/offline  params={"jobId": 1, "reason": "自动化用例"}
+2026-10-01 11:54:12 | [TC_job_035] ← HTTP 200 code=403 message=无权下架该职位（10ms）
+2026-10-01 11:54:12 | [TC_job_035] 通过（15ms）
+2026-10-01 11:54:12 | [TC_job_036] → POST /api/job/offline  params={"jobId": 999999}
+2026-10-01 11:54:12 | [TC_job_036] ← HTTP 200 code=400 message=职位不存在（4ms）
+2026-10-01 11:54:12 | [TC_job_036] 通过（9ms）
+2026-10-01 11:54:12 | [TC_job_037] → POST /api/job/offline
+2026-10-01 11:54:12 | [TC_job_037] ← HTTP 200 code=500 message=系统异常（3ms）
+2026-10-01 11:54:12 | [TC_job_037] 失败（8ms）
+2026-10-01 11:54:12 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:261
+2026-10-01 11:54:12 |         AssertionError: ===== TC_job_037 申请下架-缺jobId =====
+2026-10-01 11:54:12 |         ===== 来源 =====
+2026-10-01 11:54:12 |         data/usercase_job.yaml:360
+2026-10-01 11:54:12 |         ===== 请求 =====
+2026-10-01 11:54:12 |         POST /api/job/offline   [role=teacher]
+2026-10-01 11:54:12 |         params = 无
+2026-10-01 11:54:12 |         body = 无
+2026-10-01 11:54:12 |         ===== 预期 =====
+2026-10-01 11:54:12 |         code == 400（参数错误）
+2026-10-01 11:54:12 |         ===== 实际 =====
+2026-10-01 11:54:12 |         code == 500（系统异常）
+2026-10-01 11:54:12 |         后端 message：系统异常
+2026-10-01 11:54:12 |         ===== 响应 =====
+2026-10-01 11:54:12 |         HTTP 200｜{"code": 500, "message": "系统异常", "data": null}
+2026-10-01 11:54:12 | [TC_resume_001] → GET /api/resume/list
+2026-10-01 11:54:12 | [TC_resume_001] ← HTTP 200 code=200 message=success（5ms）
+2026-10-01 11:54:12 | [TC_resume_001] 通过（10ms）
+2026-10-01 11:54:12 | [TC_resume_002] → GET /api/resume/list
+2026-10-01 11:54:12 | [TC_resume_002] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_resume_002] 通过（7ms）
+2026-10-01 11:54:12 | [TC_resume_003] → DELETE /api/resume/999999
+2026-10-01 11:54:12 | [TC_resume_003] ← HTTP 200 code=400 message=简历不存在（3ms）
+2026-10-01 11:54:12 | [TC_resume_003] 通过（9ms）
+2026-10-01 11:54:12 | [TC_resume_004] → DELETE /api/resume/1
+2026-10-01 11:54:12 | [TC_resume_004] ← HTTP 200 code=400 message=简历不存在（3ms）
+2026-10-01 11:54:12 | [TC_resume_004] 通过（9ms）
+2026-10-01 11:54:12 | [TC_resume_005] → DELETE /api/resume/999999
+2026-10-01 11:54:12 | [TC_resume_005] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_resume_005] 通过（7ms）
+2026-10-01 11:54:12 | [TC_cart_001] → GET /api/cart/list
+2026-10-01 11:54:12 | [TC_cart_001] ← HTTP 200 code=200 message=success（5ms）
+2026-10-01 11:54:12 | [TC_cart_001] 通过（11ms）
+2026-10-01 11:54:12 | [TC_cart_002] → GET /api/cart/list
+2026-10-01 11:54:12 | [TC_cart_002] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_cart_002] 通过（8ms）
+2026-10-01 11:54:12 | [TC_cart_003] → POST /api/cart/add  body={"courseId": 2}
+2026-10-01 11:54:12 | [TC_cart_003] ← HTTP 200 code=200 message=success（13ms）
+2026-10-01 11:54:12 | [TC_cart_003] 通过（19ms）
+2026-10-01 11:54:12 | [TC_cart_004] → POST /api/cart/add  body={"courseId": 2}
+2026-10-01 11:54:12 | [TC_cart_004] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:54:12 | [TC_cart_004] 通过（21ms）
+2026-10-01 11:54:12 | [TC_cart_005] → POST /api/cart/add  body={"courseId": 999999}
+2026-10-01 11:54:12 | [TC_cart_005] ← HTTP 200 code=400 message=课程不存在或已下架（4ms）
+2026-10-01 11:54:12 | [TC_cart_005] 通过（10ms）
+2026-10-01 11:54:12 | [TC_cart_006] → POST /api/cart/add  body={"courseId": 2}
+2026-10-01 11:54:12 | [TC_cart_006] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_cart_006] 通过（8ms）
+2026-10-01 11:54:12 | [TC_cart_007] → PUT /api/cart/999999  body={"quantity": 1}
+2026-10-01 11:54:12 | [TC_cart_007] ← HTTP 200 code=400 message=购物车项不存在（5ms）
+2026-10-01 11:54:12 | [TC_cart_007] 通过（10ms）
+2026-10-01 11:54:12 | [TC_cart_008] → DELETE /api/cart/999999
+2026-10-01 11:54:12 | [TC_cart_008] ← HTTP 200 code=400 message=购物车项不存在（4ms）
+2026-10-01 11:54:12 | [TC_cart_008] 通过（10ms）
+2026-10-01 11:54:12 | [TC_cart_009] → DELETE /api/cart/999999
+2026-10-01 11:54:12 | [TC_cart_009] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_cart_009] 通过（7ms）
+2026-10-01 11:54:12 | [TC_order_001] → POST /api/order/create  body={"cartIds": []}
+2026-10-01 11:54:12 | [TC_order_001] ← HTTP 200 code=400 message=请选择要结算的课程（3ms）
+2026-10-01 11:54:12 | [TC_order_001] 通过（10ms）
+2026-10-01 11:54:12 | [TC_order_002] → POST /api/order/create
+2026-10-01 11:54:12 | [TC_order_002] ← HTTP 200 code=400 message=请选择要结算的课程（3ms）
+2026-10-01 11:54:12 | [TC_order_002] 通过（11ms）
+2026-10-01 11:54:12 | [TC_order_003] → POST /api/order/create  body={"cartIds": [999999]}
+2026-10-01 11:54:12 | [TC_order_003] ← HTTP 200 code=400 message=购物车项不存在（5ms）
+2026-10-01 11:54:12 | [TC_order_003] 通过（11ms）
+2026-10-01 11:54:12 | [TC_order_004] → POST /api/order/create  body={"cartIds": [1]}
+2026-10-01 11:54:12 | [TC_order_004] ← HTTP 200 code=400 message=购物车项不存在（4ms）
+2026-10-01 11:54:12 | [TC_order_004] 通过（9ms）
+2026-10-01 11:54:12 | [TC_order_005] → POST /api/order/create  body={"cartIds": [1]}
+2026-10-01 11:54:12 | [TC_order_005] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_order_005] 通过（9ms）
+2026-10-01 11:54:12 | [TC_order_006] → GET /api/order/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_order_006] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:12 | [TC_order_006] 通过（13ms）
+2026-10-01 11:54:12 | [TC_order_007] → GET /api/order/list  params={"status": 0, "page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_order_007] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:12 | [TC_order_007] 通过（13ms）
+2026-10-01 11:54:12 | [TC_order_008] → GET /api/order/list  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_order_008] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:12 | [TC_order_008] 通过（11ms）
+2026-10-01 11:54:12 | [TC_order_009] → GET /api/order/list
+2026-10-01 11:54:12 | [TC_order_009] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_order_009] 通过（7ms）
+2026-10-01 11:54:12 | [TC_order_010] → GET /api/order/999999
+2026-10-01 11:54:12 | [TC_order_010] ← HTTP 200 code=400 message=订单不存在（4ms）
+2026-10-01 11:54:12 | [TC_order_010] 通过（9ms）
+2026-10-01 11:54:12 | [TC_order_011] → GET /api/order/1
+2026-10-01 11:54:12 | [TC_order_011] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_order_011] 通过（7ms）
+2026-10-01 11:54:12 | [TC_order_012] → POST /api/order/pay/999999
+2026-10-01 11:54:12 | [TC_order_012] ← HTTP 200 code=400 message=订单不存在（3ms）
+2026-10-01 11:54:12 | [TC_order_012] 通过（9ms）
+2026-10-01 11:54:12 | [TC_order_013] → POST /api/order/pay/1
+2026-10-01 11:54:12 | [TC_order_013] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_order_013] 通过（11ms）
+2026-10-01 11:54:12 | [TC_order_014] → POST /api/order/cancel/999999
+2026-10-01 11:54:12 | [TC_order_014] ← HTTP 200 code=400 message=订单不存在（6ms）
+2026-10-01 11:54:12 | [TC_order_014] 通过（17ms）
+2026-10-01 11:54:12 | [TC_order_015] → POST /api/order/cancel/1
+2026-10-01 11:54:12 | [TC_order_015] ← HTTP 200 code=401 message=未登录（4ms）
+2026-10-01 11:54:12 | [TC_order_015] 通过（13ms）
+2026-10-01 11:54:12 | [TC_apply_001] → GET /api/apply/my  params={"page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_apply_001] ← HTTP 200 code=200 message=success（18ms）
+2026-10-01 11:54:12 | [TC_apply_001] 通过（26ms）
+2026-10-01 11:54:12 | [TC_apply_002] → GET /api/apply/my  params={"page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_apply_002] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:12 | [TC_apply_002] 通过（15ms）
+2026-10-01 11:54:12 | [TC_apply_003] → GET /api/apply/my
+2026-10-01 11:54:12 | [TC_apply_003] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:12 | [TC_apply_003] 通过（11ms）
+2026-10-01 11:54:12 | [TC_apply_004] → GET /api/apply/pending  params={"page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_apply_004] ← HTTP 200 code=200 message=success（11ms）
+2026-10-01 11:54:12 | [TC_apply_004] 通过（20ms）
+2026-10-01 11:54:12 | [TC_apply_005] → GET /api/apply/pending
+2026-10-01 11:54:12 | [TC_apply_005] ← HTTP 200 code=403 message=无权限（3ms）
+2026-10-01 11:54:12 | [TC_apply_005] 通过（11ms）
+2026-10-01 11:54:12 | [TC_apply_006] → GET /api/apply/pending
+2026-10-01 11:54:12 | [TC_apply_006] ← HTTP 200 code=403 message=无权限（4ms）
+2026-10-01 11:54:12 | [TC_apply_006] 通过（12ms）
+2026-10-01 11:54:12 | [TC_apply_007] → GET /api/apply/pending
+2026-10-01 11:54:12 | [TC_apply_007] ← HTTP 200 code=401 message=未登录（3ms）
+2026-10-01 11:54:12 | [TC_apply_007] 通过（13ms）
+2026-10-01 11:54:12 | [TC_apply_008] → GET /api/apply/audited  params={"page": 1, "size": 10}
+2026-10-01 11:54:12 | [TC_apply_008] ← HTTP 200 code=200 message=success（9ms）
+2026-10-01 11:54:12 | [TC_apply_008] 通过（18ms）
+2026-10-01 11:54:12 | [TC_apply_009] → GET /api/apply/audited  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_apply_009] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:13 | [TC_apply_009] 通过（13ms）
+2026-10-01 11:54:13 | [TC_apply_010] → GET /api/apply/audited  params={"status": 2, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_apply_010] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:13 | [TC_apply_010] 通过（12ms）
+2026-10-01 11:54:13 | [TC_apply_011] → GET /api/apply/audited
+2026-10-01 11:54:13 | [TC_apply_011] ← HTTP 200 code=403 message=无权限（3ms）
+2026-10-01 11:54:13 | [TC_apply_011] 通过（8ms）
+2026-10-01 11:54:13 | [TC_apply_012] → POST /api/apply/audit  body={"id": 999999, "pass": true}
+2026-10-01 11:54:13 | [TC_apply_012] ← HTTP 200 code=400 message=申请不存在（6ms）
+2026-10-01 11:54:13 | [TC_apply_012] 通过（13ms）
+2026-10-01 11:54:13 | [TC_apply_013] → POST /api/apply/audit  body={"id": 1, "pass": true}
+2026-10-01 11:54:13 | [TC_apply_013] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:13 | [TC_apply_013] 通过（8ms）
+2026-10-01 11:54:13 | [TC_apply_014] → POST /api/apply/audit  body={"id": 1, "pass": true}
+2026-10-01 11:54:13 | [TC_apply_014] ← HTTP 200 code=403 message=无权限（3ms）
+2026-10-01 11:54:13 | [TC_apply_014] 通过（9ms）
+2026-10-01 11:54:13 | [TC_admin_001] → GET /api/admin/user/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_001] ← HTTP 200 code=200 message=success（13ms）
+2026-10-01 11:54:13 | [TC_admin_001] 通过（21ms）
+2026-10-01 11:54:13 | [TC_admin_002] → GET /api/admin/user/list  params={"role": 0, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_002] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:54:13 | [TC_admin_002] 通过（19ms）
+2026-10-01 11:54:13 | [TC_admin_003] → GET /api/admin/user/list  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_003] ← HTTP 200 code=200 message=success（13ms）
+2026-10-01 11:54:13 | [TC_admin_003] 通过（21ms）
+2026-10-01 11:54:13 | [TC_admin_004] → GET /api/admin/user/list  params={"keyword": "stu", "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_004] ← HTTP 200 code=200 message=success（10ms）
+2026-10-01 11:54:13 | [TC_admin_004] 通过（18ms）
+2026-10-01 11:54:13 | [TC_admin_005] → GET /api/admin/user/list
+2026-10-01 11:54:13 | [TC_admin_005] ← HTTP 200 code=403 message=无权限（2ms）
+2026-10-01 11:54:13 | [TC_admin_005] 通过（7ms）
+2026-10-01 11:54:13 | [TC_admin_006] → GET /api/admin/user/list
+2026-10-01 11:54:13 | [TC_admin_006] ← HTTP 200 code=403 message=无权限（2ms）
+2026-10-01 11:54:13 | [TC_admin_006] 通过（7ms）
+2026-10-01 11:54:13 | [TC_admin_007] → GET /api/admin/user/list
+2026-10-01 11:54:13 | [TC_admin_007] ← HTTP 200 code=401 message=未登录（2ms）
+2026-10-01 11:54:13 | [TC_admin_007] 通过（7ms）
+2026-10-01 11:54:13 | [TC_admin_008] → PUT /api/admin/user/status/999999  params={"status": 0}
+2026-10-01 11:54:13 | [TC_admin_008] ← HTTP 200 code=400 message=用户不存在（4ms）
+2026-10-01 11:54:13 | [TC_admin_008] 通过（9ms）
+2026-10-01 11:54:13 | [TC_admin_009] → PUT /api/admin/user/status/1
+2026-10-01 11:54:13 | [TC_admin_009] ← HTTP 200 code=500 message=系统异常（3ms）
+2026-10-01 11:54:13 | [TC_admin_009] 失败（8ms）
+2026-10-01 11:54:13 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:261
+2026-10-01 11:54:13 |         AssertionError: ===== TC_admin_009 用户状态-缺status参数 =====
+2026-10-01 11:54:13 |         ===== 来源 =====
+2026-10-01 11:54:13 |         data/usercase_admin.yaml:91
+2026-10-01 11:54:13 |         ===== 请求 =====
+2026-10-01 11:54:13 |         PUT /api/admin/user/status/1   [role=admin]
+2026-10-01 11:54:13 |         params = 无
+2026-10-01 11:54:13 |         body = 无
+2026-10-01 11:54:13 |         ===== 预期 =====
+2026-10-01 11:54:13 |         code == 400（参数错误）
+2026-10-01 11:54:13 |         ===== 实际 =====
+2026-10-01 11:54:13 |         code == 500（系统异常）
+2026-10-01 11:54:13 |         后端 message：系统异常
+2026-10-01 11:54:13 |         ===== 响应 =====
+2026-10-01 11:54:13 |         HTTP 200｜{"code": 500, "message": "系统异常", "data": null}
+2026-10-01 11:54:13 | [TC_admin_010] → GET /api/admin/order/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_010] ← HTTP 200 code=200 message=success（5ms）
+2026-10-01 11:54:13 | [TC_admin_010] 通过（10ms）
+2026-10-01 11:54:13 | [TC_admin_011] → GET /api/admin/order/list  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_011] ← HTTP 200 code=200 message=success（5ms）
+2026-10-01 11:54:13 | [TC_admin_011] 通过（10ms）
+2026-10-01 11:54:13 | [TC_admin_012] → GET /api/admin/order/999999
+2026-10-01 11:54:13 | [TC_admin_012] ← HTTP 200 code=400 message=订单不存在（5ms）
+2026-10-01 11:54:13 | [TC_admin_012] 通过（11ms）
+2026-10-01 11:54:13 | [TC_admin_013] → GET /api/admin/course/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_013] ← HTTP 200 code=200 message=success（9ms）
+2026-10-01 11:54:13 | [TC_admin_013] 通过（15ms）
+2026-10-01 11:54:13 | [TC_admin_014] → GET /api/admin/course/list  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_014] ← HTTP 200 code=200 message=success（8ms）
+2026-10-01 11:54:13 | [TC_admin_014] 通过（13ms）
+2026-10-01 11:54:13 | [TC_admin_015] → GET /api/admin/course/list  params={"keyword": "Java", "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_015] ← HTTP 200 code=200 message=success（6ms）
+2026-10-01 11:54:13 | [TC_admin_015] 通过（13ms）
+2026-10-01 11:54:13 | [TC_admin_016] → GET /api/admin/job/list  params={"page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_016] ← HTTP 200 code=200 message=success（12ms）
+2026-10-01 11:54:13 | [TC_admin_016] 通过（18ms）
+2026-10-01 11:54:13 | [TC_admin_017] → GET /api/admin/job/list  params={"status": 1, "page": 1, "size": 10}
+2026-10-01 11:54:13 | [TC_admin_017] ← HTTP 200 code=200 message=success（7ms）
+2026-10-01 11:54:13 | [TC_admin_017] 通过（13ms）
+2026-10-01 11:54:13 | [TC_admin_018] → PUT /api/admin/course/status/999999  params={"status": 2}
+2026-10-01 11:54:13 | [TC_admin_018] ← HTTP 200 code=400 message=课程不存在（4ms）
+2026-10-01 11:54:13 | [TC_admin_018] 通过（9ms）
+2026-10-01 11:54:13 | [TC_admin_019] → PUT /api/admin/job/status/999999  params={"status": 2}
+2026-10-01 11:54:13 | [TC_admin_019] ← HTTP 200 code=400 message=职位不存在（7ms）
+2026-10-01 11:54:13 | [TC_admin_019] 通过（16ms）
+2026-10-01 11:54:13 | [TC_admin_020] → PUT /api/admin/course/status/1  params={"status": 2}
+2026-10-01 11:54:13 | [TC_admin_020] ← HTTP 200 code=403 message=无权限（5ms）
+2026-10-01 11:54:13 | [TC_admin_020] 通过（16ms）
+2026-10-01 11:54:13 | ------------------------------------------------------------------------
+2026-10-01 11:54:13 | 本轮结束：共 182 条，通过 178，失败 4，出错 0，耗时 5.81s
+2026-10-01 11:54:13 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_115407.log
+2026-10-01 11:54:13 | ========================================================================

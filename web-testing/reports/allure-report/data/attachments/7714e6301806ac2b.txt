@@ -1,0 +1,24 @@
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/apply
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  79ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/apply/pending?page=1&size=10  200  64ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":24,"applyType":1,"targetId":16,"applicantId":40,"reason":"","status":0,"auditorId":null,"auditComment":null,"auditTime":null,"createTime":"2026-10-02T14:46:20"},{"id":25,"applyType":2,"targetId":9,"applicantId":40,"reason":"","status":0,"auditorI…
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/users
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  10ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/courses
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/user/list?page=1&size=10  200  19ms
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  9ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/course/list?page=1&size=10  200  10ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":16,"courseName":"自动化测试课程","courseType":1,"techSystem":"Java","techDirection":"Web后端","courseLevel":"初级","isFree":1,"price":0.00,"teacherId":40,"teacherName":"自动化测试老师02","coverImage":"","description":"","rating":0.0,"enrollCount":0,"listTime":null…
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/jobs
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  9ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/job/list?page=1&size=10  200  10ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":9,"jobName":"自动化测试工程师","companyId":null,"companyName":"","jobCategory":"前端","salaryMin":10000.00,"salaryMax":20000.00,"city":"","education":"","experience":"","description":"","applyCount":0,"collectCount":0,"listTime":null,"status":0,"createTime…
+INFO     sep-web:plugins.py:96 [admin]   ⇢ 跳转 /admin/orders
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/user/info  200  6ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"id":1,"username":"admin","password":"***","nickname":"管理员","avatar":null,"realName":null,"phone":null,"email":null,"role":2,"status":1,"lastLoginTime":"2026-10-02T14:44:45","createTime":"2026-10-01T14:09:17","updateTime":"2026-10-01T14:09:17"}}
+INFO     sep-web:plugins.py:81 [admin]   → GET /api/admin/order/list?page=1&size=10  200  12ms
+INFO     sep-web:plugins.py:84 [admin]     返回 {"code":200,"message":"success","data":{"list":[{"id":39,"orderNo":"ORD1790923540411705774","userId":239,"totalAmount":199.00,"status":1,"payTime":"2026-10-02T14:45:41","createTime":"2026-10-02T14:45:40","updateTime":"2026-10-02T14:45:40"},{"id":38,"orderNo":"ORD1790923539146170859","userId":238,"to…

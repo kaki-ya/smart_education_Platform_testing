@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_028] → POST /api/course/offline  params={"courseId": 999999}
+INFO     sep:request_util.py:133 [TC_course_028] ← HTTP 200 code=400 message=课程不存在（7ms）

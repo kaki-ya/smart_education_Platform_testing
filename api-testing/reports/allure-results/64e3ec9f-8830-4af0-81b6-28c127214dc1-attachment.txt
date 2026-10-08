@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_027] → POST /api/job/applyList  body={"jobName": "自动化测试岗", "jobCategory": "开发", "salaryMin": 10000, "salaryMax": 20000, "city": "北京", "education": "本科", "experience": "3年", "reason": "自动化用例", "duties": ["负责测试", "编写用例"]}
+INFO     sep:request_util.py:133 [TC_job_027] ← HTTP 200 code=200 message=success（17ms）

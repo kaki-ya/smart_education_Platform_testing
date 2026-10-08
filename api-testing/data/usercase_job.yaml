@@ -1,0 +1,364 @@
+
+# 用例总数：37
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 职位列表 ==============
+
+- case_id: TC_job_001
+  title: 职位列表-默认分页
+  method: GET
+  path: /api/job/list
+  params:
+    page: 1
+    size: 10
+  except_code: 200
+  except_field: data.list not_null
+
+- case_id: TC_job_002
+  title: 职位列表-关键字筛选
+  method: GET
+  path: /api/job/list
+  params:
+    keyword: Java
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_job_003
+  title: 职位列表-按类别筛选
+  method: GET
+  path: /api/job/list
+  params:
+    jobCategory: 开发
+    page: 1
+    size: 10
+  except_code: 200
+
+- case_id: TC_job_004
+  title: 职位列表-超大页码
+  method: GET
+  path: /api/job/list
+  params:
+    page: 9999
+    size: 10
+  except_code: 200
+  except_field: data.list == []
+
+- case_id: TC_job_005
+  title: 职位详情
+  method: GET
+  path: /api/job/1
+  except_code: 200
+  except_field: data.id not_null
+
+- case_id: TC_job_006
+  title: 职位详情-不存在
+  method: GET
+  path: /api/job/999999
+  except_code: 400
+  except_message: "职位不存在或已下架"
+
+# ============= 收藏与投递 ==============
+
+- case_id: TC_job_007
+  title: 收藏职位
+  path: /api/job/collect/1
+  role: student
+  except_code: 200
+
+- case_id: TC_job_008
+  title: 收藏职位-未登录
+  path: /api/job/collect/1
+  except_code: 401
+  except_message: "未登录"
+
+# 首次投递。原本带 ?resumeId={{resume_id}}，但 resume 模块只有列表/删除，
+# 没有上传用例，占位符没有来源；而且 YAML 加载器不支持模板替换。
+# job_apply.resume_id 还有外键指向 resume，塞个不存在的 id 会直接 500，
+# 所以这里按「不带简历投递」来测。
+- case_id: TC_job_009
+  title: 投递职位-首次投递成功
+  path: /api/job/apply/1
+  role: student
+  except_code: 200
+
+# 依赖 TC_job_009 先跑。缺陷 D2（不拦截重复投递）修复后，
+# student01 第二次投 job 1 会被 JobService.apply 的查重拦下。
+# Excel 原本写 200，与修复后的代码冲突，改成 400。
+- case_id: TC_job_010
+  title: 投递职位-重复投递被拒绝
+  path: /api/job/apply/1
+  role: student
+  except_code: 400
+  except_message: "您已投递过该职位，请勿重复投递"
+
+- case_id: TC_job_011
+  title: 投递职位-职位不存在
+  path: /api/job/apply/999999
+  role: student
+  except_code: 400
+  except_message: "职位不存在或已下架"
+
+- case_id: TC_job_012
+  title: 投递职位-未登录
+  path: /api/job/apply/1
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 我的投递 ==============
+
+- case_id: TC_job_013
+  title: 我的投递
+  method: GET
+  path: /api/job/my/applications
+  role: student
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_job_014
+  title: 我的投递-未登录
+  method: GET
+  path: /api/job/my/applications
+  except_code: 401
+  except_message: "未登录"
+
+# ============= AI 面试 ==============
+
+- case_id: TC_job_015
+  title: 发起AI面试
+  path: /api/job/ai-interview/1
+  role: student
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_job_016
+  title: 发起AI面试-职位不存在
+  path: /api/job/ai-interview/999999
+  role: student
+  except_code: 400
+  except_message: "职位不存在或已下架"
+
+- case_id: TC_job_017
+  title: 提交面试-面试不存在
+  path: /api/job/interview/submit
+  role: student
+  body:
+    interviewId: 999999
+    answers:
+      - A
+      - B
+  except_code: 400
+  except_message: "面试不存在"
+
+- case_id: TC_job_018
+  title: 提交面试-未登录
+  path: /api/job/interview/submit
+  body:
+    interviewId: 1
+    answers:
+      - A
+  except_code: 401
+  except_message: "未登录"
+
+- case_id: TC_job_019
+  title: 面试报告-不存在
+  method: GET
+  path: /api/job/interview/report/999999
+  role: student
+  except_code: 400
+  except_message: "面试不存在"
+
+- case_id: TC_job_020
+  title: 面试报告-未登录
+  method: GET
+  path: /api/job/interview/report/1
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 我的职位 ==============
+
+# teacher01 此刻还没在 TC_job_027 里建职位，所以是空列表。
+# 断言只要求 data 非 null，空数组也算通过。
+- case_id: TC_job_021
+  title: 我的职位-讲师
+  method: GET
+  path: /api/job/my
+  role: teacher
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_job_022
+  title: 我的职位-未登录
+  method: GET
+  path: /api/job/my
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 候选人管理 ==============
+
+- case_id: TC_job_023
+  title: 候选人列表-非本人职位
+  method: GET
+  path: /api/job/my/applicants/1
+  role: teacher
+  except_code: 400
+  except_message: "无权查看该职位"
+
+- case_id: TC_job_024
+  title: 候选人列表-学生
+  method: GET
+  path: /api/job/my/applicants/1
+  role: student
+  except_code: 400
+  except_message: "无权查看该职位"
+
+- case_id: TC_job_025
+  title: 更新候选人状态-投递不存在
+  method: PUT
+  path: /api/job/my/applicants/999999
+  role: teacher
+  params:
+    status: 1
+  except_code: 400
+  except_message: "投递记录不存在"
+
+# status 是必填 query 参数，故意不传 → 当前返回 500 系统异常，
+# 用例断言 400（理由同 TC_course_027）。
+- case_id: TC_job_026
+  title: 更新候选人状态-缺status
+  method: PUT
+  path: /api/job/my/applicants/1
+  role: teacher
+  except_code: 400
+
+# ============= 申请上架 ==============
+
+- case_id: TC_job_027
+  title: 申请上架-成功
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 自动化测试岗
+    jobCategory: 开发
+    salaryMin: 10000
+    salaryMax: 20000
+    city: 北京
+    education: 本科
+    experience: 3年
+    reason: 自动化用例
+    duties:
+      - 负责测试
+      - 编写用例
+  except_code: 200
+
+- case_id: TC_job_028
+  title: 申请上架-职位名缺失
+  path: /api/job/applyList
+  role: teacher
+  body:
+    salaryMin: 10000
+    salaryMax: 20000
+  except_code: 400
+  except_message: "职位名称不能为空"
+
+- case_id: TC_job_029
+  title: 申请上架-职位名超50字
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗岗
+    salaryMin: 10000
+    salaryMax: 20000
+  except_code: 400
+  except_message: "职位名称不能超过50个字符"
+
+- case_id: TC_job_030
+  title: 申请上架-薪资下限大于上限
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 测试岗A
+    salaryMin: 20000
+    salaryMax: 10000
+  except_code: 400
+  except_message: "最低薪资必须小于最高薪资"
+
+- case_id: TC_job_031
+  title: 申请上架-薪资上下限相等
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 测试岗B
+    salaryMin: 10000
+    salaryMax: 10000
+  except_code: 400
+  except_message: "最低薪资必须小于最高薪资"
+
+- case_id: TC_job_032
+  title: 申请上架-薪资低于2500
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 测试岗C
+    salaryMin: 2000
+    salaryMax: 20000
+  except_code: 400
+  except_message: "最低薪资不得低于2500元"
+
+- case_id: TC_job_033
+  title: 申请上架-薪资超100000
+  path: /api/job/applyList
+  role: teacher
+  body:
+    jobName: 测试岗D
+    salaryMin: 10000
+    salaryMax: 100001
+  except_code: 400
+  except_message: "最高薪资不得高于100000元"
+
+- case_id: TC_job_034
+  title: 申请上架-未登录
+  path: /api/job/applyList
+  body:
+    jobName: x
+    salaryMin: 10000
+    salaryMax: 20000
+  except_code: 401
+  except_message: "未登录"
+
+# ============= 申请下架 ==============
+
+# 缺陷 B 修复后同 TC_course_029：job 1 在 apply 表里没有
+# applyType=2 且 applicant_id=teacher01 的记录，JobService.offline
+# 的归属反查查不到 → 403 无权下架该职位。
+- case_id: TC_job_035
+  title: 申请下架-非本人职位被拒绝
+  path: /api/job/offline
+  role: teacher
+  params:
+    jobId: 1
+    reason: 自动化用例
+  except_code: 403
+  except_message: "无权下架该职位"
+
+- case_id: TC_job_036
+  title: 申请下架-职位不存在
+  path: /api/job/offline
+  role: teacher
+  params:
+    jobId: 999999
+  except_code: 400
+  except_message: "职位不存在"
+
+# jobId 是必填 query 参数，故意不传 → 当前 500，用例断言 400。
+- case_id: TC_job_037
+  title: 申请下架-缺jobId
+  path: /api/job/offline
+  role: teacher
+  except_code: 400

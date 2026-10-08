@@ -1,0 +1,3 @@
+POST /api/apply/audit   [role=none]
+params = 无
+body = {"id": 1, "pass": true}

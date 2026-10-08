@@ -1,0 +1,3 @@
+except_code    = 400
+except_message = '该手机号在此身份下已被使用'
+except_field   = （未写，不校验）

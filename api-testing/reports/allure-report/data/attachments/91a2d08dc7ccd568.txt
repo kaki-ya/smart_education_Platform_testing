@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_024] → POST /api/course/applyList  body={"courseName": "自动化测试课程", "price": -1}
+INFO     sep:request_util.py:133 [TC_course_024] ← HTTP 200 code=400 message=价格不能小于0（4ms）

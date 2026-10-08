@@ -1,0 +1,19 @@
+# Direct dependencies only; transitive deps are resolved by pip.
+#
+# Versions are pinned exactly rather than with >=, because a test suite has to be
+# reproducible: the same commit must produce the same result today and months later.
+#
+# Install:  pip install -r requirements.txt
+#
+# NOTE: keep this file ASCII-only. pip reads requirements files using the locale
+# encoding on some versions (cp936/GBK on Chinese Windows), so any non-ASCII byte
+# here makes `pip install -r` fail with UnicodeDecodeError before it installs
+# anything.
+#
+# The allure CLI is a separate install and needs Java on PATH; without it the
+# tests still run, only report generation is skipped.
+
+pytest==9.1.1
+requests==2.34.2
+PyYAML==6.0.3
+allure-pytest==2.16.1

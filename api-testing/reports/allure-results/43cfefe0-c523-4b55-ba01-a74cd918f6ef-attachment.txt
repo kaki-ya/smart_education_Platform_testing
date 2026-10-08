@@ -1,0 +1,3 @@
+PUT /api/user/info   [role=student]
+params = 无
+body = {"realName": "38同学"}

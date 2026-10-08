@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_023] → POST /api/user/register  body={"password": "1234567", "phone": "13900000023", "email": "register023@test.com", "role": 0}
+INFO     sep:request_util.py:133 [TC_user_023] ← HTTP 200 code=400 message=用户名不能为空（3ms）

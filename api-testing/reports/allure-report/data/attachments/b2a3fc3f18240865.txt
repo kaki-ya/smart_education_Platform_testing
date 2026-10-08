@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_admin_020] → PUT /api/admin/course/status/1  params={"status": 2}
+INFO     sep:request_util.py:133 [TC_admin_020] ← HTTP 200 code=403 message=无权限（5ms）

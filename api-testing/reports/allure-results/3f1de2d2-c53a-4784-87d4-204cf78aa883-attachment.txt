@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_001] → GET /api/course/list  params={"page": 1, "size": 10}
+INFO     sep:request_util.py:133 [TC_course_001] ← HTTP 200 code=200 message=success（16ms）

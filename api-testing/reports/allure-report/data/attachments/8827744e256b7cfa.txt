@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_010] → POST /api/job/apply/1
+INFO     sep:request_util.py:133 [TC_job_010] ← HTTP 200 code=400 message=您已投递过该职位，请勿重复投递（7ms）

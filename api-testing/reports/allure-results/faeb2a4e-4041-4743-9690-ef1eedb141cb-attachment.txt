@@ -1,0 +1,4 @@
+except_code    = 200
+except_message = （未写，不校验）
+except_field   =
+  data.role == 1

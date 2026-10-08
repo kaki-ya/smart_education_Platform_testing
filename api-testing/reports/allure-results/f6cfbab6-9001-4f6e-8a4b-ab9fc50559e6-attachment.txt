@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_order_012] → POST /api/order/pay/999999
+INFO     sep:request_util.py:133 [TC_order_012] ← HTTP 200 code=400 message=订单不存在（3ms）

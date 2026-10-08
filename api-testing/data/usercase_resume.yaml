@@ -1,0 +1,50 @@
+
+# 用例总数：5
+
+
+defaults:
+  method: POST
+  role: none
+
+cases:
+
+# ============= 简历 ==============
+
+- case_id: TC_resume_001
+  title: 简历列表
+  method: GET
+  path: /api/resume/list
+  role: student
+  except_code: 200
+  except_field: data not_null
+
+- case_id: TC_resume_002
+  title: 简历列表-未登录
+  method: GET
+  path: /api/resume/list
+  except_code: 401
+  except_message: "未登录"
+
+- case_id: TC_resume_003
+  title: 删除简历-不存在
+  method: DELETE
+  path: /api/resume/999999
+  role: student
+  except_code: 400
+  except_message: "简历不存在"
+
+
+- case_id: TC_resume_004
+  title: 删除简历-他人简历
+  method: DELETE
+  path: /api/resume/1
+  role: teacher
+  except_code: 400
+  except_message: "简历不存在"
+
+- case_id: TC_resume_005
+  title: 删除简历-未登录
+  method: DELETE
+  path: /api/resume/999999
+  except_code: 401
+  except_message: "未登录"

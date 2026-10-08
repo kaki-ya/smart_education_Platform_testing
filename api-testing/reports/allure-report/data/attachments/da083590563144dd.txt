@@ -1,0 +1,3 @@
+PUT /api/admin/user/status/1   [role=admin]
+params = 无
+body = 无

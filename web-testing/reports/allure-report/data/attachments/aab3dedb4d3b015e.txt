@@ -1,0 +1,7 @@
+INFO     sep-web:plugins.py:96 [web0923535497]   ⇢ 跳转 /order
+INFO     sep-web:plugins.py:81 [web0923535497]   → GET /api/user/info  200  63ms
+INFO     sep-web:plugins.py:84 [web0923535497]     返回 {"code":200,"message":"success","data":{"id":236,"username":"web0923535497","password":"***","nickname":"web0923535497","avatar":null,"realName":null,"phone":"10923535497","email":"web0923535497@test.com","role":0,"status":1,"lastLoginTime":"2026-10-02T14:45:36","createTime":"2026-10-02T14:45:36","u…
+INFO     sep-web:plugins.py:81 [web0923535497]   → GET /api/order/list?page=1&size=10  200  25ms
+INFO     sep-web:plugins.py:84 [web0923535497]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}
+INFO     sep-web:plugins.py:81 [web0923535497]   → GET /api/order/list?page=1&size=10&status=1  200  8ms
+INFO     sep-web:plugins.py:84 [web0923535497]     返回 {"code":200,"message":"success","data":{"list":[],"total":0}}

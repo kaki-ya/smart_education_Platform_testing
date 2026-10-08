@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_user_018] → POST /api/user/register  body={"username": "register018", "password": "1234567", "phone": "1380000018", "email": "register018@test.com", "role": 0}
+INFO     sep:request_util.py:133 [TC_user_018] ← HTTP 200 code=400 message=手机号必须为11位数字,以1开始,不得含有特殊字符（3ms）

@@ -1,0 +1,29 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "courseName": "Java 基础入门",
+        "courseType": 1,
+        "techSystem": "Java",
+        "techDirection": "后端",
+        "courseLevel": "初级",
+        "isFree": 1,
+        "price": 0.0,
+        "teacherId": null,
+        "teacherName": "默认讲师",
+        "coverImage": null,
+        "description": null,
+        "rating": 5.0,
+        "enrollCount": 1,
+        "listTime": "2026-10-01T11:49:42",
+        "status": 1,
+        "createTime": "2026-10-01T11:49:42",
+        "updateTime": "2026-10-01T11:49:42"
+      }
+    ],
+    "total": 1
+  }
+}

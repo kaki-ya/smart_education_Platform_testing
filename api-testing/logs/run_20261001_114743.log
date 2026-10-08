@@ -1,0 +1,75 @@
+2026-10-01 11:47:43 | ========================================================================
+2026-10-01 11:47:43 | 本轮测试开始
+2026-10-01 11:47:43 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_114743.log
+2026-10-01 11:47:43 | 后端地址：http://localhost:8080
+2026-10-01 11:47:43 | 运行环境：Python 3.12.4 / pytest 9.1.1 / Windows-11-10.0.26200-SP0
+2026-10-01 11:47:43 | 命令行：pytest testcases/test_01_user.py::test_user[TC_user_013] testcases/test_01_user.py::test_user[TC_user_022] testcases/test_03_job.py::test_job[TC_job_009] -p no:cacheprovider --no-header -q
+2026-10-01 11:47:43 | ========================================================================
+2026-10-01 11:47:43 | [后端探活] → GET /api/course/list  params={"page": 1, "size": 1}
+2026-10-01 11:47:43 | [后端探活] ← HTTP 200 code=200 message=success（26ms）
+2026-10-01 11:47:43 | [账号引导·student01] → POST /api/user/login  body={"username": "student01", "password": "123456"}
+2026-10-01 11:47:43 | [账号引导·student01] ← HTTP 200 code=200 message=success（93ms）
+2026-10-01 11:47:43 | [账号引导·teacher01] → POST /api/user/login  body={"username": "teacher01", "password": "123456"}
+2026-10-01 11:47:43 | [账号引导·teacher01] ← HTTP 200 code=200 message=success（80ms）
+2026-10-01 11:47:43 | [账号引导·admin] → POST /api/user/login  body={"username": "admin", "password": "admin123"}
+2026-10-01 11:47:44 | [账号引导·admin] ← HTTP 200 code=200 message=success（79ms）
+2026-10-01 11:47:44 | [账号引导·apitest01] → POST /api/user/login  body={"username": "apitest01", "password": "1234567"}
+2026-10-01 11:47:44 | [账号引导·apitest01] ← HTTP 200 code=200 message=success（79ms）
+2026-10-01 11:47:44 | [TC_user_013] → POST /api/user/register  body={"username": "register013", "password": "1234567", "phone": "13900000013", "email": "register013@test.com", "role": 0}
+2026-10-01 11:47:44 | [TC_user_013] ← HTTP 200 code=400 message=用户名已存在（22ms）
+2026-10-01 11:47:44 | [TC_user_013] 失败（23ms）
+2026-10-01 11:47:44 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:220
+2026-10-01 11:47:44 |         AssertionError: ===== TC_user_013 注册成功 =====
+2026-10-01 11:47:44 |         ===== 来源 =====
+2026-10-01 11:47:44 |         data/usercase_user.yaml:118
+2026-10-01 11:47:44 |         ===== 请求 =====
+2026-10-01 11:47:44 |         POST /api/user/register   [role=none]
+2026-10-01 11:47:44 |         params = 无
+2026-10-01 11:47:44 |         body = {"username": "register013", "password": "1234567", "phone": "13900000013", "email": "register013@test.com", "role": 0}
+2026-10-01 11:47:44 |         ===== 预期 =====
+2026-10-01 11:47:44 |         code == 200（成功）
+2026-10-01 11:47:44 |         ===== 实际 =====
+2026-10-01 11:47:44 |         code == 400（参数错误）
+2026-10-01 11:47:44 |         后端 message：用户名已存在
+2026-10-01 11:47:44 |         ===== 响应 =====
+2026-10-01 11:47:44 |         HTTP 200｜{"code": 400, "message": "用户名已存在", "data": null}
+2026-10-01 11:47:44 | [TC_user_022] → POST /api/user/register  body={"username": "register022", "password": "1234567", "phone": "13900000013", "email": "register022@test.com", "role": 1}
+2026-10-01 11:47:44 | [TC_user_022] ← HTTP 200 code=400 message=用户名已存在（3ms）
+2026-10-01 11:47:44 | [TC_user_022] 失败（4ms）
+2026-10-01 11:47:44 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:220
+2026-10-01 11:47:44 |         AssertionError: ===== TC_user_022 注册成功，同一个手机号但是不同身份 =====
+2026-10-01 11:47:44 |         ===== 来源 =====
+2026-10-01 11:47:44 |         data/usercase_user.yaml:225
+2026-10-01 11:47:44 |         ===== 请求 =====
+2026-10-01 11:47:44 |         POST /api/user/register   [role=none]
+2026-10-01 11:47:44 |         params = 无
+2026-10-01 11:47:44 |         body = {"username": "register022", "password": "1234567", "phone": "13900000013", "email": "register022@test.com", "role": 1}
+2026-10-01 11:47:44 |         ===== 预期 =====
+2026-10-01 11:47:44 |         code == 200（成功）
+2026-10-01 11:47:44 |         ===== 实际 =====
+2026-10-01 11:47:44 |         code == 400（参数错误）
+2026-10-01 11:47:44 |         后端 message：用户名已存在
+2026-10-01 11:47:44 |         ===== 响应 =====
+2026-10-01 11:47:44 |         HTTP 200｜{"code": 400, "message": "用户名已存在", "data": null}
+2026-10-01 11:47:44 | [TC_job_009] → POST /api/job/apply/1
+2026-10-01 11:47:44 | [TC_job_009] ← HTTP 200 code=400 message=您已投递过该职位，请勿重复投递（29ms）
+2026-10-01 11:47:44 | [TC_job_009] 失败（29ms）
+2026-10-01 11:47:44 |         位置：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\common\assert_util.py:220
+2026-10-01 11:47:44 |         AssertionError: ===== TC_job_009 投递职位-首次投递成功 =====
+2026-10-01 11:47:44 |         ===== 来源 =====
+2026-10-01 11:47:44 |         data/usercase_job.yaml:85
+2026-10-01 11:47:44 |         ===== 请求 =====
+2026-10-01 11:47:44 |         POST /api/job/apply/1   [role=student]
+2026-10-01 11:47:44 |         params = 无
+2026-10-01 11:47:44 |         body = 无
+2026-10-01 11:47:44 |         ===== 预期 =====
+2026-10-01 11:47:44 |         code == 200（成功）
+2026-10-01 11:47:44 |         ===== 实际 =====
+2026-10-01 11:47:44 |         code == 400（参数错误）
+2026-10-01 11:47:44 |         后端 message：您已投递过该职位，请勿重复投递
+2026-10-01 11:47:44 |         ===== 响应 =====
+2026-10-01 11:47:44 |         HTTP 200｜{"code": 400, "message": "您已投递过该职位，请勿重复投递", "data": null}
+2026-10-01 11:47:44 | ------------------------------------------------------------------------
+2026-10-01 11:47:44 | 本轮结束：共 3 条，通过 0，失败 3，出错 0，耗时 0.92s
+2026-10-01 11:47:44 | 日志文件：C:\Users\csw\Desktop\smart-education-platform-testing\api-testing\logs\run_20261001_114743.log
+2026-10-01 11:47:44 | ========================================================================

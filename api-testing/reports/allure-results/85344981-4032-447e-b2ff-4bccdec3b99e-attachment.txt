@@ -1,0 +1,3 @@
+POST /api/user/forgotPassword   [role=none]
+params = 无
+body = {"phone": "1370046", "newPassword": "654321"}

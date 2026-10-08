@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_course_030] → POST /api/course/offline  params={"courseId": 1}
+INFO     sep:request_util.py:133 [TC_course_030] ← HTTP 200 code=401 message=未登录（3ms）

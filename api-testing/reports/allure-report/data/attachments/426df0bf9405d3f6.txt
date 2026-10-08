@@ -1,0 +1,3 @@
+GET /api/admin/user/list   [role=admin]
+params = {"status": 1, "page": 1, "size": 10}
+body = 无

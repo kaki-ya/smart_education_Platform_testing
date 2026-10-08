@@ -1,0 +1,2 @@
+INFO     sep:request_util.py:110 [TC_job_017] → POST /api/job/interview/submit  body={"interviewId": 999999, "answers": ["A", "B"]}
+INFO     sep:request_util.py:133 [TC_job_017] ← HTTP 200 code=400 message=面试不存在（6ms）

@@ -1,0 +1,33 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": 6,
+        "applyType": 1,
+        "targetId": 6,
+        "applicantId": 21,
+        "reason": "自动化测试",
+        "status": 0,
+        "auditorId": null,
+        "auditComment": null,
+        "auditTime": null,
+        "createTime": "2026-10-01T11:54:11"
+      },
+      {
+        "id": 7,
+        "applyType": 2,
+        "targetId": 3,
+        "applicantId": 21,
+        "reason": "自动化用例",
+        "status": 0,
+        "auditorId": null,
+        "auditComment": null,
+        "auditTime": null,
+        "createTime": "2026-10-01T11:54:12"
+      }
+    ],
+    "total": 2
+  }
+}
